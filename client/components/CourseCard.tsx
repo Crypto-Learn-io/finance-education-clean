@@ -103,8 +103,9 @@ export default function CourseCard({
 
       <div className="mt-auto pt-6">
         <Button asChild className="w-full" size="lg">
-          <Link to={course.path} aria-label={`Start ${course.title} for free`}>
+          <Link to={course.path}>
             Start for free
+            <span className="sr-only">: {course.title}</span>
             <ArrowRight
               className="transition-transform duration-200 group-hover:translate-x-1"
               aria-hidden="true"

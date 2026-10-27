@@ -30,7 +30,6 @@ export default function Navigation() {
           <Link
             to="/"
             className="group flex items-center gap-2.5 rounded-lg"
-            aria-label="THRIVE: Track, Habits, Responsibility, Invest, Value, Earn. Home"
             title="THRIVE: Track, Habits, Responsibility, Invest, Value, Earn"
           >
             <img

@@ -116,7 +116,11 @@ export default function Quizzes() {
                     </span>
                     <span>{xpInfo.progressToNext}%</span>
                   </div>
-                  <Progress value={xpInfo.progressToNext} className="h-3" />
+                  <Progress
+                    value={xpInfo.progressToNext}
+                    className="h-3"
+                    aria-label="Progress to next level"
+                  />
                 </div>
               )}
             </CardContent>
