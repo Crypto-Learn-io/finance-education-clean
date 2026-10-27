@@ -1,17 +1,20 @@
-import { ReactNode } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { CSSProperties, ReactNode } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Layout from "./Layout";
+import LessonContent from "./LessonContent";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import {
-  ArrowRight,
-  Play,
-  Clock,
-  BookOpen,
-  Target,
   ArrowLeft,
+  ArrowRight,
+  Brain,
+  CheckCircle2,
+  ChevronRight,
+  Clock,
+  PlayCircle,
+  Trophy,
+  Users,
 } from "lucide-react";
+import { courseByPath, pillarWord } from "@/data/courses";
 
 interface LessonSection {
   title: string;
@@ -32,6 +35,9 @@ interface LessonLayoutProps {
   quizId?: string;
 }
 
+const sectionId = (i: number) => `part-${i + 1}`;
+const delay = (ms: number) => ({ "--delay": `${ms}ms` }) as CSSProperties;
+
 export default function LessonLayout({
   title,
   intro,
@@ -46,149 +52,254 @@ export default function LessonLayout({
   quizId,
 }: LessonLayoutProps) {
   const navigate = useNavigate();
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
-      case "Beginner":
-        return "bg-green-100 text-green-700";
-      case "Intermediate":
-        return "bg-yellow-100 text-yellow-700";
-      case "Advanced":
-        return "bg-red-100 text-red-700";
-      default:
-        return "bg-gray-100 text-gray-700";
-    }
-  };
+  const { pathname } = useLocation();
+  // Course card data is the single source for title, age, time and goals.
+  const course = courseByPath(pathname);
+  const nextCourse = nextLessonPath ? courseByPath(nextLessonPath) : undefined;
+  const prevCourse = prevLessonPath ? courseByPath(prevLessonPath) : undefined;
+
+  const heading = course?.title ?? title;
+  const blurb = course?.blurb ?? intro;
 
   return (
     <Layout>
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Breadcrumb */}
-        <nav className="mb-8">
-          <div className="flex items-center space-x-2 text-sm text-gray-600">
-            <Link to="/courses" className="hover:text-primary">
-              Courses
-            </Link>
-            <span>/</span>
-            <span className="text-gray-900">{title}</span>
-          </div>
-        </nav>
+      {/* Header */}
+      <section className="bg-gradient-to-b from-mint to-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-10">
+          <nav aria-label="Breadcrumb">
+            <ol className="flex items-center gap-1 text-sm font-semibold text-ink-muted">
+              <li>
+                <Link to="/courses" className="link-underline text-primary">
+                  Courses
+                </Link>
+              </li>
+              <li aria-hidden="true">
+                <ChevronRight className="w-4 h-4" />
+              </li>
+              <li aria-current="page" className="text-ink">
+                {heading}
+              </li>
+            </ol>
+          </nav>
 
-        {/* Lesson Header */}
-        <div className="mb-12">
-          <div className="flex items-center gap-4 mb-4">
-            <Badge className={getDifficultyColor(difficulty)}>
-              {difficulty}
-            </Badge>
-            <div className="flex items-center gap-1 text-sm text-gray-600">
-              <Clock className="w-4 h-4" />
-              {duration}
-            </div>
+          <div className="hero-animate mt-6 flex flex-wrap items-center gap-2">
+            <span className="free-pill">Free</span>
+            <span className="rounded-full bg-white px-3 py-1 text-sm font-bold text-ink shadow-sm">
+              {course?.level ?? difficulty}
+            </span>
+            {course?.pillars.map((p) => (
+              <span
+                key={p}
+                className="rounded-full bg-white px-3 py-1 text-sm font-bold text-primary shadow-sm"
+              >
+                {pillarWord(p)}
+              </span>
+            ))}
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            {title}
+
+          <h1
+            className="hero-animate mt-4 text-4xl md:text-5xl font-black text-ink"
+            style={delay(80)}
+          >
+            {heading}
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl">{intro}</p>
-        </div>
+          <p
+            className="hero-animate mt-4 text-lg md:text-xl text-ink-muted max-w-2xl"
+            style={delay(160)}
+          >
+            {blurb}
+          </p>
 
-        {/* Video Section */}
+          <dl
+            className="hero-animate mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold text-ink-muted"
+            style={delay(220)}
+          >
+            {course && (
+              <div className="flex items-center gap-1.5">
+                <dt className="sr-only">Age</dt>
+                <Users className="w-4 h-4 text-brand" aria-hidden="true" />
+                <dd>{course.age}</dd>
+              </div>
+            )}
+            <div className="flex items-center gap-1.5">
+              <dt className="sr-only">Time</dt>
+              <Clock className="w-4 h-4 text-brand" aria-hidden="true" />
+              <dd>{course?.time ?? duration}</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        {/* In this lesson: goals + jump links */}
+        <section
+          aria-labelledby="overview-heading"
+          className="reveal grid gap-6 rounded-3xl border border-border bg-white p-6 shadow-sm md:grid-cols-2"
+        >
+          <div>
+            <h2
+              id="overview-heading"
+              className="text-sm font-extrabold uppercase tracking-wide text-ink"
+            >
+              You'll learn to
+            </h2>
+            <ul className="mt-3 space-y-2">
+              {(course?.objectives ?? []).map((o) => (
+                <li key={o} className="flex items-start gap-2 text-ink">
+                  <CheckCircle2
+                    className="mt-0.5 w-5 h-5 flex-none text-brand"
+                    aria-hidden="true"
+                  />
+                  {o}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <nav aria-label="Lesson parts">
+            <h2 className="text-sm font-extrabold uppercase tracking-wide text-ink">
+              In this lesson
+            </h2>
+            <ol className="mt-3 space-y-1">
+              {videoEmbed && (
+                <li>
+                  <a
+                    href="#video"
+                    className="flex items-center gap-2 rounded-xl px-2 py-1.5 font-semibold text-primary hover:bg-mint"
+                  >
+                    <PlayCircle className="w-4 h-4" aria-hidden="true" />
+                    Watch the video
+                  </a>
+                </li>
+              )}
+              {sections.map((s, i) => (
+                <li key={s.title}>
+                  <a
+                    href={`#${sectionId(i)}`}
+                    className="flex items-start gap-2 rounded-xl px-2 py-1.5 font-semibold text-ink hover:bg-mint hover:text-primary"
+                  >
+                    <span className="flex h-5 w-5 flex-none items-center justify-center rounded-full bg-mint text-xs font-black text-primary">
+                      {i + 1}
+                    </span>
+                    {s.title}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        </section>
+
+        {/* Video */}
         {videoEmbed && (
-          <Card className="mb-12">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Play className="w-5 h-5 text-primary" />
-                Watch & Learn
-              </CardTitle>
-            </CardHeader>
-            <CardContent>{videoEmbed}</CardContent>
-          </Card>
+          <section
+            id="video"
+            aria-labelledby="video-heading"
+            className="reveal mt-8 scroll-mt-24 rounded-3xl bg-ink p-4 sm:p-6"
+          >
+            <h2
+              id="video-heading"
+              className="mb-4 flex items-center gap-2 text-lg font-extrabold text-white"
+            >
+              <PlayCircle className="w-6 h-6 text-sun" aria-hidden="true" />
+              Watch and learn
+            </h2>
+            <div className="overflow-hidden rounded-2xl bg-black">
+              {videoEmbed}
+            </div>
+          </section>
         )}
 
-        {/* Learning Sections */}
-        <div className="space-y-8 mb-12">
+        {/* Lesson parts */}
+        <div className="mt-8 space-y-6">
           {sections.map((section, index) => (
-            <Card key={index} className="border-l-4 border-l-primary">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-primary font-semibold text-sm">
-                    {index + 1}
-                  </div>
+            <article
+              key={section.title}
+              id={sectionId(index)}
+              aria-labelledby={`${sectionId(index)}-title`}
+              className="reveal scroll-mt-24 rounded-3xl border border-border bg-white p-6 sm:p-8 shadow-sm"
+            >
+              <h2
+                id={`${sectionId(index)}-title`}
+                className="flex items-start gap-3 text-xl sm:text-2xl font-extrabold text-ink"
+              >
+                <span
+                  aria-hidden="true"
+                  className="flex h-9 w-9 flex-none items-center justify-center rounded-xl bg-primary text-base font-black text-white"
+                >
+                  {index + 1}
+                </span>
+                <span>
+                  <span className="sr-only">Part {index + 1}: </span>
                   {section.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="prose prose-gray max-w-none">
-                  {section.content.split("\n\n").map((paragraph, pIndex) => (
-                    <p
-                      key={pIndex}
-                      className="text-gray-700 leading-relaxed mb-4"
-                    >
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+                </span>
+              </h2>
+              <div className="mt-5">
+                <LessonContent content={section.content} />
+              </div>
+            </article>
           ))}
         </div>
 
-        {/* Quiz Teaser */}
-        <Card className="mb-12 bg-gradient-to-r from-primary/10 to-blue-50">
-          <CardContent className="p-8 text-center">
-            <Target className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">
-              Ready to test yourself?
-            </h3>
-            <p className="text-gray-600 mb-6">
-              Take a quick quiz to see how well you understand this lesson.
+        {/* Outcome + quiz */}
+        <section
+          aria-labelledby="quiz-heading"
+          className="reveal mt-10 rounded-3xl bg-sun-soft p-8 text-center"
+        >
+          {course && (
+            <p className="mx-auto mb-6 flex max-w-xl items-start justify-center gap-2 font-bold text-ink">
+              <Trophy
+                className="mt-0.5 w-5 h-5 flex-none text-amber-600"
+                aria-hidden="true"
+              />
+              {course.outcome}
             </p>
-            <Button
-              size="lg"
-              onClick={() => quizId && navigate(`/quiz/${quizId}`)}
-              disabled={!quizId}
-            >
-              <BookOpen className="mr-2 w-5 h-5" />
-              Take Quiz
-            </Button>
-            {!quizId && (
-              <p className="text-xs text-gray-500 mt-2">Quiz coming soon</p>
-            )}
-          </CardContent>
-        </Card>
-
-        {/* Navigation */}
-        <div className="flex flex-col sm:flex-row justify-between gap-4">
-          {prevLessonPath ? (
-            <Button asChild variant="outline" size="lg" className="flex-1">
-              <Link to={prevLessonPath}>
-                <ArrowLeft className="mr-2 w-5 h-5" />
-                {prevLessonTitle}
-              </Link>
-            </Button>
-          ) : (
-            <Button asChild variant="outline" size="lg" className="flex-1">
-              <Link to="/courses">
-                <ArrowLeft className="mr-2 w-5 h-5" />
-                Back to Courses
-              </Link>
-            </Button>
           )}
-
-          {nextLessonPath ? (
-            <Button asChild size="lg" className="flex-1">
-              <Link to={nextLessonPath}>
-                {nextLessonTitle}
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-            </Button>
-          ) : (
-            <Button asChild size="lg" className="flex-1">
-              <Link to="/courses">
-                Browse More Courses
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-            </Button>
+          <Brain className="mx-auto w-12 h-12 text-brand" aria-hidden="true" />
+          <h2 id="quiz-heading" className="mt-3 text-2xl font-black text-ink">
+            Ready to test yourself?
+          </h2>
+          <p className="mt-2 text-ink-muted">
+            Take a quick quiz and see what stuck.
+          </p>
+          <Button
+            size="lg"
+            className="mt-6"
+            onClick={() => quizId && navigate(`/quiz/${quizId}`)}
+            disabled={!quizId}
+          >
+            Take the quiz
+            <ArrowRight aria-hidden="true" />
+          </Button>
+          {!quizId && (
+            <p className="mt-2 text-sm text-ink-muted">Quiz coming soon</p>
           )}
-        </div>
+        </section>
+
+        {/* Prev / next */}
+        <nav
+          aria-label="More lessons"
+          className="mt-10 flex flex-col sm:flex-row justify-between gap-4"
+        >
+          <Button asChild variant="outline" size="lg" className="flex-1">
+            <Link to={prevLessonPath ?? "/courses"}>
+              <ArrowLeft aria-hidden="true" />
+              <span className="truncate">
+                {prevLessonPath
+                  ? (prevCourse?.title ?? prevLessonTitle)
+                  : "All courses"}
+              </span>
+            </Link>
+          </Button>
+          <Button asChild size="lg" className="flex-1">
+            <Link to={nextLessonPath ?? "/courses"}>
+              <span className="truncate">
+                {nextLessonPath
+                  ? `Next: ${nextCourse?.title ?? nextLessonTitle}`
+                  : "Pick another course"}
+              </span>
+              <ArrowRight aria-hidden="true" />
+            </Link>
+          </Button>
+        </nav>
       </div>
     </Layout>
   );

@@ -4,16 +4,16 @@ Every course card uses the same fields. The data lives in `client/data/courses.t
 and renders through `client/components/CourseCard.tsx`, so adding a course is one
 new object in that file.
 
-| Field        | Rule                                                         |
-| ------------ | ------------------------------------------------------------ |
-| `title`      | Short. 1 to 4 words.                                         |
-| `age`        | Recommended age range, for example `Ages 8–11`.              |
-| `time`       | Number of parts or lessons and rough time.                   |
-| `blurb`      | 1 or 2 short sentences. Talk to the learner or the parent.   |
-| `objectives` | 3 to 5 short phrases. Start with a verb. No full stops.      |
-| `outcome`    | One sentence that starts with "By the end, ...".             |
-| `pillars`    | One or two THRIVE skills: T, H, R, I, V, E.                  |
-| CTA          | Always "Start for free".                                     |
+| Field        | Rule                                                       |
+| ------------ | ---------------------------------------------------------- |
+| `title`      | Short. 1 to 4 words.                                       |
+| `age`        | Recommended age range, for example `Ages 8–11`.            |
+| `time`       | Number of parts or lessons and rough time.                 |
+| `blurb`      | 1 or 2 short sentences. Talk to the learner or the parent. |
+| `objectives` | 3 to 5 short phrases. Start with a verb. No full stops.    |
+| `outcome`    | One sentence that starts with "By the end, ...".           |
+| `pillars`    | One or two THRIVE skills: T, H, R, I, V, E.                |
+| CTA          | Always "Start for free".                                   |
 
 ## Example (copy this style)
 
