@@ -42,7 +42,7 @@ export const quizzes: Quiz[] = [
       needsImprovement: {
         max: 4,
         message:
-          "Needs improvement — revisit the budgeting lesson to strengthen your knowledge.",
+          "Keep going. Revisit the budgeting lesson to strengthen your knowledge.",
       },
     },
     questions: [
@@ -186,7 +186,7 @@ export const quizzes: Quiz[] = [
       needsImprovement: {
         max: 4,
         message:
-          "Needs improvement — revisit the credit lesson to better understand this crucial topic.",
+          "Keep going. Revisit the credit lesson to better understand this crucial topic.",
       },
     },
     questions: [
@@ -321,7 +321,7 @@ export const quizzes: Quiz[] = [
       needsImprovement: {
         max: 4,
         message:
-          "Needs improvement — revisit the interest rates lesson to master this important concept.",
+          "Keep going. Revisit the interest rates lesson to master this important concept.",
       },
     },
     questions: [
@@ -460,7 +460,7 @@ export const quizzes: Quiz[] = [
       needsImprovement: {
         max: 4,
         message:
-          "Needs improvement — revisit the loans lesson before considering any major borrowing.",
+          "Keep going. Revisit the loans lesson before considering any major borrowing.",
       },
     },
     questions: [
@@ -602,7 +602,7 @@ export const quizzes: Quiz[] = [
       needsImprovement: {
         max: 4,
         message:
-          "Needs improvement — revisit the investment lesson before considering any investments.",
+          "Keep going. Revisit the investment lesson before considering any investments.",
       },
     },
     questions: [
@@ -745,7 +745,7 @@ export const quizzes: Quiz[] = [
       needsImprovement: {
         max: 4,
         message:
-          "Needs improvement — revisit the risk vs return lesson for safer investing.",
+          "Keep going. Revisit the risk vs return lesson for safer investing.",
       },
     },
     questions: [
@@ -892,7 +892,7 @@ export const quizzes: Quiz[] = [
       needsImprovement: {
         max: 4,
         message:
-          "Needs improvement — revisit the inflation lesson to protect your purchasing power.",
+          "Keep going. Revisit the inflation lesson to protect your purchasing power.",
       },
     },
     questions: [
@@ -1034,7 +1034,7 @@ export const quizzes: Quiz[] = [
       needsImprovement: {
         max: 4,
         message:
-          "Needs improvement — revisit the tax lesson for better financial planning.",
+          "Keep going. Revisit the tax lesson for better financial planning.",
       },
     },
     questions: [
@@ -1167,7 +1167,7 @@ export const quizzes: Quiz[] = [
       needsImprovement: {
         max: 4,
         message:
-          "Needs improvement — revisit the retirement lesson to secure your financial future.",
+          "Keep going. Revisit the retirement lesson to secure your financial future.",
       },
     },
     questions: [
