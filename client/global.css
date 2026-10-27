@@ -4,86 +4,101 @@
 
 @layer base {
   /**
-   * Tailwind CSS theme
-   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
-   * A different format will require also updating the theme in tailwind.config.ts.
-  */
+   * THRIVE brand palette (plain hex, use anywhere with var()).
+   * Contrast notes (WCAG):
+   *  - white on --color-primary-dark  5.4:1  (AA for all text)  -> buttons, links
+   *  - white on --color-primary       3.5:1  (AA large text only) -> icons, big headings, decoration
+   *  - --color-text on --bg-muted    14.2:1
+   *  - --color-text on --color-accent 10.0:1 -> yellow is for small highlights with dark text
+   */
   :root {
+    --color-primary: #0f9d58;
+    --color-primary-dark: #0a7a4a;
+    --color-primary-darker: #086b40;
+    --color-accent: #ffc857;
+    --color-accent-soft: #fff4dc;
+    --bg-muted: #eaf9f0;
+    --bg-soft: #f3fff6;
+    --color-text: #0b2a1a;
+    --color-text-muted: #3d5a47;
+
+    /* Motion tokens: keep everything between 150 and 400ms. */
+    --motion-fast: 150ms;
+    --motion-base: 250ms;
+    --motion-slow: 400ms;
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+    /**
+     * Tailwind / shadcn theme tokens (HSL triplets, see tailwind.config.ts).
+     * Mapped onto the THRIVE palette above.
+     */
     --background: 0 0% 100%;
-    --foreground: 225 15% 15%;
+    --foreground: 149 59% 10%; /* #0B2A1A */
 
     --card: 0 0% 100%;
-    --card-foreground: 225 15% 15%;
+    --card-foreground: 149 59% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 225 15% 15%;
+    --popover-foreground: 149 59% 10%;
 
-    --primary: 142 76% 36%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 154 85% 26%; /* #0A7A4A, passes AA with white text */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 154 86% 23%; /* #086B40 */
 
-    --secondary: 142 20% 96%;
-    --secondary-foreground: 142 76% 20%;
+    --secondary: 144 55% 95%; /* #EAF9F0 */
+    --secondary-foreground: 154 85% 26%;
 
-    --muted: 210 40% 98%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 144 55% 97%;
+    --muted-foreground: 141 19% 30%; /* #3D5A47 */
 
-    --accent: 142 76% 36%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 144 55% 95%; /* hover fill for outline/ghost buttons */
+    --accent-foreground: 154 85% 22%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --sun: 40 100% 67%; /* #FFC857 */
+    --sun-foreground: 149 59% 10%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 142 76% 36%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 100%;
 
-    --radius: 0.75rem;
+    --border: 145 38% 87%; /* #D3EBDD */
+    --input: 145 30% 80%;
+    --ring: 154 85% 26%;
+
+    --radius: 0.875rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --background: 152 45% 7%;
+    --foreground: 140 40% 94%;
+    --card: 152 40% 10%;
+    --card-foreground: 140 40% 94%;
+    --popover: 152 40% 10%;
+    --popover-foreground: 140 40% 94%;
+    --primary: 151 83% 45%;
+    --primary-foreground: 152 45% 7%;
+    --primary-hover: 151 83% 40%;
+    --secondary: 152 30% 16%;
+    --secondary-foreground: 140 40% 94%;
+    --muted: 152 30% 14%;
+    --muted-foreground: 140 15% 70%;
+    --accent: 152 30% 16%;
+    --accent-foreground: 140 40% 94%;
+    --sun: 40 100% 67%;
+    --sun-foreground: 149 59% 10%;
+    --destructive: 0 62.8% 40%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 152 25% 20%;
+    --input: 152 25% 20%;
+    --ring: 151 83% 45%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,7 +115,163 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family:
+      "Nunito Variable",
+      "Nunito",
+      ui-rounded,
+      system-ui,
+      -apple-system,
+      "Segoe UI",
+      Roboto,
+      sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.01em;
+  }
+
+  /* Clear, consistent keyboard focus everywhere. */
+  :focus-visible {
+    outline: 3px solid var(--color-primary-dark);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  /* Small green pill, e.g. "Always free" next to the main CTA. */
+  .free-pill {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-bold;
+    background: #d6f5e3;
+    color: #065f3a; /* 6.7:1 on the pill */
+    box-shadow: inset 0 0 0 1px #b3e6c9;
+  }
+
+  /* Animated underline for text links. */
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 2px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size var(--motion-base) var(--ease-out);
+  }
+  .link-underline:hover,
+  .link-underline:focus-visible {
+    background-size: 100% 2px;
+  }
+
+  /* Lift effect for interactive cards. */
+  .card-lift {
+    transition:
+      transform var(--motion-base) var(--ease-out),
+      box-shadow var(--motion-base) var(--ease-out);
+  }
+  .card-lift:hover,
+  .card-lift:focus-within {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px -12px rgb(10 122 74 / 0.35);
+  }
+}
+
+/* ---------- Animations ---------- */
+
+@keyframes thrive-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes thrive-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes thrive-sway {
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+/* Hero: gentle fade + rise on load. Use style="--delay: 80ms" to stagger. */
+.hero-animate {
+  opacity: 0;
+  animation: thrive-fade-up var(--motion-slow) var(--ease-out) forwards;
+  animation-delay: var(--delay, 0ms);
+}
+
+/* Reveal on scroll: useReveal() adds .is-visible via IntersectionObserver. */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity var(--motion-slow) var(--ease-out),
+    transform var(--motion-slow) var(--ease-out);
+  transition-delay: var(--delay, 0ms);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.float-slow {
+  animation: thrive-float 4s ease-in-out infinite;
+}
+.sway {
+  transform-origin: 50% 100%;
+  animation: thrive-sway 3.5s ease-in-out infinite;
+}
+
+/* Respect reduced motion: show everything, no movement. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .hero-animate,
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+  .float-slow,
+  .sway {
+    animation: none !important;
+  }
+  .card-lift:hover,
+  .card-lift:focus-within {
+    transform: none;
+  }
+  .link-underline {
+    transition: none;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
