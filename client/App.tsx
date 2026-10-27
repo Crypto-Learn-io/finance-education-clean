@@ -7,7 +7,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import Courses from "./pages/Courses";
-import About from "./pages/About";
 import Quizzes from "./pages/Quizzes";
 import NotFound from "./pages/NotFound";
 import Chatbot from "./components/Chatbot";
@@ -41,7 +40,8 @@ export default function App() {
               path="/pricing"
               element={<Navigate to="/courses" replace />}
             />
-            <Route path="/about" element={<About />} />
+            {/* About section was removed. Old links go home. */}
+            <Route path="/about" element={<Navigate to="/" replace />} />
             <Route path="/quizzes" element={<Quizzes />} />
 
             {/* Lesson Routes */}

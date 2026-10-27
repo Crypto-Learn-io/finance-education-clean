@@ -21,7 +21,6 @@ import {
   TrendingDown,
   Percent,
   Clock,
-  Users,
   Play,
   BookOpen,
   CheckCircle,
@@ -237,7 +236,7 @@ export default function Courses() {
         </div>
 
         {/* Course Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           <Card className="text-center">
             <CardContent className="pt-6">
               <BookOpen className="w-8 h-8 text-primary mx-auto mb-2" />
@@ -257,13 +256,6 @@ export default function Courses() {
               <Clock className="w-8 h-8 text-primary mx-auto mb-2" />
               <div className="text-2xl font-bold text-gray-900">15+</div>
               <div className="text-sm text-gray-600">Hours of Content</div>
-            </CardContent>
-          </Card>
-          <Card className="text-center">
-            <CardContent className="pt-6">
-              <Users className="w-8 h-8 text-primary mx-auto mb-2" />
-              <div className="text-2xl font-bold text-gray-900">1000+</div>
-              <div className="text-sm text-gray-600">Students</div>
             </CardContent>
           </Card>
         </div>

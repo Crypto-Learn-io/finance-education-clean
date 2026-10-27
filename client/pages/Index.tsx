@@ -248,8 +248,7 @@ export default function Index() {
                 Ready to Take Control of Your Finances?
               </h2>
               <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-                Join thousands of learners who have improved their financial
-                literacy with our comprehensive courses.
+                Pick a course and start your first lesson today. It's free.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button

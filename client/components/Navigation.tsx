@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { GraduationCap, BookOpen, Users, Brain } from "lucide-react";
+import { GraduationCap, BookOpen, Brain } from "lucide-react";
 
 export default function Navigation() {
   const location = useLocation();
@@ -8,7 +8,6 @@ export default function Navigation() {
   const navItems = [
     { href: "/", label: "Home", icon: GraduationCap },
     { href: "/courses", label: "Courses", icon: BookOpen },
-    { href: "/about", label: "About", icon: Users },
     { href: "/quizzes", label: "Quizzes", icon: Brain },
   ];
 
