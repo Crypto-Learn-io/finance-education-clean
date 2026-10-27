@@ -183,7 +183,11 @@ export default function QuizComponent({
                       {xpInfo.nextLevel?.minXP || "Max Level"}
                     </span>
                   </div>
-                  <Progress value={xpInfo.progressToNext} className="h-3" />
+                  <Progress
+                    value={xpInfo.progressToNext}
+                    className="h-3"
+                    aria-label="Progress to next level"
+                  />
                   {xpInfo.nextLevel && (
                     <div className="text-sm text-gray-600">
                       {xpInfo.xpNeededForNext} XP to {xpInfo.nextLevel.badge}{" "}
@@ -308,6 +312,7 @@ export default function QuizComponent({
           </Badge>
         </div>
         <Progress
+          aria-label="Quiz progress"
           value={((currentQuestionIndex + 1) / quiz.questions.length) * 100}
           className="h-3"
         />

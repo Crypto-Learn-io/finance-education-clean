@@ -46,33 +46,39 @@ export default function App() {
 
             {/* Lesson Routes */}
             <Route
-              path="/lessons/budgeting-and-saving"
+              path="/lessons/budgeting-and-saving/*"
               element={<BudgetingAndSaving />}
             />
             <Route
-              path="/lessons/understanding-credit"
+              path="/lessons/understanding-credit/*"
               element={<UnderstandingCredit />}
             />
-            <Route path="/lessons/interest-rates" element={<InterestRates />} />
             <Route
-              path="/lessons/loans-and-mortgages"
+              path="/lessons/interest-rates/*"
+              element={<InterestRates />}
+            />
+            <Route
+              path="/lessons/loans-and-mortgages/*"
               element={<LoansAndMortgages />}
             />
             <Route
-              path="/lessons/investment-basics"
+              path="/lessons/investment-basics/*"
               element={<InvestmentBasics />}
             />
-            <Route path="/lessons/risk-vs-return" element={<RiskVsReturn />} />
             <Route
-              path="/lessons/understanding-inflation"
+              path="/lessons/risk-vs-return/*"
+              element={<RiskVsReturn />}
+            />
+            <Route
+              path="/lessons/understanding-inflation/*"
               element={<UnderstandingInflation />}
             />
             <Route
-              path="/lessons/tax-fundamentals"
+              path="/lessons/tax-fundamentals/*"
               element={<TaxFundamentals />}
             />
             <Route
-              path="/lessons/retirement-planning"
+              path="/lessons/retirement-planning/*"
               element={<RetirementPlanning />}
             />
 

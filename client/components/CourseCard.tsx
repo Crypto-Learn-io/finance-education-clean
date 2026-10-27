@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle2, Clock, Trophy, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Course, pillarWord } from "@/data/courses";
+import { useCourseProgress } from "@/lib/course-progress";
 
 interface CourseCardProps {
   course: Course;
@@ -19,6 +20,8 @@ export default function CourseCard({
   compact = false,
 }: CourseCardProps) {
   const headingId = `course-${course.slug}`;
+  const { done } = useCourseProgress(course.slug);
+  const started = done.size > 0;
 
   return (
     <article
@@ -104,7 +107,7 @@ export default function CourseCard({
       <div className="mt-auto pt-6">
         <Button asChild className="w-full" size="lg">
           <Link to={course.path}>
-            Start for free
+            {started ? "Continue" : "Start for free"}
             <span className="sr-only">: {course.title}</span>
             <ArrowRight
               className="transition-transform duration-200 group-hover:translate-x-1"
