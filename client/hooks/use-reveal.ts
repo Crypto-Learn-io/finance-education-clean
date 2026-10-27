@@ -1,42 +1,48 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
 
 /**
  * Adds `.is-visible` to every `.reveal` element when it scrolls into view.
- * CSS in global.css does the actual animation and turns it off for
- * prefers-reduced-motion. Re-scans on every route change.
+ * CSS in global.css does the animation and turns it off for
+ * prefers-reduced-motion. A MutationObserver picks up elements that mount
+ * later (for example after a filter change).
  */
 export function useReveal() {
-  const { pathname } = useLocation();
-
   useEffect(() => {
-    const els = Array.from(
-      document.querySelectorAll<HTMLElement>(".reveal:not(.is-visible)"),
-    );
-    if (els.length === 0) return;
-
     const reduceMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
     ).matches;
+    const canObserve = "IntersectionObserver" in window;
 
-    if (reduceMotion || !("IntersectionObserver" in window)) {
-      els.forEach((el) => el.classList.add("is-visible"));
-      return;
-    }
+    const io = canObserve
+      ? new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                io?.unobserve(entry.target);
+              }
+            });
+          },
+          { rootMargin: "0px 0px -8% 0px", threshold: 0.12 },
+        )
+      : null;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
+    const scan = () => {
+      document
+        .querySelectorAll<HTMLElement>(".reveal:not(.is-visible)")
+        .forEach((el) => {
+          if (reduceMotion || !io) el.classList.add("is-visible");
+          else io.observe(el);
         });
-      },
-      { rootMargin: "0px 0px -8% 0px", threshold: 0.12 },
-    );
+    };
 
-    els.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, [pathname]);
+    scan();
+    const mo = new MutationObserver(scan);
+    mo.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      mo.disconnect();
+      io?.disconnect();
+    };
+  }, []);
 }

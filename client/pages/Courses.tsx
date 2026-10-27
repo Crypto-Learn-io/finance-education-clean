@@ -1,411 +1,151 @@
+import { CSSProperties, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
-import {
-  PiggyBank,
-  CreditCard,
-  TrendingUp,
-  Target,
-  Calculator,
-  Shield,
-  Building,
-  TrendingDown,
-  Percent,
-  Clock,
-  Play,
-  BookOpen,
-  CheckCircle,
-} from "lucide-react";
+import CourseCard from "@/components/CourseCard";
+import { cn } from "@/lib/utils";
+import { BookOpen, Video, Brain, ArrowRight } from "lucide-react";
+import { courses, learningPath, Course } from "@/data/courses";
+
+type Filter = "All" | Course["level"];
+const filters: { value: Filter; label: string }[] = [
+  { value: "All", label: "All courses" },
+  { value: "Beginner", label: "Start here" },
+  { value: "Intermediate", label: "Next steps" },
+];
 
 export default function Courses() {
-  const courses = [
-    {
-      id: 1,
-      title: "Budgeting & Saving",
-      description:
-        "Master the fundamentals of personal budgeting, tracking expenses, and building a solid savings foundation for your future.",
-      icon: PiggyBank,
-      lessons: 6,
-      duration: "2 hours",
-      difficulty: "Beginner",
-      progress: 0,
-      color: "bg-blue-100 text-blue-600",
-      topics: [
-        "Creating a Budget",
-        "Tracking Expenses",
-        "Emergency Funds",
-        "Savings Goals",
-        "50/30/20 Rule",
-        "Money-Saving Tips",
-      ],
-    },
-    {
-      id: 2,
-      title: "Understanding Credit",
-      description:
-        "Learn about credit scores, debt management, and how to build and maintain excellent credit throughout your life.",
-      icon: CreditCard,
-      lessons: 5,
-      duration: "1.5 hours",
-      difficulty: "Beginner",
-      progress: 0,
-      color: "bg-purple-100 text-purple-600",
-      topics: [
-        "Credit Scores Explained",
-        "Building Credit History",
-        "Debt Management",
-        "Credit Cards vs Loans",
-        "Improving Your Score",
-      ],
-    },
-    {
-      id: 3,
-      title: "Interest Rates Explained",
-      description:
-        "Understand simple vs compound interest, how rates affect loans and investments, and make informed financial decisions.",
-      icon: Percent,
-      lessons: 4,
-      duration: "1 hour",
-      difficulty: "Beginner",
-      progress: 0,
-      color: "bg-yellow-100 text-yellow-600",
-      topics: [
-        "Simple Interest",
-        "Compound Interest",
-        "APR vs APY",
-        "Rate Comparisons",
-      ],
-    },
-    {
-      id: 4,
-      title: "Loans & Mortgages",
-      description:
-        "Navigate the world of borrowing, from personal loans to mortgages, and understand terms that affect your payments.",
-      icon: Building,
-      lessons: 7,
-      duration: "2.5 hours",
-      difficulty: "Intermediate",
-      progress: 0,
-      color: "bg-indigo-100 text-indigo-600",
-      topics: [
-        "Types of Loans",
-        "Mortgage Basics",
-        "Down Payments",
-        "Loan Terms",
-        "Refinancing",
-        "PMI Explained",
-        "First-Time Buyer Tips",
-      ],
-    },
-    {
-      id: 5,
-      title: "Investment Basics",
-      description:
-        "Introduction to stocks, bonds, mutual funds, ETFs, and building a diversified investment portfolio.",
-      icon: TrendingUp,
-      lessons: 8,
-      duration: "3 hours",
-      difficulty: "Intermediate",
-      progress: 0,
-      color: "bg-green-100 text-green-600",
-      topics: [
-        "Stock Market Basics",
-        "Bonds & Fixed Income",
-        "Mutual Funds",
-        "ETFs",
-        "Portfolio Diversification",
-        "Dollar-Cost Averaging",
-        "Index Investing",
-        "Risk Assessment",
-      ],
-    },
-    {
-      id: 6,
-      title: "Risk vs Return",
-      description:
-        "Learn to balance investment risk with potential returns and create a strategy that matches your risk tolerance.",
-      icon: Shield,
-      lessons: 5,
-      duration: "1.5 hours",
-      difficulty: "Intermediate",
-      progress: 0,
-      color: "bg-red-100 text-red-600",
-      topics: [
-        "Risk Types",
-        "Risk Tolerance",
-        "Asset Allocation",
-        "Risk-Return Relationship",
-        "Diversification Benefits",
-      ],
-    },
-    {
-      id: 7,
-      title: "Understanding Inflation",
-      description:
-        "Discover how inflation affects your money over time and strategies to protect your purchasing power.",
-      icon: TrendingDown,
-      lessons: 3,
-      duration: "45 minutes",
-      difficulty: "Beginner",
-      progress: 0,
-      color: "bg-orange-100 text-orange-600",
-      topics: [
-        "What is Inflation",
-        "Historical Inflation Rates",
-        "Inflation Protection Strategies",
-      ],
-    },
-    {
-      id: 8,
-      title: "Tax Fundamentals",
-      description:
-        "Learn about different types of taxes, deductions, credits, and strategies to minimize your tax burden legally.",
-      icon: Calculator,
-      lessons: 6,
-      duration: "2 hours",
-      difficulty: "Intermediate",
-      progress: 0,
-      color: "bg-teal-100 text-teal-600",
-      topics: [
-        "Income Tax Basics",
-        "Tax Brackets",
-        "Deductions vs Credits",
-        "Tax-Advantaged Accounts",
-        "Tax Planning",
-        "Filing Basics",
-      ],
-    },
-    {
-      id: 9,
-      title: "Retirement Planning",
-      description:
-        "Plan for your future with 401k, IRA, and other retirement accounts. Learn about contribution limits and strategies.",
-      icon: Target,
-      lessons: 7,
-      duration: "2.5 hours",
-      difficulty: "Intermediate",
-      progress: 0,
-      color: "bg-pink-100 text-pink-600",
-      topics: [
-        "401k Basics",
-        "Traditional vs Roth IRA",
-        "Contribution Limits",
-        "Employer Matching",
-        "Retirement Timeline",
-        "Social Security",
-        "Withdrawal Strategies",
-      ],
-    },
-  ];
+  const [filter, setFilter] = useState<Filter>("All");
 
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
-      case "Beginner":
-        return "bg-green-100 text-green-700";
-      case "Intermediate":
-        return "bg-yellow-100 text-yellow-700";
-      case "Advanced":
-        return "bg-red-100 text-red-700";
-      default:
-        return "bg-gray-100 text-gray-700";
-    }
-  };
+  const shown = useMemo(
+    () =>
+      filter === "All" ? courses : courses.filter((c) => c.level === filter),
+    [filter],
+  );
+
+  const pathCourses = learningPath
+    .map((slug) => courses.find((c) => c.slug === slug))
+    .filter(Boolean) as Course[];
 
   return (
     <Layout>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Financial Literacy Courses
+      {/* Header */}
+      <section className="bg-gradient-to-b from-mint to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-10 text-center">
+          <span className="free-pill hero-animate">Every course is free</span>
+          <h1
+            className="hero-animate mt-4 text-4xl md:text-5xl font-black text-ink"
+            style={{ "--delay": "80ms" } as CSSProperties}
+          >
+            Pick a course. Start learning.
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Master essential financial skills through our comprehensive course
-            library. Each course includes interactive lessons, expert videos,
-            and quizzes to test your knowledge.
+          <p
+            className="hero-animate mt-4 text-lg md:text-xl text-ink-muted max-w-2xl mx-auto"
+            style={{ "--delay": "160ms" } as CSSProperties}
+          >
+            Each course has short reading parts, a video, and a quiz. Go at your
+            own pace.
           </p>
+
+          <ul
+            className="hero-animate mt-8 flex flex-wrap justify-center gap-3 text-sm font-bold text-ink"
+            style={{ "--delay": "240ms" } as CSSProperties}
+          >
+            <li className="flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm">
+              <BookOpen className="w-4 h-4 text-brand" aria-hidden="true" />
+              {courses.length} courses
+            </li>
+            <li className="flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm">
+              <Video className="w-4 h-4 text-brand" aria-hidden="true" />A video
+              in every course
+            </li>
+            <li className="flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm">
+              <Brain className="w-4 h-4 text-brand" aria-hidden="true" />
+              Quizzes to check what you know
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Suggested path */}
+      <section
+        aria-labelledby="path-heading"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
+        <div className="reveal rounded-3xl bg-ink px-6 py-6 md:px-8 text-white">
+          <h2 id="path-heading" className="text-lg font-extrabold">
+            New here? Try this order.
+          </h2>
+          <ol className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {pathCourses.map((c, i) => (
+              <li key={c.slug}>
+                <Link
+                  to={c.path}
+                  className="flex items-center gap-3 rounded-2xl bg-white/10 px-4 py-3 font-bold transition-colors duration-200 hover:bg-white/20"
+                >
+                  <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-sun text-sun-foreground text-sm font-black">
+                    {i + 1}
+                  </span>
+                  {c.title}
+                </Link>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* Course grid */}
+      <section
+        aria-labelledby="all-courses"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
+      >
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+          <h2
+            id="all-courses"
+            className="text-2xl md:text-3xl font-black text-ink"
+          >
+            All courses
+          </h2>
+          <div
+            role="group"
+            aria-label="Filter courses"
+            className="inline-flex self-start rounded-full bg-mint p-1"
+          >
+            {filters.map((f) => (
+              <button
+                key={f.value}
+                type="button"
+                aria-pressed={filter === f.value}
+                onClick={() => setFilter(f.value)}
+                className={cn(
+                  "rounded-full px-4 py-2 text-sm font-bold transition-colors duration-200",
+                  filter === f.value
+                    ? "bg-primary text-primary-foreground shadow-sm"
+                    : "text-primary hover:bg-white",
+                )}
+              >
+                {f.label}
+              </button>
+            ))}
+          </div>
         </div>
 
-        {/* Course Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <Card className="text-center">
-            <CardContent className="pt-6">
-              <BookOpen className="w-8 h-8 text-primary mx-auto mb-2" />
-              <div className="text-2xl font-bold text-gray-900">9</div>
-              <div className="text-sm text-gray-600">Total Courses</div>
-            </CardContent>
-          </Card>
-          <Card className="text-center">
-            <CardContent className="pt-6">
-              <Play className="w-8 h-8 text-primary mx-auto mb-2" />
-              <div className="text-2xl font-bold text-gray-900">50+</div>
-              <div className="text-sm text-gray-600">Video Lessons</div>
-            </CardContent>
-          </Card>
-          <Card className="text-center">
-            <CardContent className="pt-6">
-              <Clock className="w-8 h-8 text-primary mx-auto mb-2" />
-              <div className="text-2xl font-bold text-gray-900">15+</div>
-              <div className="text-sm text-gray-600">Hours of Content</div>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Course Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {courses.map((course) => (
-            <Card
-              key={course.id}
-              className="hover:shadow-lg transition-shadow border-0 shadow-md"
-            >
-              <CardHeader className="pb-4">
-                <div className="flex items-start justify-between mb-4">
-                  <div
-                    className={`w-12 h-12 rounded-lg flex items-center justify-center ${course.color}`}
-                  >
-                    <course.icon className="w-6 h-6" />
-                  </div>
-                  <div className="flex gap-2">
-                    <Badge className={getDifficultyColor(course.difficulty)}>
-                      {course.difficulty}
-                    </Badge>
-                    <Badge variant="outline">{course.lessons} lessons</Badge>
-                  </div>
-                </div>
-                <CardTitle className="text-xl mb-2">{course.title}</CardTitle>
-                <CardDescription className="text-base mb-4">
-                  {course.description}
-                </CardDescription>
-
-                {/* Course Info */}
-                <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
-                  <div className="flex items-center gap-1">
-                    <Clock className="w-4 h-4" />
-                    {course.duration}
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <BookOpen className="w-4 h-4" />
-                    {course.lessons} lessons
-                  </div>
-                </div>
-
-                {/* Progress */}
-                <div className="mb-4">
-                  <div className="flex justify-between text-sm mb-2">
-                    <span>Progress</span>
-                    <span>{course.progress}%</span>
-                  </div>
-                  <Progress value={course.progress} className="h-2" />
-                </div>
-              </CardHeader>
-
-              <CardContent className="pt-0">
-                {/* Topics */}
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">
-                    Topics Covered:
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {course.topics.slice(0, 4).map((topic, index) => (
-                      <Badge
-                        key={index}
-                        variant="secondary"
-                        className="text-xs"
-                      >
-                        {topic}
-                      </Badge>
-                    ))}
-                    {course.topics.length > 4 && (
-                      <Badge variant="secondary" className="text-xs">
-                        +{course.topics.length - 4} more
-                      </Badge>
-                    )}
-                  </div>
-                </div>
-
-                <Button asChild className="w-full" size="lg">
-                  <Link
-                    to={`/lessons/${
-                      course.id === 1
-                        ? "budgeting-and-saving"
-                        : course.id === 2
-                          ? "understanding-credit"
-                          : course.id === 3
-                            ? "interest-rates"
-                            : course.id === 4
-                              ? "loans-and-mortgages"
-                              : course.id === 5
-                                ? "investment-basics"
-                                : course.id === 6
-                                  ? "risk-vs-return"
-                                  : course.id === 7
-                                    ? "understanding-inflation"
-                                    : course.id === 8
-                                      ? "tax-fundamentals"
-                                      : course.id === 9
-                                        ? "retirement-planning"
-                                        : "budgeting-and-saving"
-                    }`}
-                  >
-                    {course.progress > 0 ? (
-                      <>
-                        <Play className="mr-2 w-4 h-4" />
-                        Continue Course
-                      </>
-                    ) : (
-                      <>
-                        <BookOpen className="mr-2 w-4 h-4" />
-                        Start Course
-                      </>
-                    )}
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          {shown.map((course, i) => (
+            <CourseCard key={course.slug} course={course} index={i} />
           ))}
         </div>
 
-        {/* Learning Path Suggestion */}
-        <div className="mt-16 bg-gradient-to-r from-primary/10 to-blue-50 rounded-2xl p-8">
-          <div className="text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Recommended Learning Path
-            </h2>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              New to finance? Start with these courses in order for the best
-              learning experience.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              {[
-                "Budgeting & Saving",
-                "Understanding Credit",
-                "Interest Rates Explained",
-                "Investment Basics",
-              ].map((course, index) => (
-                <div key={course} className="flex items-center">
-                  <div className="bg-white rounded-full px-4 py-2 shadow-sm">
-                    <span className="text-sm font-medium">
-                      {index + 1}. {course}
-                    </span>
-                  </div>
-                  {index < 3 && (
-                    <div className="w-8 h-px bg-gray-300 mx-2"></div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
+        <p className="mt-12 text-center text-ink-muted">
+          Done with a course?{" "}
+          <Link
+            to="/quizzes"
+            className="link-underline inline-flex items-center gap-1 font-bold text-primary"
+          >
+            Test yourself with a quiz
+            <ArrowRight className="w-4 h-4" aria-hidden="true" />
+          </Link>
+        </p>
+      </section>
     </Layout>
   );
 }
