@@ -16,12 +16,21 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <GraduationCap className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-gray-900">
-                FintechLearn
+            <Link
+              to="/"
+              className="flex items-center space-x-2"
+              aria-label="THRIVE: Track, Habits, Responsibility, Invest, Value, Earn. Home"
+              title="THRIVE: Track, Habits, Responsibility, Invest, Value, Earn"
+            >
+              <img
+                src="/favicon.svg"
+                alt=""
+                width={32}
+                height={32}
+                className="w-8 h-8"
+              />
+              <span className="text-xl font-extrabold tracking-wide text-gray-900">
+                THRIVE
               </span>
             </Link>
           </div>

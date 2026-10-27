@@ -45,7 +45,7 @@ export default function Chatbot({ className }: ChatbotProps) {
     {
       id: "1",
       content:
-        "Hi! I'm your AI finance tutor from FintechLearn. I'm here to help you learn about budgeting, saving, investing, credit management, and more. Ask me any personal finance question!",
+        "Hi! I'm the THRIVE money tutor. Ask me anything about saving, budgeting, credit, or investing. No question is too small.",
       sender: "bot",
       timestamp: new Date(),
     },
@@ -146,6 +146,7 @@ export default function Chatbot({ className }: ChatbotProps) {
               "fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full shadow-lg hover:shadow-xl transition-all",
               className,
             )}
+            aria-label="Ask the THRIVE money tutor"
           >
             <MessageCircle className="h-6 w-6" />
           </Button>
@@ -156,12 +157,11 @@ export default function Chatbot({ className }: ChatbotProps) {
               <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
                 <Bot className="w-5 h-5 text-white" />
               </div>
-              AI Finance Tutor
+              THRIVE Money Tutor
               <Sparkles className="w-4 h-4 text-yellow-500" />
             </DialogTitle>
             <DialogDescription>
-              Ask me anything about personal finance, budgeting, investing, and
-              more!
+              Ask about saving, budgeting, credit, or investing.
             </DialogDescription>
           </DialogHeader>
 
