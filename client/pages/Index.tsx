@@ -106,6 +106,10 @@ export default function Index() {
               expert videos, and personalized AI tutoring. From budgeting basics
               to investment strategies, we'll guide you every step of the way.
             </p>
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-green-100 text-green-800 px-3 py-1 text-sm font-semibold mb-4">
+              <CheckCircle className="w-4 h-4" aria-hidden="true" />
+              Always free
+            </span>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="text-lg px-8 py-3">
                 <Link to="/courses">
@@ -236,79 +240,6 @@ export default function Index() {
           </div>
         </section>
 
-        {/* Pricing Teaser */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Choose Your Learning Path
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Start free or unlock premium features with personalized coaching
-              and advanced AI support
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Card className="text-center border-2 border-gray-200 hover:border-gray-300 transition-colors">
-              <CardContent className="p-8">
-                <div className="text-4xl font-bold text-gray-900 mb-2">
-                  Free
-                </div>
-                <div className="text-gray-600 mb-4">
-                  Basic courses & community
-                </div>
-                <Button asChild variant="outline" className="w-full">
-                  <Link to="/courses">Start Free</Link>
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center border-2 border-primary bg-primary/5 hover:bg-primary/10 transition-colors relative">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <Badge className="bg-primary text-white">Most Popular</Badge>
-              </div>
-              <CardContent className="p-8">
-                <div className="text-4xl font-bold text-gray-900 mb-2">
-                  $10.99<span className="text-lg text-gray-600">/year</span>
-                </div>
-                <div className="text-gray-600 mb-4">
-                  Premium lessons & AI tutor
-                </div>
-                <Button asChild className="w-full">
-                  <Link to="/pricing">Choose Premium</Link>
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center border-2 border-yellow-300 bg-gradient-to-br from-yellow-50 to-orange-50 hover:from-yellow-100 hover:to-orange-100 transition-colors">
-              <CardContent className="p-8">
-                <div className="text-4xl font-bold text-gray-900 mb-2">
-                  $15.99<span className="text-lg text-gray-600">/year</span>
-                </div>
-                <div className="text-gray-600 mb-4">
-                  Personal coaching included
-                </div>
-                <Button
-                  asChild
-                  variant="outline"
-                  className="w-full border-yellow-600 text-yellow-700 hover:bg-yellow-600 hover:text-white"
-                >
-                  <Link to="/pricing">Go Pro</Link>
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="text-center mt-8">
-            <Button asChild variant="ghost" size="lg">
-              <Link to="/pricing">
-                View All Plans & Features
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-            </Button>
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="bg-primary text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -330,17 +261,6 @@ export default function Index() {
                   <Link to="/courses">
                     Start Learning Free
                     <ArrowRight className="ml-2 w-5 h-5" />
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="text-lg px-8 py-3 text-white border-white hover:bg-white hover:text-primary"
-                >
-                  <Link to="/pricing">
-                    View Pricing
-                    <Target className="ml-2 w-5 h-5" />
                   </Link>
                 </Button>
               </div>
