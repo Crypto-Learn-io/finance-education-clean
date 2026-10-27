@@ -72,12 +72,13 @@ export default function Quizzes() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Financial Knowledge Quizzes
+          <span className="free-pill hero-animate">Free to play</span>
+          <h1 className="hero-animate mt-4 text-4xl md:text-5xl font-black text-ink mb-4">
+            Money quizzes
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Test your financial literacy with our interactive quizzes. Track
-            your progress and identify areas for improvement.
+          <p className="hero-animate text-xl text-ink-muted max-w-2xl mx-auto">
+            Quick quizzes to check what you learned. Earn points and level up as
+            you go.
           </p>
         </div>
 
@@ -115,7 +116,11 @@ export default function Quizzes() {
                     </span>
                     <span>{xpInfo.progressToNext}%</span>
                   </div>
-                  <Progress value={xpInfo.progressToNext} className="h-3" />
+                  <Progress
+                    value={xpInfo.progressToNext}
+                    className="h-3"
+                    aria-label="Progress to next level"
+                  />
                 </div>
               )}
             </CardContent>

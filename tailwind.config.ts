@@ -22,6 +22,26 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          hover: "hsl(var(--primary-hover))",
+        },
+        // THRIVE brand colors (see client/global.css for contrast notes)
+        brand: {
+          DEFAULT: "var(--color-primary)",
+          dark: "var(--color-primary-dark)",
+          darker: "var(--color-primary-darker)",
+        },
+        sun: {
+          DEFAULT: "hsl(var(--sun))",
+          foreground: "hsl(var(--sun-foreground))",
+          soft: "var(--color-accent-soft)",
+        },
+        mint: {
+          DEFAULT: "var(--bg-muted)",
+          soft: "var(--bg-soft)",
+        },
+        ink: {
+          DEFAULT: "var(--color-text)",
+          muted: "var(--color-text-muted)",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",

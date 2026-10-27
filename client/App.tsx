@@ -4,12 +4,10 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import Courses from "./pages/Courses";
-import About from "./pages/About";
 import Quizzes from "./pages/Quizzes";
-import Pricing from "./pages/Pricing";
 import NotFound from "./pages/NotFound";
 import Chatbot from "./components/Chatbot";
 
@@ -37,39 +35,50 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/courses" element={<Courses />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/about" element={<About />} />
+            {/* Pricing was removed: THRIVE is free. Old links go to courses. */}
+            <Route
+              path="/pricing"
+              element={<Navigate to="/courses" replace />}
+            />
+            {/* About section was removed. Old links go home. */}
+            <Route path="/about" element={<Navigate to="/" replace />} />
             <Route path="/quizzes" element={<Quizzes />} />
 
             {/* Lesson Routes */}
             <Route
-              path="/lessons/budgeting-and-saving"
+              path="/lessons/budgeting-and-saving/*"
               element={<BudgetingAndSaving />}
             />
             <Route
-              path="/lessons/understanding-credit"
+              path="/lessons/understanding-credit/*"
               element={<UnderstandingCredit />}
             />
-            <Route path="/lessons/interest-rates" element={<InterestRates />} />
             <Route
-              path="/lessons/loans-and-mortgages"
+              path="/lessons/interest-rates/*"
+              element={<InterestRates />}
+            />
+            <Route
+              path="/lessons/loans-and-mortgages/*"
               element={<LoansAndMortgages />}
             />
             <Route
-              path="/lessons/investment-basics"
+              path="/lessons/investment-basics/*"
               element={<InvestmentBasics />}
             />
-            <Route path="/lessons/risk-vs-return" element={<RiskVsReturn />} />
             <Route
-              path="/lessons/understanding-inflation"
+              path="/lessons/risk-vs-return/*"
+              element={<RiskVsReturn />}
+            />
+            <Route
+              path="/lessons/understanding-inflation/*"
               element={<UnderstandingInflation />}
             />
             <Route
-              path="/lessons/tax-fundamentals"
+              path="/lessons/tax-fundamentals/*"
               element={<TaxFundamentals />}
             />
             <Route
-              path="/lessons/retirement-planning"
+              path="/lessons/retirement-planning/*"
               element={<RetirementPlanning />}
             />
 

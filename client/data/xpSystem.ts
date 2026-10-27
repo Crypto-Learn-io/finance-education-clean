@@ -143,6 +143,7 @@ export function getXPProgress(totalXP: number): {
 // Local storage helpers for user progress
 export function saveUserProgress(progress: UserProgress): void {
   if (typeof window !== "undefined") {
+    // Storage key keeps the pre-THRIVE name so existing learners keep their progress.
     localStorage.setItem("fintechlearn_progress", JSON.stringify(progress));
   }
 }
