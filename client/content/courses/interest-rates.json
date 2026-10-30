@@ -1,0 +1,340 @@
+{
+  "schemaVersion": 1,
+  "slug": "interest-rates",
+  "meta": {
+    "title": "Interest Rates",
+    "order": 3,
+    "age": "Ages 12–16",
+    "level": "Beginner",
+    "blurb": "Interest can work for you or against you. See how small rates grow big over time.",
+    "objectives": [
+      "Tell simple and compound interest apart",
+      "Compare APR and APY",
+      "See why starting early pays off"
+    ],
+    "outcome": "By the end, you can compare two rates and pick the better deal.",
+    "pillars": [
+      "V",
+      "I"
+    ],
+    "icon": "Percent",
+    "tint": "bg-amber-100 text-amber-800",
+    "time": "3 modules, about 30 min"
+  },
+  "modules": [
+    {
+      "id": "m1",
+      "title": "The basics",
+      "summary": "Watch the video, then learn the key ideas.",
+      "discussionPrompt": "Where have you seen interest in real life?",
+      "lessons": [
+        {
+          "id": "watch",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "video",
+              "type": "video",
+              "title": "Simple vs. Compound Interest | Simple Beginners Guide",
+              "source": {
+                "youtubeId": "lMVwYoiiV0w"
+              },
+              "checkpoints": [
+                {
+                  "time": 60,
+                  "question": {
+                    "id": "i-v1",
+                    "prompt": "Simple interest is paid on…",
+                    "options": [
+                      "Only the starting amount",
+                      "The starting amount plus past interest",
+                      "Only the interest",
+                      "Nothing until year 10"
+                    ],
+                    "answer": 0,
+                    "hint": "Simple means it never snowballs.",
+                    "explanation": "Simple interest is figured only on the original amount, called the principal."
+                  }
+                },
+                {
+                  "time": 150,
+                  "question": {
+                    "id": "i-v2",
+                    "prompt": "Why does compound interest grow faster?",
+                    "options": [
+                      "The rate goes up each year",
+                      "You earn interest on your interest",
+                      "Banks add bonuses",
+                      "It doesn't"
+                    ],
+                    "answer": 1,
+                    "hint": "Think of a snowball rolling downhill.",
+                    "explanation": "Each period's interest is added to the balance, so the next period earns interest on a bigger amount."
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Learn the key ideas",
+          "items": [
+            {
+              "id": "part-1",
+              "type": "reading",
+              "title": "Understanding Interest: The Foundation of Finance",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Interest is one of the most fundamental concepts in personal finance, yet it's often misunderstood. At its core, interest represents the time value of money - the idea that money available today is worth more than the same amount in the future because of its earning potential.\n\n**The Dual Nature of Interest**\nInterest serves two distinct purposes depending on your position:\n\n**For Borrowers**: Interest is the cost of accessing money you don't currently have. It compensates lenders for the risk they take and the opportunity cost of not using their money elsewhere.\n\n**For Savers/Investors**: Interest is the reward for delaying consumption and providing your money to others to use. It's how your money can grow over time without additional effort from you.\n\n**Factors That Influence Interest Rates**\nUnderstanding what drives interest rates helps you make better financial decisions:\n\n**Economic Conditions**: During economic growth, interest rates typically rise as demand for money increases. During recessions, rates often fall to stimulate borrowing and spending.\n\n**Inflation**: Lenders demand higher rates when inflation is expected to rise, ensuring their returns maintain purchasing power.\n\n**Risk Assessment**: Higher-risk borrowers pay higher rates. This is why credit scores matter so much for loan terms.\n\n**Time Frame**: Longer-term loans typically carry higher rates due to increased uncertainty over time.\n\n**Market Competition**: More competition among lenders generally leads to better rates for consumers.\n\n**Central Bank Policy**: The Federal Reserve's decisions significantly influence all other interest rates in the economy.\n\n**Real vs. Nominal Interest Rates**\n**Nominal Rate**: The stated interest rate before adjusting for inflation.\n**Real Rate**: The interest rate after accounting for inflation.\n\nIf you earn 3% interest but inflation is 2%, your real return is only 1%. This distinction is crucial for long-term financial planning."
+                },
+                {
+                  "type": "check",
+                  "question": {
+                    "id": "i-c1",
+                    "prompt": "$100 earns 10% simple interest for 2 years. How much interest is that?",
+                    "options": [
+                      "$10",
+                      "$20",
+                      "$21",
+                      "$200"
+                    ],
+                    "answer": 1,
+                    "hint": "Multiply principal × rate × years.",
+                    "explanation": "$100 × 0.10 × 2 = $20. With yearly compounding it would be $21."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "part-2",
+              "type": "reading",
+              "title": "Simple Interest: The Foundation",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Simple interest is calculated only on the original principal amount, making it the most straightforward form of interest calculation.\n\n**The Simple Interest Formula**\nInterest = Principal × Rate × Time\n\n**Example Calculation**\nIf you invest $1,000 at 5% simple interest for 3 years:\nInterest = $1,000 × 0.05 × 3 = $150\nTotal Amount = $1,000 + $150 = $1,150\n\n**Where You'll Encounter Simple Interest**\n• Short-term loans (some personal loans, payday loans)\n• Certificate of deposits (CDs) that pay interest at maturity\n• Some government bonds\n• Basic savings calculations\n\n**Advantages of Simple Interest**\n• Easy to calculate and understand\n• Predictable returns or costs\n• No compounding complexity\n\n**Disadvantages of Simple Interest**\n• Lower growth potential for investments\n• Less favorable for long-term wealth building\n• Doesn't reflect how money actually grows in most real-world scenarios\n\n**Real-World Example: Car Loan**\nA $20,000 car loan at 6% simple interest for 5 years:\nInterest = $20,000 × 0.06 × 5 = $6,000\nTotal Payment = $20,000 + $6,000 = $26,000\nMonthly Payment = $26,000 ÷ 60 months = $433.33\n\nHowever, most car loans use compound interest with monthly compounding, which would result in lower total interest due to principal reduction over time.\n\n**Simple Interest vs. Daily Life**\nWhile simple interest calculations are rare in modern finance, understanding them helps you:\n• Quickly estimate costs and returns\n• Understand the baseline before compounding effects\n• Appreciate the power of compound interest by comparison\n• Make rough calculations for financial planning"
+                }
+              ]
+            },
+            {
+              "id": "part-3",
+              "type": "reading",
+              "title": "Compound Interest: The Eighth Wonder of the World",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Compound interest is arguably the most powerful force in personal finance. Unlike simple interest, compound interest calculates returns not only on your original principal but also on all previously earned interest.\n\n**The Compound Interest Formula**\nA = P(1 + r/n)^(nt)\nWhere:\n• A = Final amount\n• P = Principal\n• r = Annual interest rate (decimal)\n• n = Number of times interest compounds per year\n• t = Number of years\n\n**The Magic of Compounding**\nLet's compare $1,000 invested at 7% for 30 years:\n\n**Simple Interest**: $1,000 + ($1,000 × 0.07 × 30) = $3,100\n\n**Compound Interest (Annual)**: $1,000 × (1.07)^30 = $7,612\n\nThe difference? $4,512 in additional growth, just from compounding!\n\n**Compounding Frequency Matters**\nThe same $1,000 at 7% for 30 years compounded:\n• Annually: $7,612\n• Semi-annually: $7,738\n• Quarterly: $7,804\n• Monthly: $7,841\n• Daily: $7,847\n\n**The Rule of 72**\nThis quick calculation estimates how long it takes money to double:\nTime to Double = 72 ÷ Interest Rate\n\nExamples:\n• At 6% interest: 72 ÷ 6 = 12 years to double\n• At 9% interest: 72 ÷ 9 = 8 years to double\n• At 3% interest: 72 ÷ 3 = 24 years to double\n\n**Real-World Compounding Examples**\n\n**Retirement Savings**\nStarting at age 25, saving $200/month at 7% annual return:\n• By age 35 (10 years): $33,014\n• By age 45 (20 years): $98,846\n• By age 55 (30 years): $224,370\n• By age 65 (40 years): $479,632\n\nThe last 10 years alone add $255,262 - more than the first 30 years combined!\n\n**Credit Card Debt (Compound Interest Working Against You)**\nA $5,000 credit card balance at 18% APR with minimum payments (2% of balance):\n• Year 1: $5,900 balance\n• Year 5: $6,923 balance\n• Year 10: $8,813 balance\n• Total time to pay off: 47 years\n• Total interest paid: $13,931\n\n**The Early Start Advantage**\nCompare two investors:\n• Early Eddie: Invests $2,000/year from age 25-35 (10 years), then stops\n• Late Larry: Invests $2,000/year from age 35-65 (30 years)\n\nBoth earn 10% annually. At age 65:\n• Early Eddie: $973,704 (invested $20,000)\n• Late Larry: $328,988 (invested $60,000)\n\nEddie invested less money but started earlier, demonstrating the incredible power of time in compounding.\n\n**Maximizing Compound Interest**\n• Start as early as possible\n• Contribute regularly and consistently\n• Reinvest all earnings and dividends\n• Choose accounts with higher compounding frequency\n• Avoid early withdrawals that break the compounding chain\n• Focus on long-term growth rather than short-term fluctuations"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "Going further",
+      "summary": "Try the interactive tool, then read on.",
+      "discussionPrompt": "Did the compound interest tool surprise you? What changed the result most?",
+      "lessons": [
+        {
+          "id": "try",
+          "title": "Try it",
+          "items": [
+            {
+              "id": "explore",
+              "type": "widget",
+              "title": "Watch compound interest grow",
+              "widget": {
+                "kind": "compound-interest",
+                "intro": "Change the starting amount, monthly savings, rate and years. Compare what you put in with what interest adds.",
+                "defaults": {
+                  "principal": 1000,
+                  "monthly": 50,
+                  "rate": 6,
+                  "years": 20
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "read-on",
+          "title": "Read on",
+          "items": [
+            {
+              "id": "part-4",
+              "type": "reading",
+              "title": "APR vs APY: Understanding the True Cost and Return",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "APR and APY are two critical terms that can make the difference between good and poor financial decisions. Understanding their differences helps you compare financial products accurately.\n\n**APR (Annual Percentage Rate)**\nAPR represents the total cost of borrowing money for a year, including:\n• Base interest rate\n• Loan origination fees\n• Points (for mortgages)\n• Other lender fees\n\n**What APR Tells You**\nAPR provides a standardized way to compare loan costs. A loan with a 5% interest rate plus $1,000 in fees might have a 5.5% APR, while a loan with 5.5% interest and no fees also has a 5.5% APR.\n\n**APR Examples by Loan Type**\n\n**Credit Cards**\n• APR typically ranges from 15-25%\n• Often variable, tied to prime rate\n• Different APRs for purchases, balance transfers, and cash advances\n• No additional fees included since credit cards don't have origination fees\n\n**Mortgages**\n• Purchase APR includes interest rate plus fees\n• Refinance APR accounts for new loan fees\n• Lower APR means lower total borrowing cost\n• Compare APRs when mortgage shopping\n\n**Personal Loans**\n• APR includes interest plus origination fees\n• Can range from 6% (excellent credit) to 36% (poor credit)\n• Fixed APR provides payment certainty\n\n**Auto Loans**\n• Dealer financing often has higher APRs than banks/credit unions\n• 0% APR promotions usually require excellent credit\n• Compare dealer financing APR to outside lender options\n\n**APY (Annual Percentage Yield)**\nAPY represents what you actually earn on savings or investments, accounting for compound interest.\n\n**APY Formula**\nAPY = (1 + r/n)^n - 1\nWhere r = nominal rate, n = compounding periods per year\n\n**APY Examples**\n\n**Savings Accounts**\nA 2% interest rate compounded:\n• Annually: 2% APY\n• Semi-annually: 2.01% APY\n• Quarterly: 2.015% APY\n• Monthly: 2.018% APY\n• Daily: 2.020% APY\n\n**Certificates of Deposit (CDs)**\n• Higher rates typically offer higher APY\n• Longer terms generally provide higher APY\n• Shop APY, not just interest rate\n\n**Investment Accounts**\n• Money market accounts often compound daily\n• Compare APY across different institutions\n• Consider minimum balance requirements\n\n**Key Differences Summary**\n• APR = Cost of borrowing (lower is better)\n• APY = Return on savings (higher is better)\n• APR includes fees; APY shows compounding effect\n• APR is for loans; APY is for savings/investments\n\n**Making Better Financial Decisions**\n• Always compare APRs when borrowing\n• Always compare APYs when saving\n• Don't be fooled by promotional rates without considering APR/APY\n• Factor in all fees and terms, not just the headline rate\n• Consider how long you'll keep the loan or investment"
+                },
+                {
+                  "type": "check",
+                  "question": {
+                    "id": "i-c2",
+                    "prompt": "Which number shows the yearly cost of borrowing, including some fees?",
+                    "options": [
+                      "APY",
+                      "APR",
+                      "CPI",
+                      "GDP"
+                    ],
+                    "answer": 1,
+                    "hint": "The one used on loans and credit cards.",
+                    "explanation": "APR is for borrowing. APY shows what savings earn with compounding."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "part-5",
+              "type": "reading",
+              "title": "Interest Rate Types and Structures",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Understanding different types of interest rates helps you choose the right financial products and manage risk effectively.\n\n**Fixed vs. Variable Interest Rates**\n\n**Fixed Interest Rates**\n• Rate stays the same throughout the loan or investment term\n• Provides payment predictability and budgeting certainty\n• Protection against rising interest rate environments\n• Typically higher initial rates than variable options\n\n**Best For**: Long-term planning, risk-averse borrowers, when rates are expected to rise\n\n**Variable Interest Rates**\n• Rate changes based on an underlying benchmark (prime rate, LIBOR, etc.)\n• Often start lower than fixed rates\n• Payments can increase or decrease over time\n• Can include rate caps and floors for protection\n\n**Best For**: Short-term needs, when rates are expected to fall, borrowers who can handle payment fluctuations\n\n**Common Interest Rate Benchmarks**\n\n**Prime Rate**: The rate banks charge their most creditworthy customers, typically 3% above the federal funds rate\n\n**LIBOR (being phased out)**: London Interbank Offered Rate, historically used for many variable rate products\n\n**SOFR**: Secured Overnight Financing Rate, replacing LIBOR for new products\n\n**Federal Funds Rate**: The rate banks charge each other for overnight loans, set by the Federal Reserve\n\n**Treasury Rates**: Interest rates on U.S. government securities, used as benchmarks for many consumer products\n\n**Specialized Interest Rate Products**\n\n**Teaser Rates**: Low introductory rates that increase after a specified period\n• Common in credit cards (0% APR promotions)\n• Adjustable-rate mortgages (ARM)\n• Balance transfer offers\n\n**Tiered Interest Rates**: Different rates based on account balance or loan amount\n• Higher balances often earn higher rates\n• Larger loans may qualify for better rates\n\n**Promotional Rates**: Temporary rates to attract new customers\n• May require meeting specific conditions\n• Important to understand post-promotional rates\n\n**Interest Rate Risk Management**\n\n**For Borrowers**:\n• Lock in fixed rates when rates are low\n• Consider variable rates for short-term needs\n• Understand rate adjustment mechanisms\n• Plan for potential payment increases\n\n**For Savers/Investors**:\n• Diversify across different rate types\n• Consider rate laddering strategies\n• Monitor rate environments for opportunities\n• Balance liquidity needs with rate maximization\n\n**Economic Factors Affecting Interest Rates**\n\n**Inflation**: Higher inflation expectations lead to higher rates\n**Economic Growth**: Strong growth typically increases rates\n**Government Policy**: Federal Reserve actions directly impact rates\n**Global Events**: International crises can affect U.S. rates\n**Supply and Demand**: Money supply and borrowing demand influence rates\n\nUnderstanding these factors helps you time major financial decisions and anticipate rate changes."
+                }
+              ]
+            },
+            {
+              "id": "part-6",
+              "type": "reading",
+              "title": "Strategic Applications of Interest Knowledge",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Understanding interest rates empowers you to make strategic financial decisions that can save or earn you thousands of dollars over your lifetime.\n\n**Debt Management Strategies**\n\n**Interest Rate Arbitrage**\n• Pay off high-interest debt before investing\n• If investment returns exceed debt interest rates, consider keeping low-rate debt\n• Example: Keep a 3% mortgage while investing in accounts earning 7%\n\n**Debt Consolidation Analysis**\nBefore consolidating debt, calculate:\n• Total interest under current structure\n• Total interest under consolidation\n• Impact on monthly cash flow\n• Any fees associated with consolidation\n\n**Refinancing Decisions**\nRefinance when:\n• Current rates are at least 0.5-1% below your existing rate\n• You plan to stay in the home long enough to recoup closing costs\n• Your credit score has improved significantly\n• You want to change loan terms (15-year vs. 30-year)\n\n**Investment Strategies Based on Interest Rates**\n\n**Rate Environment Analysis**\n**Rising Rate Environment**:\n• Consider shorter-term bonds and CDs\n• Variable rate investments may become more attractive\n• Focus on dividend-paying stocks over bonds\n• Lock in current fixed-rate debt\n\n**Falling Rate Environment**:\n• Lock in longer-term fixed-rate investments\n• Consider refinancing existing debt\n• Growth stocks may outperform dividend stocks\n• Fixed-rate bonds increase in value\n\n**Laddering Strategies**\nCreate a bond or CD ladder by purchasing securities with staggered maturity dates. This provides:\n• Regular income as securities mature\n• Protection against interest rate changes\n• Opportunities to reinvest at new rates\n\n**Emergency Fund Optimization**\n• Keep 3-6 months expenses in high-yield savings\n• Consider money market accounts for higher rates\n• Use CDs for portions you won't need immediately\n• Monitor online banks for competitive rates\n\n**Advanced Interest Strategies**\n\n**Float vs. Fixed Decisions**\nFor businesses and sophisticated investors:\n• Analyze interest rate forecasts\n• Consider hedging strategies\n• Evaluate swap opportunities\n• Balance risk tolerance with cost savings\n\n**Tax Implications**\n• Municipal bonds for high-income earners\n• Consider after-tax yields when comparing investments\n• Understand how interest income affects your tax bracket\n• Time investment sales for optimal tax treatment\n\n**International Considerations**\n• Currency risk in foreign investments\n• International interest rate differentials\n• Impact of global economic conditions\n• Diversification benefits and risks\n\n**Psychological Aspects of Interest Decisions**\n\n**Present Bias**: Tendency to overweight immediate costs and benefits\n**Loss Aversion**: Feeling losses more acutely than equivalent gains\n**Anchoring**: Over-relying on first information received (like initial rates quoted)\n**Optimism Bias**: Assuming rates will move in your favor\n\n**Making Better Interest-Based Decisions**\n• Use calculators to quantify different scenarios\n• Consider total cost/return over time, not just monthly payments\n• Factor in your risk tolerance and life circumstances\n• Regularly review and adjust strategies as conditions change\n• Seek professional advice for complex decisions\n\n**Long-Term Wealth Building with Interest**\n• Start early to maximize compound interest benefits\n• Reinvest all interest and dividends\n• Gradually increase savings rates over time\n• Balance growth investments with stable, interest-bearing accounts\n• Use interest knowledge to evaluate all financial products\n\nRemember: Understanding interest rates isn't just about calculations - it's about making informed decisions that align with your financial goals and risk tolerance. The knowledge you gain here will serve you throughout your financial life, helping you build wealth more effectively and avoid costly mistakes."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Practice and check",
+      "summary": "Review the big ideas, practice, then take the quiz.",
+      "discussionPrompt": "If you had $100 today, would you rather earn simple or compound interest? Why?",
+      "lessons": [
+        {
+          "id": "review",
+          "title": "Review and practice",
+          "items": [
+            {
+              "id": "review",
+              "type": "reading",
+              "title": "Key ideas and practice",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Here's the whole course in five steps. Open each one to review it."
+                },
+                {
+                  "type": "timeline",
+                  "title": "The big ideas, in order",
+                  "steps": [
+                    {
+                      "title": "Interest is the price of using money"
+                    },
+                    {
+                      "title": "Simple interest: only on the starting amount"
+                    },
+                    {
+                      "title": "Compound interest: interest on interest"
+                    },
+                    {
+                      "title": "APR for borrowing, APY for saving"
+                    },
+                    {
+                      "title": "Start early and let time help"
+                    }
+                  ]
+                },
+                {
+                  "type": "accordion",
+                  "title": "Key terms",
+                  "items": [
+                    {
+                      "title": "Principal",
+                      "md": "The original amount you save or borrow."
+                    },
+                    {
+                      "title": "Interest rate",
+                      "md": "The percent charged or paid on the principal, usually per year."
+                    },
+                    {
+                      "title": "APR",
+                      "md": "Annual percentage rate. The yearly cost of a loan."
+                    },
+                    {
+                      "title": "APY",
+                      "md": "Annual percentage yield. What savings really earn in a year with compounding."
+                    }
+                  ]
+                },
+                {
+                  "type": "sort",
+                  "question": {
+                    "id": "i-s1",
+                    "prompt": "Are you earning interest or paying it?",
+                    "buckets": [
+                      "Earning",
+                      "Paying"
+                    ],
+                    "items": [
+                      {
+                        "text": "Savings account",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Credit card balance",
+                        "bucket": 1
+                      },
+                      {
+                        "text": "Car loan",
+                        "bucket": 1
+                      },
+                      {
+                        "text": "Certificate of deposit (CD)",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Student loan",
+                        "bucket": 1
+                      },
+                      {
+                        "text": "A bond you own",
+                        "bucket": 0
+                      }
+                    ],
+                    "hint": "Who is lending money to whom?",
+                    "explanation": "When you lend money (savings, CDs, bonds) you earn. When you borrow (cards, loans) you pay."
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "quiz",
+          "title": "Quiz",
+          "items": [
+            {
+              "id": "quiz",
+              "type": "quiz",
+              "title": "Course quiz",
+              "quizId": "interest-rates"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

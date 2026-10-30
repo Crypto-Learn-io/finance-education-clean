@@ -1,0 +1,361 @@
+{
+  "schemaVersion": 1,
+  "slug": "budgeting-and-saving",
+  "meta": {
+    "title": "Budgeting & Saving",
+    "order": 1,
+    "age": "Ages 10–14",
+    "level": "Beginner",
+    "blurb": "Learn where your money goes and how to keep some. Simple steps help you build a saving habit.",
+    "objectives": [
+      "Make a simple budget",
+      "Use the 50/30/20 rule",
+      "Start an emergency fund",
+      "Set a saving goal and stick to it"
+    ],
+    "outcome": "By the end, you can plan a monthly budget and set a saving goal.",
+    "pillars": [
+      "T",
+      "H"
+    ],
+    "icon": "PiggyBank",
+    "tint": "bg-emerald-100 text-emerald-800",
+    "featured": true,
+    "time": "3 modules, about 25 min"
+  },
+  "modules": [
+    {
+      "id": "m1",
+      "title": "The basics",
+      "summary": "Watch the video, then learn the key ideas.",
+      "discussionPrompt": "What's one thing you spend on that surprised you once you tracked it?",
+      "lessons": [
+        {
+          "id": "watch",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "video",
+              "type": "video",
+              "title": "How to Make a Budget | Beginner's Guide to Budgeting",
+              "source": {
+                "youtubeId": "-Of_WRjDrx0"
+              },
+              "checkpoints": [
+                {
+                  "time": 60,
+                  "question": {
+                    "id": "b-v1",
+                    "prompt": "In the 50/30/20 rule, where does the 20% go?",
+                    "options": [
+                      "Fun things like games and movies",
+                      "Rent and groceries",
+                      "Savings and paying down debt",
+                      "Taxes"
+                    ],
+                    "answer": 2,
+                    "hint": "It's the part that helps future you.",
+                    "explanation": "The 20% is for savings and extra debt payments. Needs get 50% and wants get 30%."
+                  }
+                },
+                {
+                  "time": 150,
+                  "question": {
+                    "id": "b-v2",
+                    "prompt": "What's the first step in making a budget?",
+                    "options": [
+                      "Cut out all fun spending",
+                      "Know how much money comes in",
+                      "Open a credit card",
+                      "Buy a budgeting app"
+                    ],
+                    "answer": 1,
+                    "hint": "You can't split money until you know the total.",
+                    "explanation": "Start with your income. Then you can plan where each dollar goes."
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Learn the key ideas",
+          "items": [
+            {
+              "id": "part-1",
+              "type": "reading",
+              "title": "Understanding the Fundamentals of Budgeting",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Budgeting is the cornerstone of personal financial success. At its core, budgeting is the process of creating a detailed plan that outlines how you'll allocate your income across various expenses, savings, and financial goals over a specific period, typically monthly.\n\nThink of a budget as your financial GPS - it shows you where your money is currently going, helps you navigate toward your destination (financial goals), and alerts you when you're getting off track. Without a budget, you're essentially driving blindfolded through your financial life.\n\nMany people avoid budgeting because they think it's restrictive or complicated, but the opposite is true. A well-crafted budget actually gives you more freedom because you're making conscious decisions about your money rather than wondering where it all went at the end of the month.\n\nThe key to successful budgeting isn't perfection - it's awareness and intentionality. When you track where every dollar goes, you gain control over your financial destiny and can make informed decisions that align with your values and goals."
+                },
+                {
+                  "type": "check",
+                  "question": {
+                    "id": "b-c1",
+                    "prompt": "Which of these is a need, not a want?",
+                    "options": [
+                      "A new video game",
+                      "Concert tickets",
+                      "Groceries for the week",
+                      "A third pair of sneakers"
+                    ],
+                    "answer": 2,
+                    "hint": "Needs are things you must pay for to live, learn, or work.",
+                    "explanation": "Food is a need. The others are nice to have, so they're wants."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "part-2",
+              "type": "reading",
+              "title": "The Psychology of Money and Spending",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Before diving into budgeting mechanics, it's crucial to understand the emotional and psychological aspects of money management. Our relationship with money is deeply personal and often shaped by childhood experiences, cultural background, and societal pressures.\n\nCommon psychological barriers to effective budgeting include:\n\n**Emotional Spending**: Using purchases to cope with stress, sadness, or boredom. This \"retail therapy\" can derail even the best-planned budgets.\n\n**Lifestyle Inflation**: As income increases, expenses tend to increase proportionally, leaving little room for additional savings despite earning more money.\n\n**Present Bias**: Humans naturally prioritize immediate gratification over future benefits, making it challenging to save for long-term goals.\n\n**Analysis Paralysis**: Some people become so overwhelmed by budgeting options and strategies that they never start at all.\n\nUnderstanding these tendencies helps you develop strategies to overcome them. For example, if you're an emotional spender, you might build a small \"fun money\" category into your budget or find alternative ways to manage stress."
+                }
+              ]
+            },
+            {
+              "id": "part-3",
+              "type": "reading",
+              "title": "The Complete Guide to the 50/30/20 Rule",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "The 50/30/20 rule, popularized by Senator Elizabeth Warren, provides a simple framework for dividing your after-tax income. This rule is particularly effective for beginners because it's straightforward and flexible.\n\n**50% for Needs (Essential Expenses)**\nThese are expenses you cannot avoid:\n• Housing (rent/mortgage, property taxes, essential repairs)\n• Transportation (car payments, gas, insurance, public transit)\n• Utilities (electricity, water, gas, basic phone/internet)\n• Groceries and essential household items\n• Insurance (health, life, disability)\n• Minimum debt payments\n• Basic clothing\n\n**30% for Wants (Discretionary Spending)**\nThese enhance your quality of life but aren't essential:\n• Dining out and entertainment\n• Hobbies and recreation\n• Cable/streaming services\n• Gym memberships\n• Non-essential shopping\n• Travel and vacations\n• Personal care beyond basics\n\n**20% for Savings and Debt Repayment**\nThis category secures your financial future:\n• Emergency fund contributions\n• Retirement savings (401k, IRA)\n• Extra debt payments beyond minimums\n• Short-term savings goals\n• Investment contributions\n\n**Adapting the Rule**: If your housing costs exceed 50% of your income (common in expensive cities), you might need to adjust to 60/20/20 or focus on increasing income or reducing housing costs."
+                }
+              ]
+            },
+            {
+              "id": "part-4",
+              "type": "reading",
+              "title": "Building a Bulletproof Emergency Fund",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "An emergency fund is your financial safety net - money set aside specifically for unexpected expenses or income disruptions. This fund serves as a buffer between you and debt when life throws curveballs.\n\n**Why Emergency Funds Matter**\nWithout an emergency fund, unexpected expenses often get charged to credit cards, creating a cycle of debt that can take years to overcome. Studies show that people with emergency funds experience significantly less financial stress and are better positioned to take advantage of opportunities.\n\n**The Building Strategy**\nStart with micro-goals to build momentum:\n• Week 1-2: Save $100 (even if it's $5-10 per day)\n• Month 1: Reach $500\n• Months 2-3: Build to $1,000\n• Months 4-12: Work toward 3-6 months of expenses\n\n**Calculating Your Target Amount**\nAdd up your essential monthly expenses:\n• Housing (rent/mortgage, utilities)\n• Food and groceries\n• Transportation\n• Insurance premiums\n• Minimum debt payments\n• Basic personal care\n\nMultiply this total by 3-6 months. If you have stable employment, 3 months might suffice. If you're self-employed or in an unstable industry, aim for 6 months or more.\n\n**Where to Keep Emergency Funds**\n• High-yield savings account (separate from checking)\n• Money market account\n• Short-term CDs (if you won't need immediate access)\n\n**What Constitutes an Emergency**\nTrue emergencies include:\n• Job loss or significant income reduction\n• Medical emergencies not covered by insurance\n• Major home or car repairs\n• Unexpected travel for family emergencies\n\nNot emergencies: vacations, holidays gifts, or predictable expenses like car registration."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "Going further",
+      "summary": "Try the interactive tool, then read on.",
+      "discussionPrompt": "Would 50/30/20 work for your family? What would you change?",
+      "lessons": [
+        {
+          "id": "try",
+          "title": "Try it",
+          "items": [
+            {
+              "id": "explore",
+              "type": "widget",
+              "title": "Split a paycheck with 50/30/20",
+              "widget": {
+                "kind": "budget-split",
+                "intro": "Slide to change monthly take-home pay. Watch how the 50/30/20 rule splits it.",
+                "defaults": {
+                  "income": 2000
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "read-on",
+          "title": "Read on",
+          "items": [
+            {
+              "id": "part-5",
+              "type": "reading",
+              "title": "Advanced Saving Strategies and Automation",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "The secret to consistent saving isn't willpower - it's automation and strategic planning. By removing the decision-making process from saving, you're more likely to stick to your goals.\n\n**Pay Yourself First Philosophy**\nThis fundamental principle means treating savings like a non-negotiable bill. Before spending on anything else, allocate money to savings. This ensures your future self gets \"paid\" before present you spends everything.\n\n**Automation Strategies**\nSet up automatic transfers for:\n• Savings accounts (the day after payday)\n• Retirement contributions\n• Investment accounts\n• Bill payments to avoid late fees\n\n**The Power of Small Amounts**\nDon't underestimate small savings:\n• $25 per week = $1,300 per year\n• $5 per day = $1,825 per year\n• Rounding up purchases to the nearest dollar can save $300-500 annually\n\n**High-Yield Savings Accounts**\nTraditional savings accounts often earn less than 0.5% interest, while high-yield accounts can earn 4-5%. On a $10,000 emergency fund, this difference amounts to hundreds of dollars per year.\n\n**Savings Challenges**\n• 52-week challenge: Save $1 week 1, $2 week 2, etc. (Total: $1,378)\n• $5 challenge: Save every $5 bill you receive\n• No-spend weekends: Choose one weekend per month to avoid unnecessary spending\n\n**Multiple Savings Goals**\nUse separate accounts for different goals:\n• Emergency fund\n• Vacation fund\n• Home down payment\n• Car replacement fund\n• Holiday gift fund\n\nThis prevents you from \"borrowing\" from one goal to fund another."
+                },
+                {
+                  "type": "check",
+                  "question": {
+                    "id": "b-c2",
+                    "prompt": "An emergency fund is usually meant to cover…",
+                    "options": [
+                      "One fun weekend trip",
+                      "3 to 6 months of basic expenses",
+                      "Next year's holiday gifts",
+                      "A new phone every year"
+                    ],
+                    "answer": 1,
+                    "hint": "Think surprise job loss or a big car repair.",
+                    "explanation": "Most experts suggest 3 to 6 months of essential costs, kept somewhere safe and easy to reach."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "part-6",
+              "type": "reading",
+              "title": "Budgeting Methods and Tools",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Different budgeting methods work for different personalities and lifestyles. Experiment to find what resonates with you.\n\n**Zero-Based Budgeting**\nEvery dollar gets assigned a purpose before the month begins. Income minus expenses and savings should equal zero. This method ensures intentional spending but requires detailed planning.\n\n**Envelope Method**\nAllocate cash into physical or digital \"envelopes\" for each spending category. When the envelope is empty, you're done spending in that category for the month.\n\n**Pay-Check Budgeting**\nInstead of monthly budgeting, plan how you'll use each paycheck. This works well for irregular income or people paid bi-weekly.\n\n**Digital Tools and Apps**\n• Mint: Free, comprehensive tracking and categorization\n• YNAB (You Need A Budget): Zero-based budgeting philosophy\n• Personal Capital: Great for investment tracking\n• Spreadsheets: Ultimate customization and control\n\n**The Importance of Tracking**\nYou can't manage what you don't measure. Track spending for at least one month before creating a budget to understand your actual spending patterns vs. perceived spending."
+                }
+              ]
+            },
+            {
+              "id": "part-7",
+              "type": "reading",
+              "title": "Overcoming Common Budgeting Obstacles",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Even the best budgets face challenges. Anticipating and preparing for these obstacles increases your likelihood of long-term success.\n\n**Irregular Income**\nIf your income varies monthly:\n• Use your lowest income month as your baseline budget\n• Save excess income from good months in a \"income smoothing\" account\n• Prioritize building a larger emergency fund (6-9 months of expenses)\n\n**Overspending in Categories**\nWhen you consistently overspend in specific categories:\n• Increase the budget for that category and decrease another\n• Examine if the overspending is due to poor estimates or lack of discipline\n• Consider if it's a \"need\" miscategorized as a \"want\"\n\n**Budget Fatigue**\nTo prevent burnout:\n• Review and adjust your budget monthly, not daily\n• Build in some flexibility with a \"miscellaneous\" category\n• Focus on progress, not perfection\n• Celebrate small wins and milestones\n\n**Spousal or Family Conflicts**\nMoney disagreements are common. Strategies include:\n• Regular budget meetings to discuss goals and concerns\n• Separate \"fun money\" allowances for each person\n• Compromise on spending priorities\n• Focus on shared values and goals\n\n**Lifestyle Changes**\nLife events require budget adjustments:\n• Job changes: Wait 2-3 months before increasing lifestyle expenses\n• New baby: Plan for reduced income and increased expenses\n• Moving: Factor in one-time costs and ongoing changes\n\n**The 80/20 Rule**\nFocus on the 20% of expenses that make up 80% of your spending (usually housing, transportation, and food). Small improvements in these areas have the biggest impact."
+                }
+              ]
+            },
+            {
+              "id": "part-8",
+              "type": "reading",
+              "title": "Advanced Budgeting: Beyond the Basics",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Once you've mastered basic budgeting, these advanced strategies can accelerate your financial progress.\n\n**Sinking Funds**\nThese are mini-savings accounts for predictable but irregular expenses:\n• Annual insurance premiums\n• Holiday gifts\n• Car maintenance and repairs\n• Property taxes\n• Vacation costs\n\nCalculate the annual cost and save monthly amounts to avoid budget shocks.\n\n**The Anti-Budget**\nFor those who hate detailed tracking:\n• Automate all savings and fixed expenses\n• Spend whatever remains guilt-free\n• Requires strong automation and higher savings rates\n\n**Percentage-Based Budgeting**\nInstead of fixed dollar amounts, use percentages that adjust with income changes:\n• Housing: 25-30%\n• Transportation: 15-20%\n• Food: 10-15%\n• Savings: 20%+\n\n**Value-Based Budgeting**\nAlign spending with personal values:\n• Identify your top 5 values (family, health, education, etc.)\n• Ensure your budget reflects these priorities\n• Cut spending on things that don't align with your values\n\n**The Abundance Mindset**\nShift from \"I can't afford it\" to \"How can I afford it?\" This reframes money conversations from restriction to opportunity and can motivate income-increasing activities.\n\n**Budgeting for Financial Independence**\nIf your goal is early retirement or financial independence:\n• Track your savings rate (savings ÷ income)\n• Aim for 25-50% savings rates\n• Focus on reducing expenses and increasing income\n• Calculate your \"financial independence number\" (annual expenses × 25)\n\nRemember: budgeting is a skill that improves with practice. Start simple, be consistent, and gradually incorporate more sophisticated strategies as you become comfortable with the basics."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Practice and check",
+      "summary": "Review the big ideas, practice, then take the quiz.",
+      "discussionPrompt": "What's one saving goal you'll set this month?",
+      "lessons": [
+        {
+          "id": "review",
+          "title": "Review and practice",
+          "items": [
+            {
+              "id": "review",
+              "type": "reading",
+              "title": "Key ideas and practice",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Here's the whole course in five steps. Open each one to review it."
+                },
+                {
+                  "type": "timeline",
+                  "title": "The big ideas, in order",
+                  "steps": [
+                    {
+                      "title": "Track what you earn and spend"
+                    },
+                    {
+                      "title": "Sort spending into needs, wants and savings"
+                    },
+                    {
+                      "title": "Pay yourself first: save as soon as money arrives"
+                    },
+                    {
+                      "title": "Build an emergency fund"
+                    },
+                    {
+                      "title": "Check in every month and adjust"
+                    }
+                  ]
+                },
+                {
+                  "type": "accordion",
+                  "title": "Key terms",
+                  "items": [
+                    {
+                      "title": "Budget",
+                      "md": "A plan for how you'll use the money you have."
+                    },
+                    {
+                      "title": "Emergency fund",
+                      "md": "Savings set aside only for surprises, like a car repair or lost job."
+                    },
+                    {
+                      "title": "Needs vs wants",
+                      "md": "Needs keep you safe and healthy. Wants are extras that are nice to have."
+                    },
+                    {
+                      "title": "50/30/20 rule",
+                      "md": "50% of take-home pay to needs, 30% to wants, 20% to savings and debt."
+                    }
+                  ]
+                },
+                {
+                  "type": "sort",
+                  "question": {
+                    "id": "b-s1",
+                    "prompt": "Sort each expense. Is it a need or a want?",
+                    "buckets": [
+                      "Need",
+                      "Want"
+                    ],
+                    "items": [
+                      {
+                        "text": "Rent",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Streaming subscription",
+                        "bucket": 1
+                      },
+                      {
+                        "text": "Bus pass to get to work",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Designer jacket",
+                        "bucket": 1
+                      },
+                      {
+                        "text": "Electricity bill",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Eating out with friends",
+                        "bucket": 1
+                      }
+                    ],
+                    "hint": "Ask: could I live and work safely without it?",
+                    "explanation": "Rent, power and getting to work are needs. The rest are wants, which you can trim when money is tight."
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "quiz",
+          "title": "Quiz",
+          "items": [
+            {
+              "id": "quiz",
+              "type": "quiz",
+              "title": "Course quiz",
+              "quizId": "budgeting-and-saving"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
