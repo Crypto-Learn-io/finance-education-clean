@@ -274,6 +274,7 @@ export default function VideoPlayer({
     <div>
       <div
         ref={wrapRef}
+        data-video-player=""
         tabIndex={0}
         onKeyDown={onKey}
         aria-label={`Video player: ${item.title}. Space to play or pause, arrow keys to skip.`}

@@ -14,10 +14,7 @@
       "Set a simple savings target"
     ],
     "outcome": "By the end, you can start a retirement plan with confidence.",
-    "pillars": [
-      "I",
-      "H"
-    ],
+    "pillars": ["I", "H"],
     "icon": "Target",
     "tint": "bg-pink-100 text-pink-800",
     "featured": true,
@@ -290,10 +287,7 @@
                   "question": {
                     "id": "p-s1",
                     "prompt": "Traditional or Roth?",
-                    "buckets": [
-                      "Traditional",
-                      "Roth"
-                    ],
+                    "buckets": ["Traditional", "Roth"],
                     "items": [
                       {
                         "text": "Tax break now",

@@ -13,6 +13,8 @@ import {
   Bot,
   CheckCircle2,
   ChevronRight,
+  Award,
+  Keyboard,
   Clock,
   ListTree,
   MessageSquare,
@@ -45,6 +47,15 @@ import {
 import OutlineTree, { CheckBox } from "./components/OutlineTree";
 import ItemCanvas, { toQuiz } from "./components/ItemCanvas";
 import StudyPanel, { PanelTab } from "./components/StudyPanel";
+import { award, POINTS } from "./rewards";
+import {
+  CourseCelebration,
+  LearnerStats,
+  RewardToasts,
+} from "./components/Rewards";
+import Certificate from "./components/Certificate";
+import ReadAloud, { blocksToSpeech } from "./components/ReadAloud";
+import { ShortcutsDialog, useShortcuts } from "./components/Shortcuts";
 
 /* ---------- Shared progress logic ---------- */
 
@@ -100,12 +111,23 @@ export default function CoursePlayerPage() {
   const course = courseBySlug(params.slug);
   if (!course) return <NotFound />;
   const itemId = (params["*"] ?? "").split("/")[0];
+  if (itemId === "certificate")
+    return <CertificateRoute key={course.slug} course={course} />;
   return itemId ? (
     <Player key={course.slug} course={course} itemId={itemId} />
   ) : (
     <CourseHome course={course} />
   );
 }
+
+function CertificateRoute({ course }: { course: CourseData }) {
+  const flat = useMemo(() => flattenCourse(course), [course]);
+  const { count } = useProgress(course, flat);
+  return <Certificate course={course} done={count} total={flat.length} />;
+}
+
+/** Remember the last item viewed, for "Continue learning" on the home page. */
+export const LAST_KEY = "thrive_last_item";
 
 /* ---------- Course home ---------- */
 
@@ -212,6 +234,13 @@ function CourseHome({ course }: { course: CourseData }) {
                   )}
                 </Link>
               </Button>
+              {!nextUp && (
+                <Button asChild variant="outline" className="mt-2 w-full">
+                  <Link to={`${base}/certificate`}>
+                    <Award aria-hidden="true" /> View certificate
+                  </Link>
+                </Button>
+              )}
               {nextUp && count > 0 && (
                 <p className="mt-3 text-sm text-ink-muted">
                   Up next: {ITEM_LABEL[nextUp.item.type]}, {nextUp.item.title}
@@ -385,10 +414,30 @@ function Player({ course, itemId }: { course: CourseData; itemId: string }) {
   const flat = useMemo(() => flattenCourse(course), [course]);
   const base = `/lessons/${course.slug}`;
   const index = flat.findIndex((f) => f.item.id === itemId);
-  const { done, answered, mark, markAnswered, count } = useProgress(
-    course,
-    flat,
+  const {
+    done,
+    answered,
+    mark: markRaw,
+    markAnswered: markAnsweredRaw,
+    count,
+  } = useProgress(course, flat);
+  const slug = course.slug;
+  const mark = useCallback(
+    (id: string) => {
+      markRaw(id);
+      award(`item:${slug}:${id}`, POINTS.item, "Item done");
+    },
+    [markRaw, slug],
   );
+  const markAnswered = useCallback(
+    (qid: string) => {
+      markAnsweredRaw(qid);
+      award(`q:${slug}:${qid}`, POINTS.check, "Quick check");
+    },
+    [markAnsweredRaw, slug],
+  );
+  const [celebrate, setCelebrate] = useState(false);
+  const [helpOpen, setHelpOpen] = useState(false);
 
   const [leftOpen, setLeftOpen] = useState(() =>
     readPref("thrive_outline_open", true),
@@ -451,11 +500,73 @@ function Player({ course, itemId }: { course: CourseData; itemId: string }) {
     [navigate, base],
   );
 
+  // Course finished: award once and celebrate.
+  useEffect(() => {
+    if (flat.length > 0 && count === flat.length) {
+      if (award(`course:${slug}`, POINTS.course, "Course complete"))
+        setCelebrate(true);
+    }
+  }, [count, flat.length, slug]);
+
+  // Remember where the learner is, for the home page.
+  useEffect(() => {
+    if (index === -1) return;
+    try {
+      window.localStorage.setItem(
+        LAST_KEY,
+        JSON.stringify({ slug, itemId: flat[index].item.id, at: Date.now() }),
+      );
+    } catch {
+      /* ignore */
+    }
+  }, [index, slug, flat]);
+
+  useShortcuts({
+    next: () => {
+      const n = flat[index + 1];
+      if (n) go(n.item.id);
+    },
+    prev: () => {
+      const p = flat[index - 1];
+      if (p) go(p.item.id);
+    },
+    complete: () => {
+      const cur = flat[index];
+      if (!cur || cur.item.type === "quiz") return;
+      mark(cur.item.id);
+      const n = flat[index + 1];
+      if (n) go(n.item.id);
+      else navigate(base);
+    },
+    outline: () => {
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        setLeftOpen((v) => {
+          writePref("thrive_outline_open", !v);
+          return !v;
+        });
+      } else setOutlineSheet((v) => !v);
+    },
+    panel: (n) => {
+      const t = (["notes", "assistant", "discussion"] as const)[n - 1];
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        setTab(t);
+        setRightOpen(true);
+      } else {
+        setTab(t);
+        setToolsSheet(true);
+      }
+    },
+    close: () => setRightOpen(false),
+    help: () => setHelpOpen(true),
+  });
+
   if (index === -1) return <Navigate to={base} replace />;
 
   const prev = flat[index - 1];
   const next = flat[index + 1];
   const isDone = done.has(current.item.id);
+  const courseIndex = allCourses.findIndex((c) => c.slug === slug);
+  const nextCourse = allCourses[courseIndex + 1];
   const total = flat.length;
   const barValue = ((count + (isDone ? 0 : scrollFrac * 0.95)) / total) * 100;
 
@@ -544,6 +655,16 @@ function Player({ course, itemId }: { course: CourseData; itemId: string }) {
             {count} of {total} done · Item {index + 1} of {total}
           </p>
         </div>
+        <LearnerStats compact />
+        <button
+          type="button"
+          onClick={() => setHelpOpen(true)}
+          aria-label="Keyboard shortcuts"
+          title="Keyboard shortcuts (?)"
+          className="hidden h-10 w-10 items-center justify-center rounded-xl text-ink-muted hover:bg-mint hover:text-ink lg:flex"
+        >
+          <Keyboard className="h-5 w-5" aria-hidden="true" />
+        </button>
         <div
           className="hidden items-center gap-1 md:flex"
           role="group"
@@ -647,6 +768,14 @@ function Player({ course, itemId }: { course: CourseData; itemId: string }) {
                   {current.item.title}
                 </h1>
               )}
+              {current.item.type === "reading" && (
+                <div className="mt-4">
+                  <ReadAloud
+                    title={current.item.title}
+                    text={blocksToSpeech(current.item.blocks)}
+                  />
+                </div>
+              )}
 
               <div className="mt-6">
                 <ItemCanvas
@@ -657,7 +786,11 @@ function Player({ course, itemId }: { course: CourseData; itemId: string }) {
                   onItemDone={() => mark(current.item.id)}
                   onQuizExit={() => {
                     mark(current.item.id);
-                    navigate(base);
+                    // Finishing the last item: stay so the celebration shows.
+                    const willFinish = count + (isDone ? 0 : 1) >= total;
+                    if (willFinish) return;
+                    if (next) go(next.item.id);
+                    else navigate(base);
                   }}
                 />
               </div>
@@ -781,6 +914,19 @@ function Player({ course, itemId }: { course: CourseData; itemId: string }) {
           Tools
         </button>
       </nav>
+
+      <RewardToasts />
+      <ShortcutsDialog open={helpOpen} onOpenChange={setHelpOpen} />
+      <CourseCelebration
+        open={celebrate}
+        courseTitle={course.meta.title}
+        items={total}
+        certificateHref={`${base}/certificate`}
+        nextHref={nextCourse ? `/lessons/${nextCourse.slug}` : undefined}
+        nextTitle={nextCourse?.meta.title}
+        homeHref={base}
+        onClose={() => setCelebrate(false)}
+      />
 
       {/* Mobile drawers */}
       <Drawer

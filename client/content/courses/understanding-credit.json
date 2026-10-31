@@ -14,9 +14,7 @@
       "Pay down debt step by step"
     ],
     "outcome": "By the end, you can explain how to build good credit from zero.",
-    "pillars": [
-      "R"
-    ],
+    "pillars": ["R"],
     "icon": "CreditCard",
     "tint": "bg-violet-100 text-violet-800",
     "featured": true,
@@ -298,10 +296,7 @@
                   "question": {
                     "id": "c-s1",
                     "prompt": "Does this help or hurt your credit score?",
-                    "buckets": [
-                      "Helps",
-                      "Hurts"
-                    ],
+                    "buckets": ["Helps", "Hurts"],
                     "items": [
                       {
                         "text": "Paying on time",

@@ -13,9 +13,7 @@
       "Use diversification to stay steady"
     ],
     "outcome": "By the end, you can match an investment to your goals.",
-    "pillars": [
-      "I"
-    ],
+    "pillars": ["I"],
     "icon": "Shield",
     "tint": "bg-rose-100 text-rose-800",
     "time": "3 modules, about 25 min"
@@ -274,10 +272,7 @@
                   "question": {
                     "id": "r-s1",
                     "prompt": "Lower risk or higher risk?",
-                    "buckets": [
-                      "Lower risk",
-                      "Higher risk"
-                    ],
+                    "buckets": ["Lower risk", "Higher risk"],
                     "items": [
                       {
                         "text": "Insured savings account",

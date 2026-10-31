@@ -14,9 +14,7 @@
       "Ask the right questions"
     ],
     "outcome": "By the end, you can read a loan offer and spot the true cost.",
-    "pillars": [
-      "R"
-    ],
+    "pillars": ["R"],
     "icon": "Building",
     "tint": "bg-indigo-100 text-indigo-800",
     "time": "3 modules, about 30 min"
@@ -87,12 +85,7 @@
                   "question": {
                     "id": "l-v3",
                     "prompt": "A mortgage is a loan to buy…",
-                    "options": [
-                      "A car",
-                      "A home",
-                      "College",
-                      "Groceries"
-                    ],
+                    "options": ["A car", "A home", "College", "Groceries"],
                     "answer": 1,
                     "hint": "It's usually the biggest loan people take.",
                     "explanation": "A mortgage is a home loan, with the home as collateral."
@@ -224,12 +217,7 @@
                   "question": {
                     "id": "l-c2",
                     "prompt": "On a conventional mortgage, PMI is usually required when your down payment is below…",
-                    "options": [
-                      "5%",
-                      "20%",
-                      "50%",
-                      "1%"
-                    ],
+                    "options": ["5%", "20%", "50%", "1%"],
                     "answer": 1,
                     "hint": "It's the classic down payment target.",
                     "explanation": "Below 20% down, lenders usually add private mortgage insurance (PMI) to the monthly cost."
@@ -308,10 +296,7 @@
                   "question": {
                     "id": "l-s1",
                     "prompt": "Is this loan usually secured or unsecured?",
-                    "buckets": [
-                      "Secured",
-                      "Unsecured"
-                    ],
+                    "buckets": ["Secured", "Unsecured"],
                     "items": [
                       {
                         "text": "Mortgage",

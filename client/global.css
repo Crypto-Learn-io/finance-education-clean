@@ -501,3 +501,27 @@
     animation-iteration-count: 1 !important;
   }
 }
+
+/* Printing a certificate: print only the certificate, landscape. */
+@media print {
+  @page {
+    size: landscape;
+    margin: 0.4in;
+  }
+  body * {
+    visibility: hidden;
+  }
+  #certificate,
+  #certificate * {
+    visibility: visible;
+  }
+  #certificate {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    height: 100%;
+    aspect-ratio: auto;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
