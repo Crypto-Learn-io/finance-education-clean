@@ -64,7 +64,9 @@ export default function KnowledgeCheck({
       ref={cardRef}
       onAnimationEnd={() => setShaking(false)}
       className={cn(
-        "rounded-3xl border-2 p-5 sm:p-6 transition-colors duration-300",
+        variant === "overlay"
+          ? "rounded-2xl border-2 p-3 sm:p-4 transition-colors duration-300"
+          : "rounded-3xl border-2 p-5 sm:p-6 transition-colors duration-300",
         variant === "card" ? "my-6 bg-white" : "bg-white/95 backdrop-blur",
         solved
           ? "border-primary/60 bg-mint-soft"
@@ -84,7 +86,10 @@ export default function KnowledgeCheck({
       </p>
       <p
         id={`${uid}-q`}
-        className="mt-2 text-lg font-extrabold leading-snug text-ink"
+        className={cn(
+          "font-extrabold leading-snug text-ink",
+          variant === "overlay" ? "mt-1 text-base" : "mt-2 text-lg",
+        )}
       >
         {question.prompt}
       </p>
@@ -92,7 +97,10 @@ export default function KnowledgeCheck({
       <div
         role="radiogroup"
         aria-labelledby={`${uid}-q`}
-        className="mt-4 grid gap-2"
+        className={cn(
+          "grid gap-2",
+          variant === "overlay" ? "mt-2 sm:grid-cols-2" : "mt-4",
+        )}
       >
         {question.options.map((opt, i) => {
           const selected = choice === i;
@@ -102,7 +110,10 @@ export default function KnowledgeCheck({
             <label
               key={opt}
               className={cn(
-                "hover-glow flex cursor-pointer items-center gap-3 rounded-2xl border-2 px-4 py-3 text-[15px] font-semibold",
+                "hover-glow flex cursor-pointer items-center gap-3 rounded-2xl border-2 font-semibold",
+                variant === "overlay"
+                  ? "px-3 py-2 text-sm"
+                  : "px-4 py-3 text-[15px]",
                 isAnswer
                   ? "border-primary bg-white text-ink"
                   : isWrongPick
@@ -192,7 +203,8 @@ export default function KnowledgeCheck({
         <Button
           ref={buttonRef}
           type="button"
-          className="mt-4"
+          className={variant === "overlay" ? "mt-2" : "mt-4"}
+          size={variant === "overlay" ? "sm" : "default"}
           disabled={choice === null}
           onClick={check}
         >

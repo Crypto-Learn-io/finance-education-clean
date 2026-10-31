@@ -370,10 +370,10 @@ export default function VideoPlayer({
               role="dialog"
               aria-modal="false"
               aria-label="Video checkpoint question"
-              className="absolute inset-0 z-10 flex items-center justify-center overflow-y-auto bg-ink/70 p-3 backdrop-blur-sm animate-in fade-in duration-300 sm:p-6"
+              className="absolute inset-0 z-10 flex overflow-y-auto bg-ink/70 p-2 backdrop-blur-sm animate-in fade-in duration-300 sm:p-4"
             >
-              <div className="w-full max-w-lg animate-in zoom-in-95 slide-in-from-bottom-4 duration-300">
-                <p className="mb-2 flex items-center gap-2 text-sm font-bold text-white">
+              <div className="m-auto w-full max-w-xl animate-in zoom-in-95 slide-in-from-bottom-4 duration-300">
+                <p className="mb-1.5 flex items-center gap-2 text-xs font-bold text-white sm:text-sm">
                   <CircleHelp className="h-4 w-4 text-sun" aria-hidden="true" />
                   Checkpoint at {fmt(cp.time)}
                 </p>
@@ -386,7 +386,7 @@ export default function VideoPlayer({
                     onAnswer(cp.question.id);
                   }}
                 />
-                <div className="mt-3 flex justify-end gap-2">
+                <div className="mt-2 flex justify-end gap-2">
                   {activeSolved ? (
                     <Button
                       type="button"

@@ -79,7 +79,8 @@ const usd2 = new Intl.NumberFormat("en-US", {
   maximumFractionDigits: 2,
 });
 
-export const money = (n: number) => (Math.abs(n) < 100 ? usd2 : usd0).format(n);
+export const money = (n: number) =>
+  (Math.abs(n) < 100 && !Number.isInteger(n) ? usd2 : usd0).format(n);
 export const pct = (n: number, digits = 1) => `${n.toFixed(digits)}%`;
 
 export function formatValue(n: number, unit: Unit) {

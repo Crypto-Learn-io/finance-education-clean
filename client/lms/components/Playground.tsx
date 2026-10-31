@@ -227,9 +227,9 @@ function LineChart({
   chart: Extract<Chart, { type: "lines" }>;
   label: string;
 }) {
-  const W = 560;
+  const W = 440;
   const H = 280;
-  const P = { l: 52, r: 12, t: 12, b: 28 };
+  const P = { l: 54, r: 14, t: 12, b: 30 };
   const n = chart.xLabels.length;
   const max = Math.max(1, ...chart.series.flatMap((s) => s.values)) * 1.08;
   const x = (i: number) =>
@@ -267,7 +267,7 @@ function LineChart({
               x={P.l - 8}
               y={y(t) + 4}
               textAnchor="end"
-              fontSize="11"
+              fontSize="13"
               fill="#3D5A47"
             >
               {short(t, chart.format)}
@@ -279,8 +279,8 @@ function LineChart({
             key={i}
             x={x(i)}
             y={H - 8}
-            textAnchor="middle"
-            fontSize="11"
+            textAnchor={i === 0 ? "start" : i === n - 1 ? "end" : "middle"}
+            fontSize="13"
             fill="#3D5A47"
           >
             {chart.xLabels[i]}
