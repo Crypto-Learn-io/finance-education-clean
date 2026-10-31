@@ -14,10 +14,12 @@
       "Ask the right questions"
     ],
     "outcome": "By the end, you can read a loan offer and spot the true cost.",
-    "pillars": ["R"],
+    "pillars": [
+      "R"
+    ],
     "icon": "Building",
     "tint": "bg-indigo-100 text-indigo-800",
-    "time": "3 modules, about 35 min"
+    "time": "3 modules, about 30 min"
   },
   "modules": [
     {
@@ -85,7 +87,12 @@
                   "question": {
                     "id": "l-v3",
                     "prompt": "A mortgage is a loan to buy…",
-                    "options": ["A car", "A home", "College", "Groceries"],
+                    "options": [
+                      "A car",
+                      "A home",
+                      "College",
+                      "Groceries"
+                    ],
                     "answer": 1,
                     "hint": "It's usually the biggest loan people take.",
                     "explanation": "A mortgage is a home loan, with the home as collateral."
@@ -102,11 +109,27 @@
             {
               "id": "part-1",
               "type": "reading",
-              "title": "Understanding Different Types of Loans",
+              "title": "Why people borrow",
               "blocks": [
                 {
                   "type": "text",
-                  "md": "Loans are essential financial tools that allow you to make major purchases and investments by borrowing money today and repaying it over time. Understanding the different types helps you choose the right financing for your needs.\n\n**Secured vs. Unsecured Loans**\n\n**Secured Loans** are backed by collateral - an asset the lender can seize if you don't repay:\n• **Mortgages**: Your home serves as collateral\n• **Auto Loans**: The vehicle secures the loan\n• **Home Equity Loans**: Your home's equity backs the loan\n• **Secured Personal Loans**: Various assets can serve as collateral\n\nBenefits: Lower interest rates, larger loan amounts, easier approval\nRisks: Loss of collateral if you default\n\n**Unsecured Loans** don't require collateral but rely on your creditworthiness:\n• **Personal Loans**: For various purposes, 2-7 year terms\n• **Credit Cards**: Revolving credit lines\n• **Student Loans**: Education financing with special protections\n• **Signature Loans**: Based solely on your promise to repay\n\nBenefits: No risk of losing specific assets, faster approval process\nDrawbacks: Higher interest rates, stricter qualification requirements\n\n**Installment vs. Revolving Credit**\n\n**Installment Loans** have fixed payments over a set period:\n• Predictable monthly payments\n• Declining balance over time\n• Fixed or variable interest rates\n• Examples: auto loans, mortgages, personal loans\n\n**Revolving Credit** allows you to borrow, repay, and borrow again:\n• Variable payment amounts\n• Reusable credit line\n• Interest only on outstanding balance\n• Examples: credit cards, home equity lines of credit (HELOC)\n\n**Specialized Loan Categories**\n\n**Government-Backed Loans**:\n• **FHA Loans**: Lower down payment mortgages (3.5%)\n• **VA Loans**: Military veteran mortgages (0% down)\n• **USDA Loans**: Rural area mortgages\n• **SBA Loans**: Small business financing\n\n**Alternative Lending**:\n• **Peer-to-Peer Loans**: Individual investors fund your loan\n• **Payday Loans**: Short-term, high-cost emergency loans (avoid if possible)\n• **Title Loans**: Your car title secures a short-term loan\n• **Online Lenders**: Fast approval, often higher rates"
+                  "md": "A loan lets you buy something now and pay for it over time, plus interest.\n\n**Common kinds of loans**\n• **Mortgage:** to buy a home\n• **Auto loan:** to buy a car\n• **Student loan:** for school\n• **Personal loan:** for many uses\n• **Credit card:** a flexible, ongoing loan\n\n**Secured vs unsecured**\n• **Secured** loans are backed by something you own, called collateral. If you stop paying, the lender can take it. Mortgages and car loans work this way.\n• **Unsecured** loans have no collateral. They often have higher rates.\n\n**Good debt vs bad debt?**\nBorrowing for things that last or grow in value, like a home or education, can make sense. Borrowing for things that lose value fast deserves extra thought."
+                }
+              ]
+            },
+            {
+              "id": "part-2",
+              "type": "reading",
+              "title": "How a loan works",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "**The key parts**\n• **Principal:** the amount you borrow\n• **Interest rate (APR):** the yearly cost of borrowing\n• **Term:** how long you have to pay it back\n• **Monthly payment:** what you pay each month\n\n**Where your payment goes**\nEach payment covers some interest and some principal. Early on, more goes to interest. Later, more goes to principal. This schedule is called **amortization**.\n\n**Longer term, lower payment, more cost**\nA longer loan has smaller monthly payments. But you pay interest for more years, so the total cost is higher.\n\n**Paying extra helps**\nExtra payments toward principal shorten the loan and cut total interest."
+                },
+                {
+                  "type": "callout",
+                  "tone": "tip",
+                  "md": "**Try this:** In Module 2, change a loan from 3 years to 6. Compare the total interest."
                 },
                 {
                   "type": "check",
@@ -127,24 +150,13 @@
               ]
             },
             {
-              "id": "part-2",
-              "type": "reading",
-              "title": "Comprehensive Mortgage Guide",
-              "blocks": [
-                {
-                  "type": "text",
-                  "md": "A mortgage is likely the largest loan you'll ever take, making it crucial to understand every aspect of the process.\n\n**How Mortgages Work**\nWhen you get a mortgage, the lender pays the seller for your home, and you agree to repay the lender over time (typically 15-30 years) with interest. Your home serves as collateral, meaning the lender can foreclose if you don't make payments.\n\n**Types of Mortgages**\n\n**Fixed-Rate Mortgages**:\n• Interest rate stays the same throughout the loan\n• Predictable monthly payments\n• Protection against rising interest rates\n• Most popular choice for long-term homeowners\n\n**Adjustable-Rate Mortgages (ARMs)**:\n• Interest rate changes periodically (annually after initial period)\n• Often start with lower rates than fixed mortgages\n• Payments can increase or decrease over time\n• Better for short-term ownership or falling rate environments\n\n**Government-Insured Mortgages**:\n\n**FHA Loans**:\n• 3.5% down payment minimum\n• More flexible credit requirements\n• Mortgage insurance required\n• Loan limits vary by area\n\n**VA Loans** (Veterans):\n• 0% down payment option\n• No mortgage insurance required\n• Competitive interest rates\n• Reusable benefit\n\n**USDA Loans** (Rural areas):\n• 0% down payment in eligible areas\n• Income limits apply\n• Property must be in qualifying rural area\n\n**Conventional Loans**:\n• Not government-insured\n• Typically require 5-20% down\n• PMI required if less than 20% down\n• More flexible property types and locations\n\n**Jumbo Loans**:\n• Exceed conforming loan limits ($766,550+ in most areas)\n• Stricter qualification requirements\n• Typically require larger down payments\n• Higher interest rates than conventional loans\n\n**Understanding Mortgage Terms**\n\n**Principal**: The actual loan amount you borrow\n**Interest**: The cost of borrowing, expressed as an annual percentage\n**Property Taxes**: Local government taxes on your property value\n**Insurance**: Homeowner's insurance and possibly mortgage insurance\n**Escrow**: Account where lender collects taxes and insurance payments\n\n**PITI Calculation Example**:\n$300,000 home, $250,000 loan at 6.5% for 30 years:\n• Principal & Interest: $1,580/month\n• Property Taxes: $400/month\n• Insurance: $100/month\n• PMI: $125/month\n• **Total PITI**: $2,205/month"
-                }
-              ]
-            },
-            {
               "id": "part-3",
               "type": "reading",
-              "title": "Down Payments and Private Mortgage Insurance (PMI)",
+              "title": "Mortgages and down payments",
               "blocks": [
                 {
                   "type": "text",
-                  "md": "Your down payment significantly impacts your mortgage terms, monthly payments, and total cost of homeownership.\n\n**Down Payment Basics**\nThe down payment is money you pay upfront toward the home's purchase price. It reduces your loan amount and demonstrates your commitment to the lender.\n\n**Down Payment Amounts by Loan Type**:\n• **Conventional**: 5-20% (3% for first-time buyers)\n• **FHA**: 3.5% minimum\n• **VA**: 0% for qualified veterans\n• **USDA**: 0% in eligible rural areas\n\n**Impact of Down Payment Size**\n\n**Example: $400,000 Home Purchase**\n\n**5% Down ($20,000)**:\n• Loan Amount: $380,000\n• Monthly Payment: $2,406 (plus PMI $190)\n• Total Monthly: $2,596\n\n**10% Down ($40,000)**:\n• Loan Amount: $360,000\n• Monthly Payment: $2,279 (plus PMI $180)\n• Total Monthly: $2,459\n\n**20% Down ($80,000)**:\n• Loan Amount: $320,000\n• Monthly Payment: $2,027 (no PMI)\n• Total Monthly: $2,027\n\n**Private Mortgage Insurance (PMI) Explained**\n\nPMI protects the lender if you default on your loan. It's required on conventional loans with less than 20% down.\n\n**PMI Costs**:\n• Typically 0.3% to 1.5% of loan amount annually\n• Paid monthly as part of mortgage payment\n• Can be removed once you reach 20% equity\n\n**PMI Removal Strategies**:\n• **Automatic**: Removed at 78% loan-to-value ratio\n• **Request Removal**: At 80% loan-to-value with good payment history\n• **Refinance**: If home value increased significantly\n• **Extra Payments**: Accelerate principal reduction\n\n**PMI vs. FHA Mortgage Insurance Premium (MIP)**:\n• PMI (conventional loans): Can be removed\n• MIP (FHA loans): Often permanent for the life of the loan\n\n**Down Payment Sources**\n• Personal savings (most common)\n• Gift from family members (with proper documentation)\n• Down payment assistance programs\n• 401(k) loans (for first-time buyers)\n• IRA withdrawals (up to $10,000 penalty-free for first home)\n\n**Strategies for Low Down Payment Buyers**\n• Start with FHA loan, refinance to conventional later\n• Look for first-time buyer programs\n• Consider homes below maximum budget to minimize PMI\n• Factor PMI into affordability calculations\n• Build equity quickly with extra principal payments"
+                  "md": "A mortgage is a loan to buy a home. The home is the collateral.\n\n**Down payment**\nThat's the cash you pay up front. A bigger down payment means a smaller loan.\n\n**PMI**\nOn a conventional loan, if you put down less than 20%, lenders usually add **private mortgage insurance**. It protects the lender, not you, and raises your monthly cost.\n\n**Other loan types**\nFHA loans, backed by the government, allow down payments as low as 3.5% for many buyers. They have their own mortgage insurance.\n\n**15-year vs 30-year**\n• 30-year: lower monthly payment, much more total interest\n• 15-year: higher monthly payment, much less total interest\n\n**More than the loan**\nHomeowners also pay property taxes, insurance and repairs. Budget for all of it."
                 }
               ]
             }
@@ -185,44 +197,43 @@
             {
               "id": "part-4",
               "type": "reading",
-              "title": "The Complete Loan Application Process",
+              "title": "Shopping for a loan",
               "blocks": [
                 {
                   "type": "text",
-                  "md": "Understanding the loan application process helps you prepare properly and increases your chances of approval at the best terms.\n\n**Pre-Qualification vs. Pre-Approval**\n\n**Pre-Qualification** (Soft inquiry):\n• Basic financial overview\n• Estimated loan amount\n• No verification of information\n• Takes minutes to complete\n• Good for initial house hunting\n\n**Pre-Approval** (Hard inquiry):\n• Thorough financial review\n• Verification of income, assets, credit\n• Conditional loan commitment\n• Expires in 60-90 days\n• Strengthens purchase offers\n\n**Required Documentation**\nGather these documents before applying:\n\n**Income Verification**:\n• 2 years of tax returns\n• Recent pay stubs (30-60 days)\n• W-2 forms for past 2 years\n• 1099s for contract work\n• Profit & loss statements (self-employed)\n\n**Asset Documentation**:\n• Bank statements (2-3 months)\n• Investment account statements\n• 401(k)/retirement account statements\n• Gift letters for down payment assistance\n\n**Credit Information**:\n• Credit reports from all three bureaus\n• Explanations for any credit issues\n• Debt statements (credit cards, loans)\n\n**Property Information** (for home purchases):\n• Purchase contract\n• Property appraisal\n• Homeowner's insurance quote\n• HOA documentation (if applicable)\n\n**The Underwriting Process**\n\n**Initial Review**: Loan officer reviews your application and documents\n**Automated Underwriting**: Computer system evaluates your creditworthiness\n**Manual Underwriting**: Human underwriter reviews complex applications\n**Conditional Approval**: Approval subject to meeting specific conditions\n**Final Approval**: All conditions met, ready to close\n\n**Common Reasons for Loan Denial**:\n• Insufficient income or employment history\n• High debt-to-income ratio\n• Poor credit history or low credit score\n• Insufficient down payment or assets\n• Property issues (appraisal problems, condition)\n• Changes in financial situation during process\n\n**Tips for Smooth Loan Processing**:\n• Don't make large purchases during the process\n• Don't change jobs unless absolutely necessary\n• Respond quickly to lender requests\n• Keep all financial documentation organized\n• Don't close credit accounts during the process\n• Maintain consistent banking patterns"
-                },
-                {
-                  "type": "check",
-                  "question": {
-                    "id": "l-c2",
-                    "prompt": "On a conventional mortgage, PMI is usually required when your down payment is below…",
-                    "options": ["5%", "20%", "50%", "1%"],
-                    "answer": 1,
-                    "hint": "It's the classic down payment target.",
-                    "explanation": "Below 20% down, lenders usually add private mortgage insurance (PMI) to the monthly cost."
-                  }
+                  "md": "Never take the first offer. Compare.\n\n**Check your credit first**\nA better score usually means a lower rate. Fix errors before you apply.\n\n**Compare the APR, not just the rate**\nThe APR includes some fees, so it shows the truer cost.\n\n**Get it in writing**\nFor mortgages, lenders must give you a **Loan Estimate**. It makes offers easy to compare side by side.\n\n**Questions to ask**\n• Is the rate fixed or variable?\n• What fees are there?\n• Is there a penalty for paying early?\n• What's the total I'll pay over the life of the loan?\n\n**Prequalify**\nMany lenders show estimated rates with a soft check that doesn't hurt your score."
                 }
               ]
             },
             {
               "id": "part-5",
               "type": "reading",
-              "title": "Loan Shopping and Rate Comparison",
+              "title": "Borrowing wisely",
               "blocks": [
                 {
                   "type": "text",
-                  "md": "Shopping for loans effectively can save you thousands of dollars over the life of your loan. Here's how to compare options systematically.\n\n**The Loan Shopping Timeline**\n• **Rate Shopping Window**: 14-45 days for mortgage/auto loans (multiple inquiries count as one on credit report)\n• **Application Process**: 30-45 days for mortgages\n• **Closing Preparation**: 7-14 days before closing\n\n**Key Factors to Compare**\n\n**Interest Rates and APR**:\n• **Interest Rate**: The cost of borrowing before fees\n• **APR**: Total cost including fees and closing costs\n• **Points**: Upfront fees to reduce interest rate (1 point = 1% of loan amount)\n\n**Loan Terms**:\n• **Loan Length**: 15-year vs. 30-year mortgages\n• **Fixed vs. Variable**: Rate stability vs. potential savings\n• **Prepayment Penalties**: Fees for paying off early\n\n**Closing Costs and Fees**:\n• **Origination Fees**: Lender charges for processing\n• **Application Fees**: Upfront processing costs\n• **Appraisal Fees**: Property valuation costs\n• **Title Insurance**: Protection against ownership issues\n\n**Lender Comparison**\n\n**Traditional Banks**:\n• Established relationships\n• In-person service\n• Often higher rates\n• Stricter qualification requirements\n\n**Credit Unions**:\n• Member-owned, not-for-profit\n• Often better rates and terms\n• Personalized service\n• Membership requirements\n\n**Online Lenders**:\n• Streamlined application process\n• Competitive rates\n• Lower overhead costs\n• Less personal interaction\n\n**Mortgage Brokers**:\n• Access to multiple lenders\n• Can find specialized programs\n• Broker fees to consider\n• May not represent all options\n\n**Rate Lock Strategies**\n• **Rate Lock Period**: 30-60 days typical\n• **Float-Down Options**: Ability to take lower rate if rates fall\n• **Extension Fees**: Cost to extend lock period\n• **Timing**: Lock when you find acceptable rate and are ready to close\n\n**Calculating True Loan Costs**\n\n**Example: $300,000 Mortgage Comparison**\n\n**Lender A**: 6.25% rate, $2,000 closing costs\n• Monthly Payment: $1,847\n• Total Interest (30 years): $364,932\n• Total Cost: $366,932\n\n**Lender B**: 6.5% rate, $500 closing costs\n• Monthly Payment: $1,896\n• Total Interest (30 years): $382,632\n• Total Cost: $383,132\n\n**Break-even**: Lender A saves $16,200 over 30 years despite higher upfront costs\n\n**Red Flags When Loan Shopping**:\n• Pressure to sign immediately\n• Rates significantly below market\n• Excessive upfront fees\n• Unclear terms and conditions\n• Unlicensed lenders\n• Promises that seem too good to be true\n\n**Negotiation Strategies**:\n• Get quotes from multiple lenders\n• Use competing offers to negotiate\n• Ask about fee waivers\n• Consider timing (rates change daily)\n• Don't be afraid to walk away\n• Read all documents carefully before signing"
-                }
-              ]
-            },
-            {
-              "id": "part-6",
-              "type": "reading",
-              "title": "Advanced Loan Strategies and Optimization",
-              "blocks": [
+                  "md": "**Borrow less than you're offered**\nA lender may approve more than you can comfortably repay. Decide your limit first.\n\n**Watch your debt-to-income ratio**\nThat's your monthly debt payments divided by your monthly income. Lenders use it, and so should you.\n\n**Always pay on time**\nSet up autopay. Late payments add fees and hurt your credit.\n\n**Pay extra when you can**\nEven small extra payments save interest.\n\n**Refinancing**\nIf rates drop or your credit improves, a new loan at a lower rate might save money. Watch the fees.\n\n**Stay away from**\n• Payday loans with sky-high costs\n• Loans you don't fully understand\n• Pressure to sign today"
+                },
                 {
-                  "type": "text",
-                  "md": "Once you understand the basics, these advanced strategies can help you optimize your borrowing and build wealth more effectively.\n\n**Loan Acceleration Strategies**\n\n**Extra Principal Payments**:\nMaking additional payments toward principal can significantly reduce interest costs:\n• **Monthly Extra**: $100 extra on $300k mortgage saves $63,000 interest\n• **Annual Bonus**: Use tax refunds or bonuses for principal reduction\n• **Bi-weekly Payments**: 26 payments per year instead of 12 (equivalent to 13 monthly payments)\n\n**Refinancing Strategies**\n\n**Rate-and-Term Refinancing**:\n• Lower interest rate reduces payments\n• Change loan term (30-year to 15-year)\n• Remove PMI with increased home value\n• Generally worth it if rate drops 0.5-1%\n\n**Cash-Out Refinancing**:\n• Borrow against home equity\n• Use funds for improvements, debt consolidation, investments\n• Higher loan amount, potentially higher rate\n• Consider tax implications\n\n**Debt Consolidation with Loans**\n\n**Benefits**:\n• Single monthly payment\n• Potentially lower interest rate\n• Fixed payment schedule\n• Simplified debt management\n\n**Considerations**:\n• Total interest cost over loan term\n• Fees associated with consolidation\n• Risk of accumulating new debt\n• Impact on credit utilization\n\n**Investment Property Financing**\n\n**Primary vs. Investment Property Rates**:\n• Investment properties typically 0.5-1% higher rates\n• Larger down payment requirements (20-25%)\n• Stricter qualification requirements\n• Different tax implications\n\n**House Hacking Strategies**:\n• Live in duplex, rent other unit\n• FHA loans allow 3.5% down on 2-4 unit properties\n• Rental income can help qualify for larger loans\n• Build wealth through appreciation and cash flow\n\n**Business Loan Strategies**\n\n**SBA Loans**:\n• Government-backed business financing\n• Lower down payments and rates\n• Longer repayment terms\n• More complex application process\n\n**Equipment Financing**:\n• Equipment serves as collateral\n• Preserve working capital\n• Potential tax advantages through depreciation\n\n**Lines of Credit**:\n• Flexible access to funds\n• Interest only on used portion\n• Good for seasonal businesses\n• Variable interest rates\n\n**Loan Portfolio Management**\n\n**Diversification Strategies**:\n• Mix of fixed and variable rate loans\n• Different maturity dates\n• Various collateral types\n• Balance risk and return\n\n**Tax Optimization**:\n• Mortgage interest deduction (up to $750,000 loan amount)\n• Business loan interest deductibility\n• Investment property depreciation\n• Home office deductions\n\n**Exit Strategies**:\n• Refinancing when rates drop\n• Selling assets to pay off loans\n• Using other investments to pay down debt\n• Strategic default considerations (last resort)\n\n**Risk Management**:\n• Disability insurance to cover payments\n• Life insurance to protect family\n• Emergency funds for payment continuity\n• Regular review of loan portfolio performance\n\nRemember: Loans are tools that can either build or destroy wealth depending on how they're used. Focus on borrowing for appreciating assets and investments that generate returns exceeding the loan's cost."
+                  "type": "callout",
+                  "tone": "warning",
+                  "md": "**Red flag:** A lender who tells you not to read the paperwork or pushes you to decide right now."
+                },
+                {
+                  "type": "check",
+                  "question": {
+                    "id": "l-c2",
+                    "prompt": "On a conventional mortgage, PMI is usually required when your down payment is below…",
+                    "options": [
+                      "5%",
+                      "20%",
+                      "50%",
+                      "1%"
+                    ],
+                    "answer": 1,
+                    "hint": "It's the classic down payment target.",
+                    "explanation": "Below 20% down, lenders usually add private mortgage insurance (PMI) to the monthly cost."
+                  }
                 }
               ]
             }
@@ -297,7 +308,10 @@
                   "question": {
                     "id": "l-s1",
                     "prompt": "Is this loan usually secured or unsecured?",
-                    "buckets": ["Secured", "Unsecured"],
+                    "buckets": [
+                      "Secured",
+                      "Unsecured"
+                    ],
                     "items": [
                       {
                         "text": "Mortgage",

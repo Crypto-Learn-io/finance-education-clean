@@ -14,11 +14,13 @@
       "Invest a little, often"
     ],
     "outcome": "By the end, you can explain how a simple starter portfolio works.",
-    "pillars": ["I"],
+    "pillars": [
+      "I"
+    ],
     "icon": "TrendingUp",
     "tint": "bg-green-100 text-green-800",
     "featured": true,
-    "time": "3 modules, about 30 min"
+    "time": "3 modules, about 25 min"
   },
   "modules": [
     {
@@ -82,11 +84,27 @@
             {
               "id": "part-1",
               "type": "reading",
-              "title": "The Fundamental Reasons to Invest",
+              "title": "Why invest?",
               "blocks": [
                 {
                   "type": "text",
-                  "md": "Investing is essential for building long-term wealth and achieving financial independence. Understanding why you should invest helps motivate consistent, disciplined investing behavior.\n\n**The Inflation Problem**\nMoney sitting in checking accounts loses purchasing power over time due to inflation. If inflation averages 3% annually and your savings earn 0.5%, you're effectively losing 2.5% of purchasing power each year.\n\n**Historical Example**: $1,000 in 1990 had the same purchasing power as $2,300 in 2023. Without investing, your money would have lost more than half its value.\n\n**The Power of Compound Growth**\nInvesting allows your money to grow exponentially rather than linearly. When your investments earn returns, those returns then earn returns, creating a snowball effect.\n\n**Example: $10,000 Invested at 7% Annual Return**:\n• Year 10: $19,672\n• Year 20: $38,697\n• Year 30: $76,123\n• Year 40: $149,745\n\nThe last decade alone adds $73,622 - more than the first three decades combined!\n\n**Building Financial Independence**\nInvesting creates passive income streams that can eventually replace your salary. The goal is to accumulate enough assets that their returns cover your living expenses.\n\n**The 25x Rule**: To maintain your current lifestyle in retirement, you need about 25 times your annual expenses invested. If you spend $60,000 annually, you need $1.5 million invested.\n\n**Time Advantage**\nStarting early gives you the most powerful investing tool: time. A 25-year-old investing $200 monthly at 7% will have more at retirement than a 35-year-old investing $400 monthly at the same return.\n\n**Wealth Building vs. Savings**\n• **Savings**: Preserve money, low risk, low return\n• **Investing**: Grow money, higher risk, higher potential return\n\n**Protection Against Economic Changes**\nDiversified investing protects against:\n• Inflation eroding purchasing power\n• Currency devaluation\n• Economic downturns (when spread across time)\n• Industry-specific risks\n\n**The Cost of Not Investing**\nEvery year you delay investing costs you significantly:\n• Opportunity cost of compound growth\n• Higher required savings rates later\n• Increased risk of not meeting financial goals\n• Dependence on Social Security and employer benefits"
+                  "md": "Saving keeps money safe. Investing helps money **grow**.\n\nWhen you invest, you buy something you hope will be worth more later. Over long periods, investing has usually grown faster than savings accounts. But it also comes with risk. Values go up and down.\n\n**Before you invest**\n• Build an emergency fund first\n• Only invest money you won't need for at least 5 years\n• Pay off high-interest debt, like credit cards\n\n**Why start young?**\nTime lets compound growth do its work. Small amounts invested early can grow more than bigger amounts invested later."
+                },
+                {
+                  "type": "callout",
+                  "tone": "note",
+                  "md": "**Parent tip:** Kids can't open a brokerage account alone. A parent can open a custodial account for them. If your teen has earned income, a custodial Roth IRA is another option."
+                }
+              ]
+            },
+            {
+              "id": "part-2",
+              "type": "reading",
+              "title": "Stocks and bonds",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "**Stocks**\nA stock is a small piece of a company. If the company does well, your piece may be worth more. Some companies also pay **dividends**, a share of profits.\n\nStocks can swing a lot, especially over short periods.\n\n**Bonds**\nA bond is a loan you make to a company or a government. They pay you interest and give your money back on a set date.\n\nBonds are usually steadier than stocks, but they tend to grow more slowly.\n\n**The basic trade-off**\n• Stocks: more growth, more ups and downs\n• Bonds: less growth, more stability\n\nMost investors use a mix of both."
                 },
                 {
                   "type": "check",
@@ -107,24 +125,13 @@
               ]
             },
             {
-              "id": "part-2",
-              "type": "reading",
-              "title": "Understanding Different Asset Classes",
-              "blocks": [
-                {
-                  "type": "text",
-                  "md": "Different types of investments serve different purposes in your portfolio. Understanding each asset class helps you make informed allocation decisions.\n\n**Stocks (Equities)**\nStocks represent ownership shares in companies. As a shareholder, you own a piece of the business and benefit from its growth and profits.\n\n**Types of Stocks**:\n• **Large-cap**: Established companies ($10B+ market cap)\n• **Mid-cap**: Growing companies ($2-10B market cap)\n• **Small-cap**: Smaller companies (under $2B market cap)\n• **Growth stocks**: Companies expected to grow faster than average\n• **Value stocks**: Companies trading below their intrinsic value\n• **Dividend stocks**: Companies that pay regular income to shareholders\n\n**Stock Investing Approaches**:\n• **Individual stocks**: Higher risk, potential for higher returns\n• **Index funds**: Broad market exposure, lower risk\n• **Sector funds**: Focus on specific industries\n• **International stocks**: Geographic diversification\n\n**Bonds (Fixed Income)**\nBonds are loans you make to companies or governments. They pay regular interest and return your principal at maturity.\n\n**Types of Bonds**:\n• **Government bonds**: U.S. Treasury securities, very safe\n• **Corporate bonds**: Company debt, higher yield than government bonds\n• **Municipal bonds**: State/local government debt, often tax-free\n• **High-yield bonds**: Lower-rated bonds with higher interest rates\n\n**Bond Characteristics**:\n• **Face value**: Amount paid at maturity\n• **Coupon rate**: Annual interest rate\n• **Maturity date**: When principal is repaid\n• **Credit rating**: Assessment of default risk\n\n**Real Estate Investment Trusts (REITs)**\nREITs allow you to invest in real estate without buying property directly.\n\n**REIT Types**:\n• **Equity REITs**: Own and operate income-producing real estate\n• **Mortgage REITs**: Finance real estate transactions\n• **Hybrid REITs**: Combination of equity and mortgage REITs\n\n**Benefits**: Regular income, inflation protection, portfolio diversification\n**Considerations**: Interest rate sensitivity, property market risks\n\n**Commodities**\nPhysical goods like gold, oil, agricultural products, and precious metals.\n\n**Investment Methods**:\n• **Physical ownership**: Buying actual commodities\n• **Futures contracts**: Agreements to buy/sell at future dates\n• **Commodity ETFs**: Funds that track commodity prices\n• **Commodity stocks**: Companies involved in commodity production\n\n**Alternative Investments**\n• **Private equity**: Investments in private companies\n• **Hedge funds**: Complex strategies for wealthy investors\n• **Cryptocurrency**: Digital assets with high volatility\n• **Collectibles**: Art, rare coins, vintage items\n\n**Cash and Cash Equivalents**\n• **High-yield savings accounts**: FDIC-insured, immediate access\n• **Money market funds**: Slightly higher yields, very liquid\n• **Certificates of deposit**: Fixed terms, guaranteed returns\n• **Treasury bills**: Short-term government securities\n\n**Asset Class Risk and Return Characteristics**:\n• **Highest Risk/Return**: Individual stocks, commodities, alternatives\n• **Moderate Risk/Return**: Stock index funds, REITs, corporate bonds\n• **Lower Risk/Return**: Government bonds, CDs, high-yield savings\n• **Lowest Risk/Return**: Treasury bills, money market accounts"
-                }
-              ]
-            },
-            {
               "id": "part-3",
               "type": "reading",
-              "title": "Investment Vehicles: Mutual Funds, ETFs, and More",
+              "title": "Funds, index funds and ETFs",
               "blocks": [
                 {
                   "type": "text",
-                  "md": "Understanding different investment vehicles helps you choose the most cost-effective and suitable options for your goals.\n\n**Mutual Funds**\nProfessionally managed pools of money from many investors used to buy securities.\n\n**Mutual Fund Structure**:\n• **Active management**: Fund managers make investment decisions\n• **Diversification**: Instant access to hundreds or thousands of securities\n• **Professional oversight**: Research teams analyze investments\n• **Economies of scale**: Lower costs through pooled purchasing\n\n**Types of Mutual Funds**:\n• **Stock funds**: Focus on equity investments\n• **Bond funds**: Primarily fixed-income securities\n• **Balanced funds**: Mix of stocks and bonds\n• **Target-date funds**: Automatically adjust allocation as you age\n• **Index funds**: Track specific market indexes\n\n**Mutual Fund Fees**:\n• **Expense ratio**: Annual fee (0.1% to 2%+ of assets)\n• **Load fees**: Sales charges (front-end or back-end)\n• **12b-1 fees**: Marketing and distribution costs\n• **Transaction fees**: Costs for buying/selling shares\n\n**Exchange-Traded Funds (ETFs)**\nSimilar to mutual funds but trade like individual stocks on exchanges.\n\n**ETF Advantages**:\n• **Lower fees**: Typically 0.03% to 0.75% expense ratios\n• **Tax efficiency**: More tax-efficient than mutual funds\n• **Flexibility**: Trade during market hours\n• **Transparency**: Holdings disclosed daily\n\n**ETF Types**:\n• **Broad market ETFs**: Track major indexes (S&P 500, Total Stock Market)\n• **Sector ETFs**: Focus on specific industries\n• **International ETFs**: Foreign market exposure\n• **Bond ETFs**: Fixed-income exposure\n• **Commodity ETFs**: Exposure to physical goods\n\n**Index Funds vs. Actively Managed Funds**\n\n**Index Funds**:\n• **Lower costs**: Expense ratios typically under 0.5%\n• **Consistent performance**: Match market returns\n• **Lower turnover**: Less trading, more tax-efficient\n• **Simplicity**: Easy to understand and compare\n\n**Actively Managed Funds**:\n• **Professional management**: Attempt to beat market returns\n• **Higher costs**: Expense ratios often 1%+ annually\n• **Inconsistent performance**: Most fail to beat their benchmark long-term\n• **Tax implications**: Higher turnover can generate taxable events\n\n**Individual Stocks**\nBuying shares of specific companies directly.\n\n**Advantages**:\n• **No management fees**: Keep all returns\n• **Control**: Choose exactly what you own\n• **Potential for high returns**: Successful companies can provide exceptional returns\n\n**Disadvantages**:\n• **Higher risk**: Lack of diversification\n• **Research required**: Need to analyze individual companies\n• **Time intensive**: Ongoing monitoring required\n\n**Target-Date Funds**\nAll-in-one funds that automatically adjust allocation based on your target retirement date.\n\n**How They Work**:\n• **Aggressive early**: Higher stock allocation when young\n• **Conservative later**: Shift to bonds as retirement approaches\n• **Automatic rebalancing**: No action required from investor\n\n**Example Allocation by Age**:\n• Age 25: 90% stocks, 10% bonds\n• Age 45: 70% stocks, 30% bonds\n• Age 65: 40% stocks, 60% bonds\n\n**Robo-Advisors**\nAutomated investment platforms that create and manage portfolios.\n\n**Services Provided**:\n• **Automated rebalancing**: Maintain target allocations\n• **Tax-loss harvesting**: Offset gains with losses\n• **Goal-based investing**: Customize for specific objectives\n• **Low fees**: Typically 0.25%-0.5% annually\n\n**Popular Robo-Advisors**: Betterment, Wealthfront, Vanguard Digital Advisor\n\n**Choosing the Right Investment Vehicle**:\n• **Beginners**: Start with target-date funds or broad market ETFs\n• **Intermediate**: Add sector ETFs and individual stocks\n• **Advanced**: Consider alternatives and complex strategies\n• **All levels**: Prioritize low fees and broad diversification"
+                  "md": "Picking single stocks is hard, even for experts. Funds make it easier.\n\n**Mutual funds**\nA fund pools money from many people to buy lots of investments at once.\n\n**Index funds**\nThese copy a list of companies, like the S&P 500. They don't try to pick winners. They just own the whole list.\n\n**ETFs**\nExchange-traded funds also hold many investments. They trade during the day like a single stock. Many ETFs are index funds.\n\n**Why people like index funds**\n• Instant diversification\n• Usually low fees\n• Simple to understand\n\n**Watch the fees**\nA fund's yearly fee is its **expense ratio**. A difference of 1% a year can cost a lot over decades. Lower is better."
                 }
               ]
             }
@@ -166,11 +173,27 @@
             {
               "id": "part-4",
               "type": "reading",
-              "title": "Building and Managing Your Investment Portfolio",
+              "title": "Build a simple portfolio",
               "blocks": [
                 {
                   "type": "text",
-                  "md": "Creating an effective investment portfolio requires understanding asset allocation, diversification, and rebalancing strategies.\n\n**Asset Allocation Fundamentals**\nAsset allocation - how you divide investments among different asset classes - is the most important factor in determining your portfolio's risk and return.\n\n**Age-Based Allocation Rules**:\n• **\"100 minus your age\" rule**: Percentage in stocks\n• **110 minus your age**: More aggressive version\n• **Target-date fund approach**: Gradual shift from stocks to bonds\n\n**Example Allocations by Life Stage**:\n\n**Age 25 (40+ years to retirement)**:\n• 90% stocks (60% U.S., 30% international)\n• 10% bonds\n• High growth potential, can weather volatility\n\n**Age 45 (20 years to retirement)**:\n• 70% stocks (50% U.S., 20% international)\n• 25% bonds\n• 5% alternatives (REITs, commodities)\n\n**Age 65 (retirement)**:\n• 40% stocks (30% U.S., 10% international)\n• 55% bonds\n• 5% cash/short-term securities\n\n**Diversification Strategies**\n\n**Geographic Diversification**:\n• **U.S. stocks**: 50-70% of equity allocation\n• **International developed markets**: 20-30%\n• **Emerging markets**: 5-15%\n• Benefits: Reduce country-specific risks, access global growth\n\n**Sector Diversification**:\n• **Technology**: Growth potential but volatile\n• **Healthcare**: Defensive, aging population benefits\n• **Financial services**: Economic cycle dependent\n• **Consumer goods**: Stable, dividend-paying\n• **Avoid over-concentration** in any single sector\n\n**Company Size Diversification**:\n• **Large-cap stocks**: Stability, established companies\n• **Mid-cap stocks**: Growth potential, moderate risk\n• **Small-cap stocks**: High growth potential, higher volatility\n\n**Style Diversification**:\n• **Growth stocks**: Companies with above-average growth rates\n• **Value stocks**: Companies trading below intrinsic value\n• **Blend approach**: Combination of growth and value\n\n**Rebalancing Your Portfolio**\nRebalancing maintains your target asset allocation as market movements change your portfolio's composition.\n\n**Rebalancing Methods**:\n• **Calendar rebalancing**: Quarterly or annually\n• **Threshold rebalancing**: When allocation drifts 5-10% from target\n• **Hybrid approach**: Combination of time and threshold triggers\n\n**Rebalancing Example**:\nTarget allocation: 70% stocks, 30% bonds\nAfter market gains: 80% stocks, 20% bonds\nAction: Sell stocks, buy bonds to return to 70/30\n\n**Tax-Efficient Rebalancing**:\n• **Use new contributions**: Direct new money to underweight assets\n• **Rebalance in tax-advantaged accounts**: Avoid taxable events\n• **Tax-loss harvesting**: Sell losing investments to offset gains\n\n**Dollar-Cost Averaging (DCA)**\nInvesting a fixed amount regularly regardless of market conditions.\n\n**DCA Benefits**:\n• **Reduces timing risk**: Avoid trying to time the market\n• **Emotional discipline**: Removes emotion from investing decisions\n• **Potential for lower average cost**: Buy more shares when prices are low\n\n**DCA Example**:\nInvest $500 monthly in S&P 500 index fund:\n• Month 1: $500 buys 10 shares at $50\n• Month 2: $500 buys 12.5 shares at $40\n• Month 3: $500 buys 8.33 shares at $60\n• Average cost per share: $48.89 vs. average price of $50\n\n**Portfolio Monitoring and Adjustments**\n\n**Regular Review Schedule**:\n• **Monthly**: Check account balances and contributions\n• **Quarterly**: Review asset allocation and performance\n• **Annually**: Comprehensive portfolio review and rebalancing\n\n**When to Adjust Your Portfolio**:\n• **Life changes**: Marriage, children, job changes\n• **Goal changes**: New financial objectives\n• **Risk tolerance shifts**: Market crashes, personal circumstances\n• **Time horizon changes**: Approaching retirement\n\n**Common Portfolio Mistakes to Avoid**:\n• **Over-diversification**: Owning too many similar funds\n• **Under-diversification**: Concentrated in few investments\n• **Emotional investing**: Buying high, selling low\n• **Timing the market**: Attempting to predict short-term movements\n• **Ignoring fees**: High-cost investments erode returns\n• **Lack of rebalancing**: Letting allocation drift from target"
+                  "md": "A portfolio is everything you invest in. Simple is usually best.\n\n**Match it to your timeline**\n• Money needed in under 5 years: keep it mostly safe, like savings or short-term bonds\n• Money for 10+ years: you can usually take more stock risk\n\n**A simple starter idea**\nMany beginners use one broad index fund, or a mix of a stock index fund and a bond index fund.\n\n**Target-date funds**\nThese pick a mix based on when you'll need the money. They get safer as that date gets closer.\n\n**Keep it balanced**\nOnce a year, check your mix. If stocks grew a lot, move some back to bonds. This is called rebalancing."
+                }
+              ]
+            },
+            {
+              "id": "part-5",
+              "type": "reading",
+              "title": "Smart investing habits",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "**Invest a little, often**\nPutting in the same amount regularly is called dollar-cost averaging. You buy more when prices are low and less when they're high.\n\n**Don't panic**\nMarkets drop sometimes. Selling in a panic can lock in losses. Long-term investors usually ride it out.\n\n**Skip the hype**\nIf friends or social media say a stock is a \"sure thing,\" be careful. Nobody can promise that.\n\n**Keep costs low**\nHigh fees quietly eat your returns.\n\n**Keep learning**\nRead, ask questions and start small."
+                },
+                {
+                  "type": "callout",
+                  "tone": "warning",
+                  "md": "**Scam alert:** \"Guaranteed\" high returns are a red flag. Real investments always carry risk."
                 },
                 {
                   "type": "check",
@@ -187,17 +210,6 @@
                     "hint": "Don't put all your eggs in one basket.",
                     "explanation": "Owning many investments means one bad one hurts less. It lowers risk but can't remove it."
                   }
-                }
-              ]
-            },
-            {
-              "id": "part-5",
-              "type": "reading",
-              "title": "Investment Strategies and Advanced Concepts",
-              "blocks": [
-                {
-                  "type": "text",
-                  "md": "As you become more comfortable with investing, these advanced strategies can help optimize your returns and manage risk more effectively.\n\n**Value Investing**\nStrategy of buying stocks that appear underpriced by fundamental analysis.\n\n**Value Investing Principles**:\n• **Intrinsic value**: Calculate what a company is really worth\n• **Margin of safety**: Buy at significant discount to intrinsic value\n• **Long-term focus**: Hold undervalued stocks until market recognizes value\n• **Quality companies**: Focus on businesses with sustainable competitive advantages\n\n**Key Value Metrics**:\n• **Price-to-earnings (P/E) ratio**: Stock price ÷ earnings per share\n• **Price-to-book (P/B) ratio**: Stock price ÷ book value per share\n• **Debt-to-equity ratio**: Company's debt relative to shareholder equity\n• **Return on equity (ROE)**: Net income ÷ shareholder equity\n\n**Growth Investing**\nStrategy of buying stocks in companies expected to grow faster than average.\n\n**Growth Investing Characteristics**:\n• **Higher P/E ratios**: Investors pay premium for future growth\n• **Reinvested earnings**: Companies plow profits back into expansion\n• **Revenue growth**: Focus on increasing sales and market share\n• **Innovation focus**: Technology and disruptive companies\n\n**Growth vs. Value Performance**:\n• **Bull markets**: Growth often outperforms\n• **Bear markets**: Value typically provides more protection\n• **Long-term**: Both strategies can be successful\n\n**Dividend Investing**\nFocus on stocks that pay regular dividends to shareholders.\n\n**Dividend Strategy Benefits**:\n• **Regular income**: Quarterly or monthly cash payments\n• **Inflation protection**: Dividends often grow over time\n• **Lower volatility**: Dividend stocks tend to be less volatile\n• **Compounding**: Reinvesting dividends accelerates growth\n\n**Dividend Metrics**:\n• **Dividend yield**: Annual dividends ÷ stock price\n��� **Payout ratio**: Dividends ÷ earnings (sustainability measure)\n• **Dividend growth rate**: Annual increase in dividend payments\n\n**Sector Rotation Strategy**\nMoving investments between different sectors based on economic cycles.\n\n**Economic Cycle Phases**:\n• **Early cycle**: Technology, consumer discretionary perform well\n• **Mid cycle**: Energy, materials benefit from growth\n• **Late cycle**: Healthcare, utilities provide stability\n• **Recession**: Consumer staples, bonds offer protection\n\n**International Investing**\nAdding foreign investments to your portfolio.\n\n**International Benefits**:\n• **Diversification**: Reduce dependence on U.S. market\n• **Growth opportunities**: Access to faster-growing economies\n• **Currency exposure**: Potential benefits from dollar weakness\n\n**International Considerations**:\n• **Currency risk**: Exchange rate fluctuations affect returns\n• **Political risk**: Government instability can impact investments\n• **Information challenges**: Less transparent financial reporting\n• **Tax complications**: Foreign tax implications\n\n**Tax-Efficient Investing Strategies**\n\n**Asset Location**:\n• **Tax-advantaged accounts**: Hold tax-inefficient investments\n• **Taxable accounts**: Hold tax-efficient investments\n• **Example**: Put bonds in 401(k), index funds in taxable account\n\n**Tax-Loss Harvesting**:\n• **Realize losses**: Sell losing investments to offset gains\n• **Wash sale rule**: Can't repurchase same security for 30 days\n• **Tax alpha**: Additional return from tax management\n\n**Alternative Investment Strategies**\n\n**Real Estate Investment**:\n• **REITs**: Liquid real estate exposure\n• **Direct ownership**: Rental properties, flipping\n• **Real estate crowdfunding**: Access to commercial real estate\n\n**Commodities Investment**:\n• **Inflation hedge**: Commodities often rise with inflation\n• **Portfolio diversification**: Low correlation with stocks/bonds\n• **Investment methods**: ETFs, futures, direct ownership\n\n**Environmental, Social, and Governance (ESG) Investing**:\n• **Sustainable investing**: Focus on environmentally responsible companies\n• **Impact investing**: Investments intended to generate positive social impact\n• **ESG funds**: Mutual funds and ETFs with ESG criteria\n\n**Behavioral Finance and Investment Psychology**\n\n**Common Investment Biases**:\n• **Confirmation bias**: Seeking information that confirms existing beliefs\n• **Loss aversion**: Feeling losses more acutely than gains\n• **Herding**: Following the crowd rather than independent analysis\n• **Overconfidence**: Believing you can predict market movements\n\n**Overcoming Emotional Investing**:\n• **Stick to your plan**: Don't let emotions drive decisions\n• **Automate investments**: Remove emotion from the equation\n• **Focus on long-term**: Short-term volatility is normal\n• **Educate yourself**: Understanding reduces fear and panic\n\nRemember: Successful investing is more about time in the market than timing the market. Start early, invest consistently, diversify broadly, and stay disciplined through market ups and downs."
                 }
               ]
             }
@@ -272,7 +284,10 @@
                   "question": {
                     "id": "v-s1",
                     "prompt": "Does this describe a stock or a bond?",
-                    "buckets": ["Stock", "Bond"],
+                    "buckets": [
+                      "Stock",
+                      "Bond"
+                    ],
                     "items": [
                       {
                         "text": "You own part of a company",
