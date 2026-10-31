@@ -1,8 +1,9 @@
 # THRIVE course card template
 
-Every course card uses the same fields. The data lives in `client/data/courses.ts`
-and renders through `client/components/CourseCard.tsx`, so adding a course is one
-new object in that file.
+Every course card uses the same fields. They live in the `meta` block of each
+course JSON file in `client/content/courses/` and render through
+`client/components/CourseCard.tsx`. For the full course format, see
+[course-json.md](./course-json.md).
 
 | Field        | Rule                                                       |
 | ------------ | ---------------------------------------------------------- |
