@@ -14,9 +14,7 @@
       "Invest a little, often"
     ],
     "outcome": "By the end, you can explain how a simple starter portfolio works.",
-    "pillars": [
-      "I"
-    ],
+    "pillars": ["I"],
     "icon": "TrendingUp",
     "tint": "bg-green-100 text-green-800",
     "featured": true,
@@ -274,10 +272,7 @@
                   "question": {
                     "id": "v-s1",
                     "prompt": "Does this describe a stock or a bond?",
-                    "buckets": [
-                      "Stock",
-                      "Bond"
-                    ],
+                    "buckets": ["Stock", "Bond"],
                     "items": [
                       {
                         "text": "You own part of a company",

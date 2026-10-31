@@ -13,9 +13,7 @@
       "Protect savings from rising prices"
     ],
     "outcome": "By the end, you can explain why saving alone isn't always enough.",
-    "pillars": [
-      "V"
-    ],
+    "pillars": ["V"],
     "icon": "TrendingDown",
     "tint": "bg-orange-100 text-orange-800",
     "time": "3 modules, about 35 min"
@@ -260,10 +258,7 @@
                   "question": {
                     "id": "f-s1",
                     "prompt": "Does this help you keep up with inflation?",
-                    "buckets": [
-                      "Helps",
-                      "Doesn't help"
-                    ],
+                    "buckets": ["Helps", "Doesn't help"],
                     "items": [
                       {
                         "text": "Long-term investing in a diversified fund",

@@ -14,10 +14,7 @@
       "Plan ahead, not just in April"
     ],
     "outcome": "By the end, you can explain how taxes affect what you earn.",
-    "pillars": [
-      "E",
-      "R"
-    ],
+    "pillars": ["E", "R"],
     "icon": "Calculator",
     "tint": "bg-teal-100 text-teal-800",
     "time": "3 modules, about 30 min"
@@ -260,10 +257,7 @@
                   "question": {
                     "id": "t-s1",
                     "prompt": "Is it a deduction or a credit?",
-                    "buckets": [
-                      "Deduction",
-                      "Credit"
-                    ],
+                    "buckets": ["Deduction", "Credit"],
                     "items": [
                       {
                         "text": "Standard deduction",

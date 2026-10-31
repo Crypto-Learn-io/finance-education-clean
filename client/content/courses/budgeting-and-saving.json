@@ -14,10 +14,7 @@
       "Set a saving goal and stick to it"
     ],
     "outcome": "By the end, you can plan a monthly budget and set a saving goal.",
-    "pillars": [
-      "T",
-      "H"
-    ],
+    "pillars": ["T", "H"],
     "icon": "PiggyBank",
     "tint": "bg-emerald-100 text-emerald-800",
     "featured": true,
@@ -305,10 +302,7 @@
                   "question": {
                     "id": "b-s1",
                     "prompt": "Sort each expense. Is it a need or a want?",
-                    "buckets": [
-                      "Need",
-                      "Want"
-                    ],
+                    "buckets": ["Need", "Want"],
                     "items": [
                       {
                         "text": "Rent",

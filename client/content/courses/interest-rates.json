@@ -13,10 +13,7 @@
       "See why starting early pays off"
     ],
     "outcome": "By the end, you can compare two rates and pick the better deal.",
-    "pillars": [
-      "V",
-      "I"
-    ],
+    "pillars": ["V", "I"],
     "icon": "Percent",
     "tint": "bg-amber-100 text-amber-800",
     "time": "3 modules, about 30 min"
@@ -94,12 +91,7 @@
                   "question": {
                     "id": "i-c1",
                     "prompt": "$100 earns 10% simple interest for 2 years. How much interest is that?",
-                    "options": [
-                      "$10",
-                      "$20",
-                      "$21",
-                      "$200"
-                    ],
+                    "options": ["$10", "$20", "$21", "$200"],
                     "answer": 1,
                     "hint": "Multiply principal × rate × years.",
                     "explanation": "$100 × 0.10 × 2 = $20. With yearly compounding it would be $21."
@@ -178,12 +170,7 @@
                   "question": {
                     "id": "i-c2",
                     "prompt": "Which number shows the yearly cost of borrowing, including some fees?",
-                    "options": [
-                      "APY",
-                      "APR",
-                      "CPI",
-                      "GDP"
-                    ],
+                    "options": ["APY", "APR", "CPI", "GDP"],
                     "answer": 1,
                     "hint": "The one used on loans and credit cards.",
                     "explanation": "APR is for borrowing. APY shows what savings earn with compounding."
@@ -284,10 +271,7 @@
                   "question": {
                     "id": "i-s1",
                     "prompt": "Are you earning interest or paying it?",
-                    "buckets": [
-                      "Earning",
-                      "Paying"
-                    ],
+                    "buckets": ["Earning", "Paying"],
                     "items": [
                       {
                         "text": "Savings account",

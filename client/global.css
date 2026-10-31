@@ -244,6 +244,223 @@
   animation: thrive-sway 3.5s ease-in-out infinite;
 }
 
+/* ---------- LMS player ---------- */
+
+:root {
+  /* Spring-like easing for slides. Falls back to a soft cubic-bezier. */
+  --ease-spring: cubic-bezier(0.34, 1.3, 0.64, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+@supports (transition-timing-function: linear(0, 1)) {
+  :root {
+    --ease-spring: linear(
+      0,
+      0.006,
+      0.025 2.8%,
+      0.101 6.1%,
+      0.539 18.9%,
+      0.721 25.3%,
+      0.849 31.5%,
+      0.937 38.1%,
+      0.968 41.8%,
+      0.991 45.7%,
+      1.006 50.1%,
+      1.015 55%,
+      1.017 63.9%,
+      1.001 85.9%,
+      1
+    );
+  }
+}
+
+@layer components {
+  /* Hover: lift 2%, soften shadow, soft green glow */
+  .hover-glow {
+    transition:
+      transform var(--motion-base) var(--ease-out),
+      box-shadow var(--motion-base) var(--ease-out),
+      border-color var(--motion-base) var(--ease-out);
+  }
+  .hover-glow:hover,
+  .hover-glow:focus-visible {
+    transform: scale(1.02);
+    box-shadow:
+      0 10px 28px -14px rgb(10 122 74 / 0.45),
+      0 0 0 4px rgb(15 157 88 / 0.12);
+    border-color: rgb(15 157 88 / 0.45);
+  }
+
+  /* Shimmering skeleton */
+  .skeleton {
+    position: relative;
+    overflow: hidden;
+    background: #e7f3ec;
+    border-radius: 0.75rem;
+  }
+  .skeleton::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgb(255 255 255 / 0.75),
+      transparent
+    );
+    animation: thrive-shimmer 1.3s ease-in-out infinite;
+  }
+
+  /* Smooth height for accordions and the sidebar tree */
+  .collapse-grid {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 380ms var(--ease-spring);
+  }
+  .collapse-grid[data-open="true"] {
+    grid-template-rows: 1fr;
+  }
+  .collapse-grid > * {
+    overflow: hidden;
+    min-height: 0;
+  }
+
+  .shake {
+    animation: thrive-shake 420ms cubic-bezier(0.36, 0.07, 0.19, 0.97);
+  }
+
+  /* Animated check box (sidebar + checklists) */
+  .check-box {
+    transition:
+      background-color 200ms var(--ease-out),
+      border-color 200ms var(--ease-out),
+      transform 320ms var(--ease-spring);
+  }
+  .check-box[data-done="true"] {
+    transform: scale(1);
+  }
+  .check-box path {
+    stroke-dasharray: 16;
+    stroke-dashoffset: 16;
+    transition: stroke-dashoffset 300ms var(--ease-out) 80ms;
+  }
+  .check-box[data-done="true"] path {
+    stroke-dashoffset: 0;
+  }
+  .check-box.just-done {
+    animation: thrive-pop 420ms var(--ease-spring);
+  }
+
+  /* Canvas slide between items */
+  .canvas-enter-next {
+    animation: thrive-slide-in-right 480ms var(--ease-spring) both;
+  }
+  .canvas-enter-prev {
+    animation: thrive-slide-in-left 480ms var(--ease-spring) both;
+  }
+
+  /* Range inputs in playgrounds */
+  .range {
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 999px;
+    background: linear-gradient(
+      to right,
+      var(--color-primary-dark) var(--fill, 50%),
+      #d3ebdd var(--fill, 50%)
+    );
+    cursor: pointer;
+  }
+  .range::-webkit-slider-thumb {
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 999px;
+    background: #fff;
+    border: 3px solid var(--color-primary-dark);
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.15);
+    transition: transform 150ms var(--ease-out);
+  }
+  .range:hover::-webkit-slider-thumb,
+  .range:focus-visible::-webkit-slider-thumb {
+    transform: scale(1.15);
+  }
+  .range::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    background: #fff;
+    border: 3px solid var(--color-primary-dark);
+  }
+
+  /* Chart lines animate between values where supported */
+  .chart-line {
+    transition: d 450ms var(--ease-in-out);
+  }
+  .bar-fill {
+    transition:
+      width 450ms var(--ease-in-out),
+      left 450ms var(--ease-in-out);
+  }
+}
+
+@keyframes thrive-shimmer {
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes thrive-shake {
+  10%,
+  90% {
+    transform: translateX(-2px);
+  }
+  20%,
+  80% {
+    transform: translateX(4px);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translateX(-6px);
+  }
+  40%,
+  60% {
+    transform: translateX(6px);
+  }
+}
+@keyframes thrive-pop {
+  0% {
+    transform: scale(0.6);
+  }
+  60% {
+    transform: scale(1.18);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes thrive-slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(36px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes thrive-slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-36px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* Respect reduced motion: show everything, no movement. */
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -257,8 +474,17 @@
     transition: none !important;
   }
   .float-slow,
-  .sway {
+  .sway,
+  .shake,
+  .skeleton::after,
+  .canvas-enter-next,
+  .canvas-enter-prev,
+  .check-box.just-done {
     animation: none !important;
+  }
+  .hover-glow:hover,
+  .hover-glow:focus-visible {
+    transform: none;
   }
   .card-lift:hover,
   .card-lift:focus-within {

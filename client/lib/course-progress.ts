@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useState } from "react";
 
 /**
- * Per-learner course progress (which items are done), saved in this browser.
+ * Per-learner course progress, saved in this browser.
+ * Stores finished item ids, plus answered questions as "q:<question id>".
  * Storage can be missing or blocked (private mode), so every access is guarded
  * and the app works without it.
  */
@@ -32,24 +33,24 @@ export function getCompleted(slug: string): string[] {
   return read()[slug] ?? [];
 }
 
-export function markComplete(slug: string, itemId: string) {
+export function markComplete(slug: string, id: string) {
   const store = read();
   const done = new Set(store[slug] ?? []);
-  if (done.has(itemId)) return;
-  done.add(itemId);
+  if (done.has(id)) return;
+  done.add(id);
   store[slug] = [...done];
   write(store);
 }
 
-/** React hook: completed item ids for a course, kept in sync across the app. */
+/** React hook: finished item ids and answered question ids for a course. */
 export function useCourseProgress(slug: string | undefined) {
-  const [done, setDone] = useState<Set<string>>(
+  const [all, setAll] = useState<Set<string>>(
     () => new Set(slug ? getCompleted(slug) : []),
   );
 
   useEffect(() => {
     if (!slug) return;
-    const sync = () => setDone(new Set(getCompleted(slug)));
+    const sync = () => setAll(new Set(getCompleted(slug)));
     sync();
     window.addEventListener(EVENT, sync);
     window.addEventListener("storage", sync);
@@ -59,10 +60,19 @@ export function useCourseProgress(slug: string | undefined) {
     };
   }, [slug]);
 
+  const done = new Set([...all].filter((id) => !id.startsWith("q:")));
+  const answered = new Set(
+    [...all].filter((id) => id.startsWith("q:")).map((id) => id.slice(2)),
+  );
+
   const mark = useCallback(
     (itemId: string) => slug && markComplete(slug, itemId),
     [slug],
   );
+  const markAnswered = useCallback(
+    (questionId: string) => slug && markComplete(slug, `q:${questionId}`),
+    [slug],
+  );
 
-  return { done, mark };
+  return { done, answered, mark, markAnswered };
 }
