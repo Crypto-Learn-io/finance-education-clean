@@ -78,7 +78,7 @@ export default function LessonContent({ content }: { content: string }) {
         switch (b.kind) {
           case "h":
             return (
-              <h4
+              <h2
                 key={i}
                 className="pt-2 text-lg font-extrabold text-ink flex items-center gap-2"
               >
@@ -87,7 +87,7 @@ export default function LessonContent({ content }: { content: string }) {
                   className="h-2 w-2 rounded-full bg-sun flex-none"
                 />
                 {b.text}
-              </h4>
+              </h2>
             );
           case "ul":
             return (

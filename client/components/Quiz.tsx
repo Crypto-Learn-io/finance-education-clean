@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import {
@@ -144,7 +144,9 @@ export default function QuizComponent({
                 <RotateCcw className="w-16 h-16 text-gray-500" />
               )}
             </div>
-            <CardTitle className="text-3xl mb-2">Quiz Complete!</CardTitle>
+            <h1 className="text-3xl font-semibold tracking-tight mb-2">
+              Quiz Complete!
+            </h1>
             <div className="text-6xl font-bold mb-2">
               {results.score}/{quiz.questions.length}
             </div>
@@ -211,7 +213,7 @@ export default function QuizComponent({
 
             {/* Review Answers */}
             <div className="mt-8 text-left">
-              <h3 className="text-xl font-semibold mb-4">Review Answers</h3>
+              <h2 className="text-xl font-semibold mb-4">Review Answers</h2>
               <div className="space-y-4">
                 {quiz.questions.map((question, index) => (
                   <Card
@@ -225,9 +227,9 @@ export default function QuizComponent({
                   >
                     <CardContent className="pt-4">
                       <div className="flex justify-between items-start mb-2">
-                        <h4 className="font-medium">
+                        <h3 className="font-medium">
                           {index + 1}. {question.question}
-                        </h4>
+                        </h3>
                         <Badge
                           className={getDifficultyColor(question.difficulty)}
                         >
@@ -322,9 +324,9 @@ export default function QuizComponent({
       <Card className="mb-8">
         <CardHeader>
           <div className="flex justify-between items-start mb-4">
-            <CardTitle className="text-xl flex-1">
+            <h2 className="text-xl font-semibold tracking-tight flex-1">
               {currentQuestion.question}
-            </CardTitle>
+            </h2>
             <Badge className={getDifficultyColor(currentQuestion.difficulty)}>
               {currentQuestion.difficulty}
             </Badge>

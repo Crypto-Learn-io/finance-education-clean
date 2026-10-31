@@ -145,9 +145,9 @@ export default function SortCheck({
       <p className="text-xs font-extrabold uppercase tracking-wide text-primary">
         Sort it out
       </p>
-      <h3 id={`${uid}-q`} className="mt-1 text-lg font-extrabold text-ink">
+      <h2 id={`${uid}-q`} className="mt-1 text-lg font-extrabold text-ink">
         {question.prompt}
-      </h3>
+      </h2>
       <p className="mt-1 text-sm text-ink-muted">
         Drag each card into a box. On a phone, tap a card, then tap{" "}
         <em>Place here</em>.
@@ -199,7 +199,7 @@ export default function SortCheck({
               )}
             >
               <div className="flex items-center justify-between gap-2">
-                <h4 className="font-extrabold text-ink">{b}</h4>
+                <h3 className="font-extrabold text-ink">{b}</h3>
                 {selected !== null && (
                   <Button
                     type="button"

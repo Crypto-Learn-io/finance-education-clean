@@ -26,7 +26,7 @@ export function Accordion({ title, items }: AccordionProps) {
   return (
     <section className="my-6" aria-label={title ?? "More details"}>
       {title && (
-        <h3 className="mb-3 text-lg font-extrabold text-ink">{title}</h3>
+        <h2 className="mb-3 text-lg font-extrabold text-ink">{title}</h2>
       )}
       <ul className="space-y-2">
         {items.map((it, i) => {
@@ -39,7 +39,7 @@ export function Accordion({ title, items }: AccordionProps) {
                 isOpen ? "border-primary/50" : "border-border",
               )}
             >
-              <h4>
+              <h3>
                 <button
                   type="button"
                   id={`${uid}-h${i}`}
@@ -57,7 +57,7 @@ export function Accordion({ title, items }: AccordionProps) {
                     )}
                   />
                 </button>
-              </h4>
+              </h3>
               <div
                 id={`${uid}-p${i}`}
                 role="region"
@@ -103,7 +103,7 @@ export function Timeline({ title, steps }: TimelineProps) {
       aria-label={title ?? "Timeline"}
     >
       {title && (
-        <h3 className="mb-4 text-lg font-extrabold text-ink">{title}</h3>
+        <h2 className="mb-4 text-lg font-extrabold text-ink">{title}</h2>
       )}
       <ol className="relative">
         {/* Track + animated fill */}
