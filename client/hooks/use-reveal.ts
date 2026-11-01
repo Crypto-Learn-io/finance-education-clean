@@ -2,15 +2,12 @@ import { useEffect } from "react";
 
 /**
  * Adds `.is-visible` to every `.reveal` element when it scrolls into view.
- * CSS in global.css does the animation and turns it off for
- * prefers-reduced-motion. A MutationObserver picks up elements that mount
- * later (for example after a filter change).
+ * CSS in global.css does the animation: fade + rise normally, fade only when
+ * the user prefers reduced motion. A MutationObserver picks up elements that
+ * mount later (for example after a filter change or a new lesson item).
  */
 export function useReveal() {
   useEffect(() => {
-    const reduceMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
     const canObserve = "IntersectionObserver" in window;
 
     const io = canObserve
@@ -23,7 +20,7 @@ export function useReveal() {
               }
             });
           },
-          { rootMargin: "0px 0px -8% 0px", threshold: 0.12 },
+          { rootMargin: "0px 0px -6% 0px", threshold: 0 },
         )
       : null;
 
@@ -31,7 +28,7 @@ export function useReveal() {
       document
         .querySelectorAll<HTMLElement>(".reveal:not(.is-visible)")
         .forEach((el) => {
-          if (reduceMotion || !io) el.classList.add("is-visible");
+          if (!io) el.classList.add("is-visible");
           else io.observe(el);
         });
     };

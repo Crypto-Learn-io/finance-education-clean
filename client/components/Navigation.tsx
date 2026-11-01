@@ -15,7 +15,9 @@ export default function Navigation() {
   const [open, setOpen] = useState(false);
 
   // Close the mobile menu after navigating.
-  useEffect(() => setOpen(false), [location.pathname]);
+  useEffect(() => {
+    setOpen(false);
+  }, [location.pathname]);
 
   const isActive = (href: string) =>
     href === "/"

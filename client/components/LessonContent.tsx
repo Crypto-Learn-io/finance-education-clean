@@ -1,4 +1,5 @@
-import { Fragment, ReactNode } from "react";
+import { CSSProperties, Fragment, ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
 /**
  * Renders the light markdown used in lesson text so it reads cleanly:
@@ -69,8 +70,22 @@ function inline(text: string): ReactNode {
   );
 }
 
-export default function LessonContent({ content }: { content: string }) {
+export default function LessonContent({
+  content,
+  reveal = false,
+}: {
+  content: string;
+  /** Fade each paragraph and list in as it scrolls into view */
+  reveal?: boolean;
+}) {
   const blocks = parse(content);
+  const rv = (i: number) =>
+    reveal
+      ? {
+          className: "reveal",
+          style: { "--delay": `${(i % 3) * 50}ms` } as CSSProperties,
+        }
+      : { className: "", style: undefined };
 
   return (
     <div className="space-y-4 text-[17px] leading-relaxed text-ink-muted">
@@ -78,20 +93,31 @@ export default function LessonContent({ content }: { content: string }) {
         switch (b.kind) {
           case "h":
             return (
-              <h4
+              <h2
                 key={i}
-                className="pt-2 text-lg font-extrabold text-ink flex items-center gap-2"
+                style={rv(i).style}
+                className={cn(
+                  "pt-2 text-lg font-extrabold text-ink flex items-center gap-2",
+                  rv(i).className,
+                )}
               >
                 <span
                   aria-hidden="true"
                   className="h-2 w-2 rounded-full bg-sun flex-none"
                 />
                 {b.text}
-              </h4>
+              </h2>
             );
           case "ul":
             return (
-              <ul key={i} className="space-y-2 rounded-2xl bg-mint-soft p-4">
+              <ul
+                key={i}
+                style={rv(i).style}
+                className={cn(
+                  "space-y-2 rounded-2xl bg-mint-soft p-4",
+                  rv(i).className,
+                )}
+              >
                 {b.items.map((item, j) => (
                   <li key={j} className="flex gap-3">
                     <span
@@ -105,7 +131,14 @@ export default function LessonContent({ content }: { content: string }) {
             );
           case "ol":
             return (
-              <ol key={i} className="space-y-2 rounded-2xl bg-mint-soft p-4">
+              <ol
+                key={i}
+                style={rv(i).style}
+                className={cn(
+                  "space-y-2 rounded-2xl bg-mint-soft p-4",
+                  rv(i).className,
+                )}
+              >
                 {b.items.map((item, j) => (
                   <li key={j} className="flex gap-3">
                     <span
@@ -120,7 +153,15 @@ export default function LessonContent({ content }: { content: string }) {
               </ol>
             );
           default:
-            return <p key={i}>{inline(b.text)}</p>;
+            return (
+              <p
+                key={i}
+                style={rv(i).style}
+                className={rv(i).className || undefined}
+              >
+                {inline(b.text)}
+              </p>
+            );
         }
       })}
     </div>

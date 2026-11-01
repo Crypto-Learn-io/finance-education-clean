@@ -2,6 +2,7 @@ import { CSSProperties } from "react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import CourseCard from "@/components/CourseCard";
+import ContinueLearning from "@/components/ContinueLearning";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
@@ -220,6 +221,8 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      <ContinueLearning />
 
       {/* What THRIVE stands for */}
       <section
