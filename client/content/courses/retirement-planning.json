@@ -37,41 +37,7 @@
               "title": "Retirement Planning Guide",
               "source": {
                 "youtubeId": "pZNnueqfj_A"
-              },
-              "checkpoints": [
-                {
-                  "time": 60,
-                  "question": {
-                    "id": "p-v1",
-                    "prompt": "Why start saving for retirement early?",
-                    "options": [
-                      "Compound growth gets more time to work",
-                      "Prices go down later",
-                      "It's required at 18",
-                      "You can't start later"
-                    ],
-                    "answer": 0,
-                    "hint": "Time is the secret ingredient.",
-                    "explanation": "Money invested early has more years to grow on its own growth."
-                  }
-                },
-                {
-                  "time": 150,
-                  "question": {
-                    "id": "p-v2",
-                    "prompt": "An employer 401(k) match is…",
-                    "options": [
-                      "Extra money your employer adds when you contribute",
-                      "A tax you pay",
-                      "A loan",
-                      "A penalty"
-                    ],
-                    "answer": 0,
-                    "hint": "People call it free money.",
-                    "explanation": "Many employers add money to your 401(k) when you save, up to a limit."
-                  }
-                }
-              ]
+              }
             }
           ]
         },
@@ -135,6 +101,28 @@
                     "hint": "Roth means tax now, not later.",
                     "explanation": "Roth contributions use after-tax money. Qualified withdrawals in retirement are tax-free."
                   }
+                },
+                {
+                  "type": "accordion",
+                  "title": "Key words to know",
+                  "items": [
+                    {
+                      "title": "401(k)",
+                      "md": "A retirement account offered through a job."
+                    },
+                    {
+                      "title": "IRA",
+                      "md": "Individual retirement account you open yourself."
+                    },
+                    {
+                      "title": "Roth",
+                      "md": "Pay tax now; qualified withdrawals later are tax-free."
+                    },
+                    {
+                      "title": "Employer match",
+                      "md": "Money your employer adds when you contribute."
+                    }
+                  ]
                 }
               ]
             }
@@ -237,7 +225,7 @@
               "blocks": [
                 {
                   "type": "text",
-                  "md": "Here's the whole course in five steps. Open each one to review it."
+                  "md": "Here's the whole course in five steps. Reveal them one at a time, then try the sorting game."
                 },
                 {
                   "type": "timeline",
@@ -257,28 +245,6 @@
                     },
                     {
                       "title": "Plan how you'll take money out"
-                    }
-                  ]
-                },
-                {
-                  "type": "accordion",
-                  "title": "Key terms",
-                  "items": [
-                    {
-                      "title": "401(k)",
-                      "md": "A retirement account offered through a job."
-                    },
-                    {
-                      "title": "IRA",
-                      "md": "Individual retirement account you open yourself."
-                    },
-                    {
-                      "title": "Roth",
-                      "md": "Pay tax now; qualified withdrawals later are tax-free."
-                    },
-                    {
-                      "title": "Employer match",
-                      "md": "Money your employer adds when you contribute."
                     }
                   ]
                 },

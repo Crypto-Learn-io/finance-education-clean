@@ -35,41 +35,7 @@
               "title": "Simple vs. Compound Interest | Simple Beginners Guide",
               "source": {
                 "youtubeId": "lMVwYoiiV0w"
-              },
-              "checkpoints": [
-                {
-                  "time": 60,
-                  "question": {
-                    "id": "i-v1",
-                    "prompt": "Simple interest is paid on…",
-                    "options": [
-                      "Only the starting amount",
-                      "The starting amount plus past interest",
-                      "Only the interest",
-                      "Nothing until year 10"
-                    ],
-                    "answer": 0,
-                    "hint": "Simple means it never snowballs.",
-                    "explanation": "Simple interest is figured only on the original amount, called the principal."
-                  }
-                },
-                {
-                  "time": 150,
-                  "question": {
-                    "id": "i-v2",
-                    "prompt": "Why does compound interest grow faster?",
-                    "options": [
-                      "The rate goes up each year",
-                      "You earn interest on your interest",
-                      "Banks add bonuses",
-                      "It doesn't"
-                    ],
-                    "answer": 1,
-                    "hint": "Think of a snowball rolling downhill.",
-                    "explanation": "Each period's interest is added to the balance, so the next period earns interest on a bigger amount."
-                  }
-                }
-              ]
+              }
             }
           ]
         },
@@ -123,6 +89,28 @@
                   "type": "callout",
                   "tone": "warning",
                   "md": "**It works on debt too.** Credit card balances compound against you. That's why unpaid balances grow so fast."
+                },
+                {
+                  "type": "accordion",
+                  "title": "Key words to know",
+                  "items": [
+                    {
+                      "title": "Principal",
+                      "md": "The original amount you save or borrow."
+                    },
+                    {
+                      "title": "Interest rate",
+                      "md": "The percent charged or paid on the principal, usually per year."
+                    },
+                    {
+                      "title": "APR",
+                      "md": "Annual percentage rate. The yearly cost of a loan."
+                    },
+                    {
+                      "title": "APY",
+                      "md": "Annual percentage yield. What savings really earn in a year with compounding."
+                    }
+                  ]
                 }
               ]
             }
@@ -220,7 +208,7 @@
               "blocks": [
                 {
                   "type": "text",
-                  "md": "Here's the whole course in five steps. Open each one to review it."
+                  "md": "Here's the whole course in five steps. Reveal them one at a time, then try the sorting game."
                 },
                 {
                   "type": "timeline",
@@ -240,28 +228,6 @@
                     },
                     {
                       "title": "Start early and let time help"
-                    }
-                  ]
-                },
-                {
-                  "type": "accordion",
-                  "title": "Key terms",
-                  "items": [
-                    {
-                      "title": "Principal",
-                      "md": "The original amount you save or borrow."
-                    },
-                    {
-                      "title": "Interest rate",
-                      "md": "The percent charged or paid on the principal, usually per year."
-                    },
-                    {
-                      "title": "APR",
-                      "md": "Annual percentage rate. The yearly cost of a loan."
-                    },
-                    {
-                      "title": "APY",
-                      "md": "Annual percentage yield. What savings really earn in a year with compounding."
                     }
                   ]
                 },

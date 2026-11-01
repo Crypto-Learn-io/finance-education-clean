@@ -14,7 +14,6 @@ import {
 
 export const POINTS = {
   check: 10, // inline knowledge check or sort, first time correct
-  checkpoint: 10, // video checkpoint question
   item: 5, // finishing any item
   course: 50, // finishing a whole course
 } as const;

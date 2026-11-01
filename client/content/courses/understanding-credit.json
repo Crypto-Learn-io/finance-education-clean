@@ -37,41 +37,7 @@
               "title": "How Do Credit Cards Work?",
               "source": {
                 "youtubeId": "-z2ObeDKjlw"
-              },
-              "checkpoints": [
-                {
-                  "time": 60,
-                  "question": {
-                    "id": "c-v1",
-                    "prompt": "What happens if you only pay the minimum on a credit card?",
-                    "options": [
-                      "The balance disappears",
-                      "You pay interest on what's left",
-                      "Your limit doubles",
-                      "Nothing at all"
-                    ],
-                    "answer": 1,
-                    "hint": "The bank isn't lending for free.",
-                    "explanation": "Whatever you don't pay off keeps growing with interest, often at a high rate."
-                  }
-                },
-                {
-                  "time": 150,
-                  "question": {
-                    "id": "c-v2",
-                    "prompt": "A credit card is really…",
-                    "options": [
-                      "Free money from the bank",
-                      "A loan you must pay back",
-                      "A debit card with points",
-                      "A savings account"
-                    ],
-                    "answer": 1,
-                    "hint": "Who owns the money you spend?",
-                    "explanation": "Every swipe borrows the bank's money. You owe it back, plus interest if you carry a balance."
-                  }
-                }
-              ]
+              }
             }
           ]
         },
@@ -135,6 +101,28 @@
                   "type": "callout",
                   "tone": "note",
                   "md": "**Parent tip:** Kids usually shouldn't have a credit report at all. If yours does, it could be a sign of identity theft. You can check and freeze a child's credit with each bureau."
+                },
+                {
+                  "type": "accordion",
+                  "title": "Key words to know",
+                  "items": [
+                    {
+                      "title": "Credit score",
+                      "md": "A number that shows lenders how likely you are to pay back money."
+                    },
+                    {
+                      "title": "Credit report",
+                      "md": "Your record of accounts, balances and payments."
+                    },
+                    {
+                      "title": "Credit utilization",
+                      "md": "Your card balance compared with your credit limit."
+                    },
+                    {
+                      "title": "APR",
+                      "md": "The yearly interest rate you pay when you carry a balance."
+                    }
+                  ]
                 }
               ]
             }
@@ -246,7 +234,7 @@
               "blocks": [
                 {
                   "type": "text",
-                  "md": "Here's the whole course in five steps. Open each one to review it."
+                  "md": "Here's the whole course in five steps. Reveal them one at a time, then try the sorting game."
                 },
                 {
                   "type": "timeline",
@@ -266,28 +254,6 @@
                     },
                     {
                       "title": "Check your credit reports for errors"
-                    }
-                  ]
-                },
-                {
-                  "type": "accordion",
-                  "title": "Key terms",
-                  "items": [
-                    {
-                      "title": "Credit score",
-                      "md": "A number that shows lenders how likely you are to pay back money."
-                    },
-                    {
-                      "title": "Credit report",
-                      "md": "Your record of accounts, balances and payments."
-                    },
-                    {
-                      "title": "Credit utilization",
-                      "md": "Your card balance compared with your credit limit."
-                    },
-                    {
-                      "title": "APR",
-                      "md": "The yearly interest rate you pay when you carry a balance."
                     }
                   ]
                 },

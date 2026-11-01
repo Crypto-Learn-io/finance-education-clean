@@ -59,24 +59,7 @@ Item `id`s must be unique within a course. They become the URL:
               "id": "video",
               "type": "video",
               "title": "What is money?",
-              "source": { "youtubeId": "VIDEO_ID" },
-              "checkpoints": [
-                {
-                  "time": 45,
-                  "question": {
-                    "id": "mb-v1",
-                    "prompt": "What is a budget?",
-                    "options": [
-                      "A plan for your money",
-                      "A type of bank",
-                      "A coupon"
-                    ],
-                    "answer": 0,
-                    "hint": "Think 'plan'.",
-                    "explanation": "A budget is a plan for how you'll use your money."
-                  }
-                }
-              ]
+              "source": { "youtubeId": "VIDEO_ID" }
             }
           ]
         },
@@ -121,12 +104,12 @@ Item `id`s must be unique within a course. They become the URL:
 
 ## Item types
 
-| Type      | Key fields                                                            | Notes                                                                                                                                                                                                                |
-| --------- | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `video`   | `source`, `checkpoints[]`                                             | `source` is `{ "youtubeId": "..." }` or `{ "src": "/videos/x.mp4", "poster": "...", "captions": "/videos/x.vtt" }`. The player pauses at each checkpoint `time` (seconds) and asks the question on top of the video. |
-| `reading` | `blocks[]`                                                            | See blocks below. Reading time is estimated automatically.                                                                                                                                                           |
-| `widget`  | `widget.kind`, `widget.intro`, `widget.defaults`, optional `blocks[]` | Slider playground with Graph and Table tabs.                                                                                                                                                                         |
-| `quiz`    | `quizId` or `questions[]`                                             | `quizId` reuses a quiz from `client/data/quizzes.ts`. Or write questions inline: `{ "id", "question", "options", "correctAnswer", "difficulty", "explanation" }`.                                                    |
+| Type      | Key fields                                                            | Notes                                                                                                                                                             |
+| --------- | --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `video`   | `source`                                                              | `{ "youtubeId": "..." }`, shown with YouTube's own player.                                                                                                        |
+| `reading` | `blocks[]`                                                            | See blocks below. Reading time is estimated automatically.                                                                                                        |
+| `widget`  | `widget.kind`, `widget.intro`, `widget.defaults`, optional `blocks[]` | Slider playground with Graph and Table tabs.                                                                                                                      |
+| `quiz`    | `quizId` or `questions[]`                                             | `quizId` reuses a quiz from `client/data/quizzes.ts`. Or write questions inline: `{ "id", "question", "options", "correctAnswer", "difficulty", "explanation" }`. |
 
 ## Reading blocks
 

@@ -36,41 +36,7 @@
               "title": "How Taxes Work in the U.S.",
               "source": {
                 "youtubeId": "ROb2Vp5Rs7A"
-              },
-              "checkpoints": [
-                {
-                  "time": 60,
-                  "question": {
-                    "id": "t-v1",
-                    "prompt": "Taxes mostly pay for…",
-                    "options": [
-                      "Public services like roads and schools",
-                      "Your bank's fees",
-                      "Your credit card",
-                      "Nothing"
-                    ],
-                    "answer": 0,
-                    "hint": "Think about things everyone shares.",
-                    "explanation": "Taxes fund shared services such as schools, roads, defense and safety-net programs."
-                  }
-                },
-                {
-                  "time": 150,
-                  "question": {
-                    "id": "t-v2",
-                    "prompt": "A tax bracket tells you…",
-                    "options": [
-                      "The rate on one slice of your income",
-                      "Your total tax on all income",
-                      "Your refund",
-                      "Your pay date"
-                    ],
-                    "answer": 0,
-                    "hint": "Income is taxed in layers.",
-                    "explanation": "Each bracket's rate applies only to the income inside that bracket."
-                  }
-                }
-              ]
+              }
             }
           ]
         },
@@ -123,6 +89,28 @@
                     "hint": "Brackets work like stairs, not a cliff.",
                     "explanation": "Only the dollars above the bracket line get the higher rate. Earning more never lowers your take-home pay because of brackets."
                   }
+                },
+                {
+                  "type": "accordion",
+                  "title": "Key words to know",
+                  "items": [
+                    {
+                      "title": "Taxable income",
+                      "md": "Income left after deductions. Tax is figured on this."
+                    },
+                    {
+                      "title": "Marginal rate",
+                      "md": "The rate on your last dollar earned."
+                    },
+                    {
+                      "title": "Effective rate",
+                      "md": "Total tax divided by total income."
+                    },
+                    {
+                      "title": "Withholding",
+                      "md": "Tax taken out of each paycheck ahead of time."
+                    }
+                  ]
                 }
               ]
             }
@@ -217,7 +205,7 @@
               "blocks": [
                 {
                   "type": "text",
-                  "md": "Here's the whole course in five steps. Open each one to review it."
+                  "md": "Here's the whole course in five steps. Reveal them one at a time, then try the sorting game."
                 },
                 {
                   "type": "timeline",
@@ -237,28 +225,6 @@
                     },
                     {
                       "title": "Credits cut your tax bill directly, then you file"
-                    }
-                  ]
-                },
-                {
-                  "type": "accordion",
-                  "title": "Key terms",
-                  "items": [
-                    {
-                      "title": "Taxable income",
-                      "md": "Income left after deductions. Tax is figured on this."
-                    },
-                    {
-                      "title": "Marginal rate",
-                      "md": "The rate on your last dollar earned."
-                    },
-                    {
-                      "title": "Effective rate",
-                      "md": "Total tax divided by total income."
-                    },
-                    {
-                      "title": "Withholding",
-                      "md": "Tax taken out of each paycheck ahead of time."
                     }
                   ]
                 },

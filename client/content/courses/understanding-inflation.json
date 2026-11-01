@@ -35,41 +35,7 @@
               "title": "What is Inflation? | It's simple.",
               "source": {
                 "youtubeId": "Ou0l5lcGrR4"
-              },
-              "checkpoints": [
-                {
-                  "time": 60,
-                  "question": {
-                    "id": "f-v1",
-                    "prompt": "Inflation means…",
-                    "options": [
-                      "Prices go up over time",
-                      "Prices go down",
-                      "Your pay always rises",
-                      "Banks give out coupons"
-                    ],
-                    "answer": 0,
-                    "hint": "Think about what a snack cost years ago.",
-                    "explanation": "Inflation is a general rise in prices, so each dollar buys a little less."
-                  }
-                },
-                {
-                  "time": 150,
-                  "question": {
-                    "id": "f-v2",
-                    "prompt": "Prices rise 3% a year and your savings earn 1%. Your money…",
-                    "options": [
-                      "Buys more over time",
-                      "Buys less over time",
-                      "Stays the same",
-                      "Doubles"
-                    ],
-                    "answer": 1,
-                    "hint": "Compare the two percentages.",
-                    "explanation": "Your savings grow 1% but prices grow 3%, so you can buy about 2% less each year."
-                  }
-                }
-              ]
+              }
             }
           ]
         },
@@ -117,6 +83,28 @@
                     "hint": "It tracks prices of everyday things people buy.",
                     "explanation": "The CPI follows prices of a basket of goods and services like food, rent and gas."
                   }
+                },
+                {
+                  "type": "accordion",
+                  "title": "Key words to know",
+                  "items": [
+                    {
+                      "title": "Inflation",
+                      "md": "A general rise in prices over time."
+                    },
+                    {
+                      "title": "Purchasing power",
+                      "md": "How much your money can actually buy."
+                    },
+                    {
+                      "title": "CPI",
+                      "md": "Consumer Price Index. A common measure of price changes."
+                    },
+                    {
+                      "title": "Real return",
+                      "md": "What you earn after subtracting inflation."
+                    }
+                  ]
                 }
               ]
             }
@@ -218,7 +206,7 @@
               "blocks": [
                 {
                   "type": "text",
-                  "md": "Here's the whole course in five steps. Open each one to review it."
+                  "md": "Here's the whole course in five steps. Reveal them one at a time, then try the sorting game."
                 },
                 {
                   "type": "timeline",
@@ -238,28 +226,6 @@
                     },
                     {
                       "title": "Long-term investing and growing your skills help you keep up"
-                    }
-                  ]
-                },
-                {
-                  "type": "accordion",
-                  "title": "Key terms",
-                  "items": [
-                    {
-                      "title": "Inflation",
-                      "md": "A general rise in prices over time."
-                    },
-                    {
-                      "title": "Purchasing power",
-                      "md": "How much your money can actually buy."
-                    },
-                    {
-                      "title": "CPI",
-                      "md": "Consumer Price Index. A common measure of price changes."
-                    },
-                    {
-                      "title": "Real return",
-                      "md": "What you earn after subtracting inflation."
                     }
                   ]
                 },

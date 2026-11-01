@@ -36,41 +36,7 @@
               "title": "Loans 101 (Loan Basics 1/3)",
               "source": {
                 "youtubeId": "fuiiJuB7tJs"
-              },
-              "checkpoints": [
-                {
-                  "time": 60,
-                  "question": {
-                    "id": "l-v1",
-                    "prompt": "When you borrow money, interest is…",
-                    "options": [
-                      "The cost of borrowing",
-                      "A gift from the bank",
-                      "Paid only if you're late",
-                      "Optional"
-                    ],
-                    "answer": 0,
-                    "hint": "Lenders need a reason to lend.",
-                    "explanation": "Interest is what you pay for using someone else's money."
-                  }
-                },
-                {
-                  "time": 150,
-                  "question": {
-                    "id": "l-v2",
-                    "prompt": "A secured loan is backed by…",
-                    "options": [
-                      "Nothing",
-                      "Something you own, like a car or house",
-                      "A friend's promise",
-                      "Your social media"
-                    ],
-                    "answer": 1,
-                    "hint": "What can the lender take if you don't pay?",
-                    "explanation": "Secured loans use collateral. If you stop paying, the lender can take it."
-                  }
-                }
-              ]
+              }
             },
             {
               "id": "video-2",
@@ -78,20 +44,7 @@
               "title": "Mortgage Explained | Personal Finance 101",
               "source": {
                 "youtubeId": "l4J5RvGB-iM"
-              },
-              "checkpoints": [
-                {
-                  "time": 90,
-                  "question": {
-                    "id": "l-v3",
-                    "prompt": "A mortgage is a loan to buy…",
-                    "options": ["A car", "A home", "College", "Groceries"],
-                    "answer": 1,
-                    "hint": "It's usually the biggest loan people take.",
-                    "explanation": "A mortgage is a home loan, with the home as collateral."
-                  }
-                }
-              ]
+              }
             }
           ]
         },
@@ -150,6 +103,28 @@
                 {
                   "type": "text",
                   "md": "A mortgage is a loan to buy a home. The home is the collateral.\n\n**Down payment**\nThat's the cash you pay up front. A bigger down payment means a smaller loan.\n\n**PMI**\nOn a conventional loan, if you put down less than 20%, lenders usually add **private mortgage insurance**. It protects the lender, not you, and raises your monthly cost.\n\n**Other loan types**\nFHA loans, backed by the government, allow down payments as low as 3.5% for many buyers. They have their own mortgage insurance.\n\n**15-year vs 30-year**\n• 30-year: lower monthly payment, much more total interest\n• 15-year: higher monthly payment, much less total interest\n\n**More than the loan**\nHomeowners also pay property taxes, insurance and repairs. Budget for all of it."
+                },
+                {
+                  "type": "accordion",
+                  "title": "Key words to know",
+                  "items": [
+                    {
+                      "title": "Principal",
+                      "md": "The amount you borrow."
+                    },
+                    {
+                      "title": "Loan term",
+                      "md": "How long you have to pay the loan back."
+                    },
+                    {
+                      "title": "Down payment",
+                      "md": "Cash you pay up front on a big purchase."
+                    },
+                    {
+                      "title": "PMI",
+                      "md": "Private mortgage insurance. Often required with less than 20% down."
+                    }
+                  ]
                 }
               ]
             }
@@ -246,7 +221,7 @@
               "blocks": [
                 {
                   "type": "text",
-                  "md": "Here's the whole course in five steps. Open each one to review it."
+                  "md": "Here's the whole course in five steps. Reveal them one at a time, then try the sorting game."
                 },
                 {
                   "type": "timeline",
@@ -266,28 +241,6 @@
                     },
                     {
                       "title": "Pay on time, and pay extra when you can"
-                    }
-                  ]
-                },
-                {
-                  "type": "accordion",
-                  "title": "Key terms",
-                  "items": [
-                    {
-                      "title": "Principal",
-                      "md": "The amount you borrow."
-                    },
-                    {
-                      "title": "Loan term",
-                      "md": "How long you have to pay the loan back."
-                    },
-                    {
-                      "title": "Down payment",
-                      "md": "Cash you pay up front on a big purchase."
-                    },
-                    {
-                      "title": "PMI",
-                      "md": "Private mortgage insurance. Often required with less than 20% down."
                     }
                   ]
                 },

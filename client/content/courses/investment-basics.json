@@ -37,41 +37,7 @@
               "title": "How to Invest for Beginners in 2025",
               "source": {
                 "youtubeId": "Ay4fmZdZqJE"
-              },
-              "checkpoints": [
-                {
-                  "time": 60,
-                  "question": {
-                    "id": "v-v1",
-                    "prompt": "Owning a share of stock means you own…",
-                    "options": [
-                      "A loan to a company",
-                      "A small piece of a company",
-                      "A government bond",
-                      "A savings account"
-                    ],
-                    "answer": 1,
-                    "hint": "Shareholders are part-owners.",
-                    "explanation": "A share is a slice of ownership. If the company grows, your slice can be worth more."
-                  }
-                },
-                {
-                  "time": 150,
-                  "question": {
-                    "id": "v-v2",
-                    "prompt": "An index fund…",
-                    "options": [
-                      "Picks one hot stock",
-                      "Holds many companies to follow a market index",
-                      "Guarantees a profit",
-                      "Is a kind of loan"
-                    ],
-                    "answer": 1,
-                    "hint": "It copies a list of companies, like the S&P 500.",
-                    "explanation": "Index funds buy all the companies in an index, so you get broad diversification at low cost."
-                  }
-                }
-              ]
+              }
             }
           ]
         },
@@ -130,6 +96,28 @@
                 {
                   "type": "text",
                   "md": "Picking single stocks is hard, even for experts. Funds make it easier.\n\n**Mutual funds**\nA fund pools money from many people to buy lots of investments at once.\n\n**Index funds**\nThese copy a list of companies, like the S&P 500. They don't try to pick winners. They just own the whole list.\n\n**ETFs**\nExchange-traded funds also hold many investments. They trade during the day like a single stock. Many ETFs are index funds.\n\n**Why people like index funds**\n• Instant diversification\n• Usually low fees\n• Simple to understand\n\n**Watch the fees**\nA fund's yearly fee is its **expense ratio**. A difference of 1% a year can cost a lot over decades. Lower is better."
+                },
+                {
+                  "type": "accordion",
+                  "title": "Key words to know",
+                  "items": [
+                    {
+                      "title": "Stock",
+                      "md": "A share of ownership in a company."
+                    },
+                    {
+                      "title": "Bond",
+                      "md": "A loan you make to a company or government in return for interest."
+                    },
+                    {
+                      "title": "ETF",
+                      "md": "Exchange-traded fund. A basket of investments that trades like one stock."
+                    },
+                    {
+                      "title": "Diversification",
+                      "md": "Spreading money across many investments to lower risk."
+                    }
+                  ]
                 }
               ]
             }
@@ -232,7 +220,7 @@
               "blocks": [
                 {
                   "type": "text",
-                  "md": "Here's the whole course in five steps. Open each one to review it."
+                  "md": "Here's the whole course in five steps. Reveal them one at a time, then try the sorting game."
                 },
                 {
                   "type": "timeline",
@@ -252,28 +240,6 @@
                     },
                     {
                       "title": "Invest regularly and stay patient"
-                    }
-                  ]
-                },
-                {
-                  "type": "accordion",
-                  "title": "Key terms",
-                  "items": [
-                    {
-                      "title": "Stock",
-                      "md": "A share of ownership in a company."
-                    },
-                    {
-                      "title": "Bond",
-                      "md": "A loan you make to a company or government in return for interest."
-                    },
-                    {
-                      "title": "ETF",
-                      "md": "Exchange-traded fund. A basket of investments that trades like one stock."
-                    },
-                    {
-                      "title": "Diversification",
-                      "md": "Spreading money across many investments to lower risk."
                     }
                   ]
                 },

@@ -395,10 +395,7 @@ function CourseHome({ course }: { course: CourseData }) {
 }
 
 function describe(it: Item) {
-  if (it.type === "video")
-    return it.checkpoints.length
-      ? `${it.checkpoints.length} checkpoint questions`
-      : "Video";
+  if (it.type === "video") return "Watch on YouTube";
   if (it.type === "widget") return "Hands-on tool";
   if (it.type === "quiz") return "Earn points";
   const checks = it.blocks.filter(
@@ -783,7 +780,6 @@ function Player({ course, itemId }: { course: CourseData; itemId: string }) {
                   current={current}
                   answered={answered}
                   onAnswer={markAnswered}
-                  onItemDone={() => mark(current.item.id)}
                   onQuizExit={() => {
                     mark(current.item.id);
                     // Finishing the last item: stay so the celebration shows.

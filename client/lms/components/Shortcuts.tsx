@@ -29,7 +29,7 @@ export const SHORTCUTS: { keys: string[]; label: string }[] = [
   { keys: ["?"], label: "Show these shortcuts" },
 ];
 
-/** Global player shortcuts. Ignored while typing or inside the video player. */
+/** Global player shortcuts. Ignored while typing or in a dialog. */
 export function useShortcuts(h: ShortcutHandlers, enabled = true) {
   useEffect(() => {
     if (!enabled) return;
@@ -38,7 +38,7 @@ export function useShortcuts(h: ShortcutHandlers, enabled = true) {
       const t = e.target as HTMLElement | null;
       if (
         t?.closest(
-          "input, textarea, select, [contenteditable=true], [role=dialog], [data-video-player]",
+          "input, textarea, select, [contenteditable=true], [role=dialog]",
         )
       )
         return;

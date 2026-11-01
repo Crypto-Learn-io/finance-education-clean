@@ -35,41 +35,7 @@
               "title": "What is risk and return? | Financial Literacy | Khan Academy",
               "source": {
                 "youtubeId": "7mo167ohvJw"
-              },
-              "checkpoints": [
-                {
-                  "time": 60,
-                  "question": {
-                    "id": "r-v1",
-                    "prompt": "In general, investments with higher possible returns…",
-                    "options": [
-                      "Have lower risk",
-                      "Have higher risk",
-                      "Have no risk",
-                      "Always go up"
-                    ],
-                    "answer": 1,
-                    "hint": "Nobody pays extra for nothing.",
-                    "explanation": "Investors expect higher returns as payment for taking on more ups and downs."
-                  }
-                },
-                {
-                  "time": 150,
-                  "question": {
-                    "id": "r-v2",
-                    "prompt": "Return means…",
-                    "options": [
-                      "What you gain or lose on an investment",
-                      "The fee you pay",
-                      "Your tax refund",
-                      "Your credit limit"
-                    ],
-                    "answer": 0,
-                    "hint": "It can be positive or negative.",
-                    "explanation": "Return is the gain or loss on an investment, often shown as a percent."
-                  }
-                }
-              ]
+              }
             }
           ]
         },
@@ -128,6 +94,28 @@
                 {
                   "type": "text",
                   "md": "Your **risk tolerance** is how much up and down you can handle.\n\n**Two parts to think about**\n• **Ability:** How long until you need the money? More time means you can usually recover from drops.\n• **Feelings:** Would a 20% drop make you want to sell everything?\n\n**Time horizon matters most**\nMoney for next year should be safe. Money for 30 years from now can usually take more risk.\n\n**Ask yourself**\n• What is this money for?\n• When will I need it?\n• How would I feel if it dropped by a quarter?\n\nBe honest. A plan you can stick with beats a \"perfect\" plan you abandon."
+                },
+                {
+                  "type": "accordion",
+                  "title": "Key words to know",
+                  "items": [
+                    {
+                      "title": "Risk",
+                      "md": "The chance an investment loses value or doesn't grow as hoped."
+                    },
+                    {
+                      "title": "Return",
+                      "md": "The gain or loss on an investment."
+                    },
+                    {
+                      "title": "Volatility",
+                      "md": "How much and how fast a price moves up and down."
+                    },
+                    {
+                      "title": "Asset allocation",
+                      "md": "How you split money between stocks, bonds and cash."
+                    }
+                  ]
                 }
               ]
             }
@@ -222,7 +210,7 @@
               "blocks": [
                 {
                   "type": "text",
-                  "md": "Here's the whole course in five steps. Open each one to review it."
+                  "md": "Here's the whole course in five steps. Reveal them one at a time, then try the sorting game."
                 },
                 {
                   "type": "timeline",
@@ -242,28 +230,6 @@
                     },
                     {
                       "title": "Match risk to when you need the money"
-                    }
-                  ]
-                },
-                {
-                  "type": "accordion",
-                  "title": "Key terms",
-                  "items": [
-                    {
-                      "title": "Risk",
-                      "md": "The chance an investment loses value or doesn't grow as hoped."
-                    },
-                    {
-                      "title": "Return",
-                      "md": "The gain or loss on an investment."
-                    },
-                    {
-                      "title": "Volatility",
-                      "md": "How much and how fast a price moves up and down."
-                    },
-                    {
-                      "title": "Asset allocation",
-                      "md": "How you split money between stocks, bonds and cash."
                     }
                   ]
                 },

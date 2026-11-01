@@ -43,8 +43,6 @@ describe("course JSON files", () => {
           const kinds = new Set<string>();
           for (const l of m.lessons)
             for (const it of l.items) {
-              if (it.type === "video" && it.checkpoints.length)
-                kinds.add("video-sync");
               if (it.type === "widget") kinds.add("playground");
               const blocks =
                 it.type === "reading" || it.type === "widget"

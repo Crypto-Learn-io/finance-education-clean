@@ -37,41 +37,7 @@
               "title": "How to Make a Budget | Beginner's Guide to Budgeting",
               "source": {
                 "youtubeId": "-Of_WRjDrx0"
-              },
-              "checkpoints": [
-                {
-                  "time": 60,
-                  "question": {
-                    "id": "b-v1",
-                    "prompt": "In the 50/30/20 rule, where does the 20% go?",
-                    "options": [
-                      "Fun things like games and movies",
-                      "Rent and groceries",
-                      "Savings and paying down debt",
-                      "Taxes"
-                    ],
-                    "answer": 2,
-                    "hint": "It's the part that helps future you.",
-                    "explanation": "The 20% is for savings and extra debt payments. Needs get 50% and wants get 30%."
-                  }
-                },
-                {
-                  "time": 150,
-                  "question": {
-                    "id": "b-v2",
-                    "prompt": "What's the first step in making a budget?",
-                    "options": [
-                      "Cut out all fun spending",
-                      "Know how much money comes in",
-                      "Open a credit card",
-                      "Buy a budgeting app"
-                    ],
-                    "answer": 1,
-                    "hint": "You can't split money until you know the total.",
-                    "explanation": "Start with your income. Then you can plan where each dollar goes."
-                  }
-                }
-              ]
+              }
             }
           ]
         },
@@ -135,6 +101,28 @@
                 {
                   "type": "text",
                   "md": "The 50/30/20 rule is a simple way to split money you take home.\n\n• **50% for needs:** rent, food, bills, transport\n• **30% for wants:** fun, eating out, hobbies\n• **20% for savings:** emergency fund, goals and paying down debt\n\n**Example with $2,000 a month**\n• Needs: $1,000\n• Wants: $600\n• Savings: $400\n\nSaving $400 a month adds up to $4,800 in a year.\n\n**A kid-sized version**\nIf you don't pay rent yet, you can use the same idea. Try 50% to spend, 30% to save for a goal and 20% to save for the long term or give.\n\nIt's a starting point, not a law. If rent is high where you live, needs might take more than half. Adjust it so it works for you."
+                },
+                {
+                  "type": "accordion",
+                  "title": "Key words to know",
+                  "items": [
+                    {
+                      "title": "Budget",
+                      "md": "A plan for how you'll use the money you have."
+                    },
+                    {
+                      "title": "Emergency fund",
+                      "md": "Savings set aside only for surprises, like a car repair or lost job."
+                    },
+                    {
+                      "title": "Needs vs wants",
+                      "md": "Needs keep you safe and healthy. Wants are extras that are nice to have."
+                    },
+                    {
+                      "title": "50/30/20 rule",
+                      "md": "50% of take-home pay to needs, 30% to wants, 20% to savings and debt."
+                    }
+                  ]
                 }
               ]
             }
@@ -250,7 +238,7 @@
               "blocks": [
                 {
                   "type": "text",
-                  "md": "Here's the whole course in five steps. Open each one to review it."
+                  "md": "Here's the whole course in five steps. Reveal them one at a time, then try the sorting game."
                 },
                 {
                   "type": "timeline",
@@ -270,28 +258,6 @@
                     },
                     {
                       "title": "Check in every month and adjust"
-                    }
-                  ]
-                },
-                {
-                  "type": "accordion",
-                  "title": "Key terms",
-                  "items": [
-                    {
-                      "title": "Budget",
-                      "md": "A plan for how you'll use the money you have."
-                    },
-                    {
-                      "title": "Emergency fund",
-                      "md": "Savings set aside only for surprises, like a car repair or lost job."
-                    },
-                    {
-                      "title": "Needs vs wants",
-                      "md": "Needs keep you safe and healthy. Wants are extras that are nice to have."
-                    },
-                    {
-                      "title": "50/30/20 rule",
-                      "md": "50% of take-home pay to needs, 30% to wants, 20% to savings and debt."
                     }
                   ]
                 },

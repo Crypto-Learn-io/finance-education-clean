@@ -77,15 +77,6 @@ export const BlockSchema = z.discriminatedUnion("type", [
 
 /* ---------- Items ---------- */
 
-const VideoSource = z.union([
-  z.object({ youtubeId: z.string().min(5) }),
-  z.object({
-    src: z.string().min(1),
-    poster: z.string().optional(),
-    captions: z.string().optional(),
-  }),
-]);
-
 export const WIDGET_KINDS = [
   "compound-interest",
   "budget-split",
@@ -106,10 +97,8 @@ const itemBase = {
 export const VideoItemSchema = z.object({
   ...itemBase,
   type: z.literal("video"),
-  source: VideoSource,
-  checkpoints: z
-    .array(z.object({ time: z.number().min(0), question: McqSchema }))
-    .default([]),
+  /** A YouTube video, shown with YouTube's own player */
+  source: z.object({ youtubeId: z.string().min(5) }),
 });
 
 export const ReadingItemSchema = z.object({

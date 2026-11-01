@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { AlertTriangle, Info, Lightbulb } from "lucide-react";
 import LessonContent from "@/components/LessonContent";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { cn } from "@/lib/utils";
 import { getQuizById, Quiz } from "@/data/quizzes";
 import type { Block, CourseData, QuizItem } from "../schema";
@@ -11,7 +12,6 @@ import { Accordion, Timeline } from "./Disclosure";
 import { CanvasSkeleton } from "./Skeletons";
 
 // Heavy pieces load on demand; a shimmer skeleton shows meanwhile.
-const VideoPlayer = lazy(() => import("./VideoPlayer"));
 const Playground = lazy(() => import("./Playground"));
 const QuizComponent = lazy(() => import("@/components/Quiz"));
 
@@ -20,7 +20,6 @@ interface Props {
   current: FlatItem;
   answered: Set<string>;
   onAnswer: (questionId: string) => void;
-  onItemDone: () => void;
   onQuizExit: () => void;
 }
 
@@ -29,21 +28,15 @@ export default function ItemCanvas({
   current,
   answered,
   onAnswer,
-  onItemDone,
   onQuizExit,
 }: Props) {
   const { item } = current;
 
   if (item.type === "video")
     return (
-      <Suspense fallback={<CanvasSkeleton kind="video" />}>
-        <VideoPlayer
-          item={item}
-          answered={answered}
-          onAnswer={onAnswer}
-          onEnded={onItemDone}
-        />
-      </Suspense>
+      <div className="reveal overflow-hidden rounded-2xl bg-ink shadow-lg">
+        <YouTubeEmbed videoId={item.source.youtubeId} title={item.title} />
+      </div>
     );
 
   if (item.type === "widget")
