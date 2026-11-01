@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 1,
+  "slug": "loans-and-mortgages",
+  "meta": {
+    "title": "Loans & Mortgages",
+    "order": 8,
+    "age": "Ages 16+, great with a parent",
+    "level": "Intermediate",
+    "blurb": "Big buys often need a loan. Learn how loans work before you sign anything.",
+    "objectives": [
+      "Know the main types of loans",
+      "Understand down payments and PMI",
+      "Compare loan offers side by side",
+      "Ask the right questions"
+    ],
+    "outcome": "By the end, you can read a loan offer and spot the true cost.",
+    "pillars": ["R"],
+    "icon": "Building",
+    "tint": "bg-indigo-100 text-indigo-800",
+    "time": "3 modules, about 30 min"
+  },
+  "modules": [
+    {
+      "id": "m1",
+      "title": "The basics",
+      "summary": "Watch the video, then learn the key ideas.",
+      "discussionPrompt": "What's the biggest thing you think you'll borrow for someday?",
+      "lessons": [
+        {
+          "id": "watch",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "video",
+              "type": "video",
+              "title": "Loans 101 (Loan Basics 1/3)",
+              "source": {
+                "youtubeId": "fuiiJuB7tJs"
+              }
+            },
+            {
+              "id": "video-2",
+              "type": "video",
+              "title": "Mortgage Explained | Personal Finance 101",
+              "source": {
+                "youtubeId": "l4J5RvGB-iM"
+              }
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Learn the key ideas",
+          "items": [
+            {
+              "id": "part-1",
+              "type": "reading",
+              "title": "Why people borrow",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "A loan lets you buy something now and pay for it over time, plus interest.\n\n**Common kinds of loans**\n• **Mortgage:** to buy a home\n• **Auto loan:** to buy a car\n• **Student loan:** for school\n• **Personal loan:** for many uses\n• **Credit card:** a flexible, ongoing loan\n\n**Secured vs unsecured**\n• **Secured** loans are backed by something you own, called collateral. If you stop paying, the lender can take it. Mortgages and car loans work this way.\n• **Unsecured** loans have no collateral. They often have higher rates.\n\n**Good debt vs bad debt?**\nBorrowing for things that last or grow in value, like a home or education, can make sense. Borrowing for things that lose value fast deserves extra thought."
+                }
+              ]
+            },
+            {
+              "id": "part-2",
+              "type": "reading",
+              "title": "How a loan works",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "**The key parts**\n• **Principal:** the amount you borrow\n• **Interest rate (APR):** the yearly cost of borrowing\n• **Term:** how long you have to pay it back\n• **Monthly payment:** what you pay each month\n\n**Where your payment goes**\nEach payment covers some interest and some principal. Early on, more goes to interest. Later, more goes to principal. This schedule is called **amortization**.\n\n**Longer term, lower payment, more cost**\nA longer loan has smaller monthly payments. But you pay interest for more years, so the total cost is higher.\n\n**Paying extra helps**\nExtra payments toward principal shorten the loan and cut total interest."
+                },
+                {
+                  "type": "callout",
+                  "tone": "tip",
+                  "md": "**Try this:** In Module 2, change a loan from 3 years to 6. Compare the total interest."
+                },
+                {
+                  "type": "check",
+                  "question": {
+                    "id": "l-c1",
+                    "prompt": "A longer loan term usually means…",
+                    "options": [
+                      "Lower monthly payments but more total interest",
+                      "Higher payments and less interest",
+                      "No interest",
+                      "The same total cost"
+                    ],
+                    "answer": 0,
+                    "hint": "Spreading payments out takes more time.",
+                    "explanation": "Smaller payments over more years add up to more interest overall."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "part-3",
+              "type": "reading",
+              "title": "Mortgages and down payments",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "A mortgage is a loan to buy a home. The home is the collateral.\n\n**Down payment**\nThat's the cash you pay up front. A bigger down payment means a smaller loan.\n\n**PMI**\nOn a conventional loan, if you put down less than 20%, lenders usually add **private mortgage insurance**. It protects the lender, not you, and raises your monthly cost.\n\n**Other loan types**\nFHA loans, backed by the government, allow down payments as low as 3.5% for many buyers. They have their own mortgage insurance.\n\n**15-year vs 30-year**\n• 30-year: lower monthly payment, much more total interest\n• 15-year: higher monthly payment, much less total interest\n\n**More than the loan**\nHomeowners also pay property taxes, insurance and repairs. Budget for all of it."
+                },
+                {
+                  "type": "accordion",
+                  "title": "Key words to know",
+                  "items": [
+                    {
+                      "title": "Principal",
+                      "md": "The amount you borrow."
+                    },
+                    {
+                      "title": "Loan term",
+                      "md": "How long you have to pay the loan back."
+                    },
+                    {
+                      "title": "Down payment",
+                      "md": "Cash you pay up front on a big purchase."
+                    },
+                    {
+                      "title": "PMI",
+                      "md": "Private mortgage insurance. Often required with less than 20% down."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "Going further",
+      "summary": "Try the interactive tool, then read on.",
+      "discussionPrompt": "In the tool, how much did going from 3 to 6 years change the total interest?",
+      "lessons": [
+        {
+          "id": "try",
+          "title": "Try it",
+          "items": [
+            {
+              "id": "explore",
+              "type": "widget",
+              "title": "Find the real cost of a loan",
+              "widget": {
+                "kind": "loan-payment",
+                "intro": "Change the amount, rate and length. Compare the monthly payment with the total interest you'd pay.",
+                "defaults": {
+                  "amount": 20000,
+                  "rate": 7,
+                  "years": 5
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "read-on",
+          "title": "Read on",
+          "items": [
+            {
+              "id": "part-4",
+              "type": "reading",
+              "title": "Shopping for a loan",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Never take the first offer. Compare.\n\n**Check your credit first**\nA better score usually means a lower rate. Fix errors before you apply.\n\n**Compare the APR, not just the rate**\nThe APR includes some fees, so it shows the truer cost.\n\n**Get it in writing**\nFor mortgages, lenders must give you a **Loan Estimate**. It makes offers easy to compare side by side.\n\n**Questions to ask**\n• Is the rate fixed or variable?\n• What fees are there?\n• Is there a penalty for paying early?\n• What's the total I'll pay over the life of the loan?\n\n**Prequalify**\nMany lenders show estimated rates with a soft check that doesn't hurt your score."
+                }
+              ]
+            },
+            {
+              "id": "part-5",
+              "type": "reading",
+              "title": "Borrowing wisely",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "**Borrow less than you're offered**\nA lender may approve more than you can comfortably repay. Decide your limit first.\n\n**Watch your debt-to-income ratio**\nThat's your monthly debt payments divided by your monthly income. Lenders use it, and so should you.\n\n**Always pay on time**\nSet up autopay. Late payments add fees and hurt your credit.\n\n**Pay extra when you can**\nEven small extra payments save interest.\n\n**Refinancing**\nIf rates drop or your credit improves, a new loan at a lower rate might save money. Watch the fees.\n\n**Stay away from**\n• Payday loans with sky-high costs\n• Loans you don't fully understand\n• Pressure to sign today"
+                },
+                {
+                  "type": "callout",
+                  "tone": "warning",
+                  "md": "**Red flag:** A lender who tells you not to read the paperwork or pushes you to decide right now."
+                },
+                {
+                  "type": "check",
+                  "question": {
+                    "id": "l-c2",
+                    "prompt": "On a conventional mortgage, PMI is usually required when your down payment is below…",
+                    "options": ["5%", "20%", "50%", "1%"],
+                    "answer": 1,
+                    "hint": "It's the classic down payment target.",
+                    "explanation": "Below 20% down, lenders usually add private mortgage insurance (PMI) to the monthly cost."
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Practice and check",
+      "summary": "Review the big ideas, practice, then take the quiz.",
+      "discussionPrompt": "What question would you ask a lender before signing?",
+      "lessons": [
+        {
+          "id": "review",
+          "title": "Review and practice",
+          "items": [
+            {
+              "id": "review",
+              "type": "reading",
+              "title": "Key ideas and practice",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Here's the whole course in five steps. Reveal them one at a time, then try the sorting game."
+                },
+                {
+                  "type": "timeline",
+                  "title": "The big ideas, in order",
+                  "steps": [
+                    {
+                      "title": "Know why you're borrowing"
+                    },
+                    {
+                      "title": "Check your credit first"
+                    },
+                    {
+                      "title": "Compare APRs and loan terms"
+                    },
+                    {
+                      "title": "Look at the total cost, not just the payment"
+                    },
+                    {
+                      "title": "Pay on time, and pay extra when you can"
+                    }
+                  ]
+                },
+                {
+                  "type": "sort",
+                  "question": {
+                    "id": "l-s1",
+                    "prompt": "Is this loan usually secured or unsecured?",
+                    "buckets": ["Secured", "Unsecured"],
+                    "items": [
+                      {
+                        "text": "Mortgage",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Auto loan",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Credit card",
+                        "bucket": 1
+                      },
+                      {
+                        "text": "Typical bank personal loan",
+                        "bucket": 1
+                      },
+                      {
+                        "text": "Home equity loan",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Federal student loan",
+                        "bucket": 1
+                      }
+                    ],
+                    "hint": "Is something you own on the line?",
+                    "explanation": "Mortgages, auto and home equity loans are backed by property. Cards, most personal loans and federal student loans aren't."
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "quiz",
+          "title": "Quiz",
+          "items": [
+            {
+              "id": "quiz",
+              "type": "quiz",
+              "title": "Course quiz",
+              "quizId": "loans-and-mortgages"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

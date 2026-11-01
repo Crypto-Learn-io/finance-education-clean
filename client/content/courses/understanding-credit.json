@@ -1,0 +1,315 @@
+{
+  "schemaVersion": 1,
+  "slug": "understanding-credit",
+  "meta": {
+    "title": "Understanding Credit",
+    "order": 2,
+    "age": "Ages 14–18",
+    "level": "Beginner",
+    "blurb": "Credit is trust you build over time. Learn how scores work and how to protect yours.",
+    "objectives": [
+      "Read a credit score",
+      "Know what raises or lowers it",
+      "Use a card without falling into debt",
+      "Pay down debt step by step"
+    ],
+    "outcome": "By the end, you can explain how to build good credit from zero.",
+    "pillars": ["R"],
+    "icon": "CreditCard",
+    "tint": "bg-violet-100 text-violet-800",
+    "featured": true,
+    "time": "3 modules, about 25 min"
+  },
+  "modules": [
+    {
+      "id": "m1",
+      "title": "The basics",
+      "summary": "Watch the video, then learn the key ideas.",
+      "discussionPrompt": "Have you or your family ever been surprised by a credit card bill? What happened?",
+      "lessons": [
+        {
+          "id": "watch",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "video",
+              "type": "video",
+              "title": "How Do Credit Cards Work?",
+              "source": {
+                "youtubeId": "-z2ObeDKjlw"
+              }
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Learn the key ideas",
+          "items": [
+            {
+              "id": "part-1",
+              "type": "reading",
+              "title": "What credit really means",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Credit means borrowing money now and paying it back later. A lender trusts you to pay it back.\n\nWhen you use a credit card, you're not spending your own money. You're borrowing the bank's money. You have to pay it back, and often with **interest**, which is the cost of borrowing.\n\n**Why credit matters**\nLenders look at how you've handled credit before. Good credit can help you:\n• Get a car loan or home loan\n• Pay lower interest rates\n• Rent an apartment more easily\n• Sometimes, get cheaper insurance\n\n**Credit is a tool**\nUsed well, it builds trust and saves money. Used badly, it leads to debt that's hard to escape."
+                }
+              ]
+            },
+            {
+              "id": "part-2",
+              "type": "reading",
+              "title": "Your credit score",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "A credit score is a number that shows how likely you are to pay back money. The most common one is the **FICO score**. It runs from 300 to 850. Higher is better.\n\n**What goes into a FICO score**\n• **Payment history (about 35%):** Do you pay on time?\n• **Amounts owed (about 30%):** How much of your credit are you using?\n• **Length of history (about 15%):** How long have you had credit?\n• **New credit (about 10%):** Have you opened lots of new accounts lately?\n• **Credit mix (about 10%):** Do you have different kinds of credit?\n\n**The big lesson**\nPaying on time matters most. One late payment can hurt your score for years."
+                },
+                {
+                  "type": "callout",
+                  "tone": "tip",
+                  "md": "**Remember:** You don't need a credit card to start learning. Understanding these five parts now puts you ahead."
+                },
+                {
+                  "type": "check",
+                  "question": {
+                    "id": "c-c1",
+                    "prompt": "What has the biggest effect on a FICO credit score?",
+                    "options": [
+                      "Payment history",
+                      "How many cards you own",
+                      "Your income",
+                      "Your age"
+                    ],
+                    "answer": 0,
+                    "hint": "Lenders care most about whether you pay them back.",
+                    "explanation": "Payment history is about 35% of a FICO score. Paying on time matters most."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "part-3",
+              "type": "reading",
+              "title": "Your credit report",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Your credit report is the record behind your score. It lists your accounts, balances, payments and any problems.\n\nThree big companies keep credit reports in the US: **Equifax, Experian and TransUnion**. Each may have slightly different information.\n\n**Check it for free**\nYou can get free credit reports from all three at **AnnualCreditReport.com**. That's the official site. Watch out for look-alike sites that try to charge you.\n\n**What to look for**\n• Accounts you don't recognize\n• Late payments that weren't late\n• Wrong names or addresses\n\nIf something is wrong, you can dispute it with the credit bureau. Errors happen, and fixing them can raise your score."
+                },
+                {
+                  "type": "callout",
+                  "tone": "note",
+                  "md": "**Parent tip:** Kids usually shouldn't have a credit report at all. If yours does, it could be a sign of identity theft. You can check and freeze a child's credit with each bureau."
+                },
+                {
+                  "type": "accordion",
+                  "title": "Key words to know",
+                  "items": [
+                    {
+                      "title": "Credit score",
+                      "md": "A number that shows lenders how likely you are to pay back money."
+                    },
+                    {
+                      "title": "Credit report",
+                      "md": "Your record of accounts, balances and payments."
+                    },
+                    {
+                      "title": "Credit utilization",
+                      "md": "Your card balance compared with your credit limit."
+                    },
+                    {
+                      "title": "APR",
+                      "md": "The yearly interest rate you pay when you carry a balance."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "Going further",
+      "summary": "Try the interactive tool, then read on.",
+      "discussionPrompt": "What's a safe first step to start building credit?",
+      "lessons": [
+        {
+          "id": "try",
+          "title": "Try it",
+          "items": [
+            {
+              "id": "explore",
+              "type": "widget",
+              "title": "See your credit utilization",
+              "widget": {
+                "kind": "credit-utilization",
+                "intro": "Set a card limit and a balance. See how much of your credit you're using.",
+                "defaults": {
+                  "limit": 2000,
+                  "balance": 600
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "read-on",
+          "title": "Read on",
+          "items": [
+            {
+              "id": "part-4",
+              "type": "reading",
+              "title": "Starting from zero",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Everyone starts with no credit. Here are safe ways to begin.\n\n**Become an authorized user**\nA parent can add you to their card. Their good habits can help your credit. Make sure their history is strong first.\n\n**Get a secured card**\nYou put down a deposit, often a few hundred dollars. That becomes your limit. Use it for small buys and pay it off each month.\n\n**Try a student card**\nThese are made for people new to credit. Limits are usually low.\n\n**Know the age rules**\nIn the US, you must be 18 to get your own card. If you're under 21, you also need to show you can pay on your own, usually with your own income.\n\n**Start small**\nPut one small bill, like a streaming plan, on the card. Then pay it in full every month."
+                }
+              ]
+            },
+            {
+              "id": "part-5",
+              "type": "reading",
+              "title": "Using a card the smart way",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "A credit card can help you build credit or trap you in debt. These habits keep you safe.\n\n**Pay the full balance every month**\nIf you pay in full by the due date, you usually pay **no interest** on purchases. That's called the grace period.\n\n**Turn on autopay**\nSet it for at least the minimum so you're never late. Then pay the rest yourself.\n\n**Keep your balance low**\nYour credit utilization is your balance divided by your limit. Many experts suggest staying under 30%. Under 10% is even better.\n\n**Only buy what you could pay in cash**\nIf you couldn't afford it today, a card doesn't change that.\n\n**Watch the APR**\nCard interest rates are often high. Carrying a balance can make a $100 purchase cost much more."
+                },
+                {
+                  "type": "callout",
+                  "tone": "warning",
+                  "md": "**Minimum payment trap:** Paying only the minimum keeps you in debt for a long time and costs much more in interest."
+                },
+                {
+                  "type": "check",
+                  "question": {
+                    "id": "c-c2",
+                    "prompt": "Credit utilization means…",
+                    "options": [
+                      "How many cards you have",
+                      "How much of your credit limit you're using",
+                      "How old your oldest account is",
+                      "Your interest rate"
+                    ],
+                    "answer": 1,
+                    "hint": "Compare your balance to your limit.",
+                    "explanation": "It's your balance divided by your limit. Lower is better. Many experts suggest staying under 30%."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "part-6",
+              "type": "reading",
+              "title": "Getting out of debt",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "If you owe money on cards, you're not alone. Here's a plan.\n\n**1. Stop adding to it**\nPut the card away while you pay it down.\n\n**2. List every debt**\nWrite the balance, interest rate and minimum payment for each.\n\n**3. Pick a method**\n• **Avalanche:** Pay extra on the highest interest rate first. This saves the most money.\n• **Snowball:** Pay extra on the smallest balance first. Quick wins keep you motivated.\n\nBoth work. The best one is the one you'll stick with.\n\n**4. Call your lender**\nAsk for a lower rate or a payment plan. It doesn't hurt to ask.\n\n**5. Avoid quick fixes**\nPayday loans and \"debt relief\" offers with big fees often make things worse."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Practice and check",
+      "summary": "Review the big ideas, practice, then take the quiz.",
+      "discussionPrompt": "What one habit will you use to protect your score?",
+      "lessons": [
+        {
+          "id": "review",
+          "title": "Review and practice",
+          "items": [
+            {
+              "id": "review",
+              "type": "reading",
+              "title": "Key ideas and practice",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Here's the whole course in five steps. Reveal them one at a time, then try the sorting game."
+                },
+                {
+                  "type": "timeline",
+                  "title": "The big ideas, in order",
+                  "steps": [
+                    {
+                      "title": "Learn how scores work"
+                    },
+                    {
+                      "title": "Start small with a secured or student card"
+                    },
+                    {
+                      "title": "Pay on time, every time"
+                    },
+                    {
+                      "title": "Keep balances low, ideally under 30% of the limit"
+                    },
+                    {
+                      "title": "Check your credit reports for errors"
+                    }
+                  ]
+                },
+                {
+                  "type": "sort",
+                  "question": {
+                    "id": "c-s1",
+                    "prompt": "Does this help or hurt your credit score?",
+                    "buckets": ["Helps", "Hurts"],
+                    "items": [
+                      {
+                        "text": "Paying on time",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Missing a payment",
+                        "bucket": 1
+                      },
+                      {
+                        "text": "Keeping balances low",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Maxing out a card",
+                        "bucket": 1
+                      },
+                      {
+                        "text": "Keeping old accounts open",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Applying for lots of cards at once",
+                        "bucket": 1
+                      }
+                    ],
+                    "hint": "Think about what shows you're careful with borrowed money.",
+                    "explanation": "On-time payments, low balances and a long history help. Late payments, maxed cards and many new applications hurt."
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "quiz",
+          "title": "Quiz",
+          "items": [
+            {
+              "id": "quiz",
+              "type": "quiz",
+              "title": "Course quiz",
+              "quizId": "understanding-credit"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "slug": "understanding-inflation",
+  "meta": {
+    "title": "Understanding Inflation",
+    "order": 4,
+    "age": "Ages 11–15",
+    "level": "Beginner",
+    "blurb": "Why does a snack cost more than it used to? That's inflation. Learn what causes it and how to keep up.",
+    "objectives": [
+      "Explain inflation in plain words",
+      "See how prices change over time",
+      "Protect savings from rising prices"
+    ],
+    "outcome": "By the end, you can explain why saving alone isn't always enough.",
+    "pillars": ["V"],
+    "icon": "TrendingDown",
+    "tint": "bg-orange-100 text-orange-800",
+    "time": "3 modules, about 25 min"
+  },
+  "modules": [
+    {
+      "id": "m1",
+      "title": "The basics",
+      "summary": "Watch the video, then learn the key ideas.",
+      "discussionPrompt": "What's something you buy that costs more now than a year ago?",
+      "lessons": [
+        {
+          "id": "watch",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "video",
+              "type": "video",
+              "title": "What is Inflation? | It's simple.",
+              "source": {
+                "youtubeId": "Ou0l5lcGrR4"
+              }
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Learn the key ideas",
+          "items": [
+            {
+              "id": "part-1",
+              "type": "reading",
+              "title": "What is inflation?",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Inflation means prices go up over time. When prices rise, each dollar buys a little less.\n\n**A quick example**\nIf a snack costs $1.00 this year and $1.03 next year, prices rose 3%. Your dollar didn't change, but it buys less.\n\n**Purchasing power**\nThat's how much your money can actually buy. Inflation slowly shrinks it.\n\n**Is some inflation normal?**\nYes. A little inflation is expected in a healthy economy. In the US, the Federal Reserve aims for about 2% a year over time.\n\nProblems start when inflation gets high. Then prices climb faster than paychecks."
+                },
+                {
+                  "type": "callout",
+                  "tone": "note",
+                  "md": "**Parent tip:** Ask grandparents what a movie ticket or a gallon of milk cost when they were young. It makes inflation real for kids."
+                }
+              ]
+            },
+            {
+              "id": "part-2",
+              "type": "reading",
+              "title": "How we measure inflation",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "The most common measure in the US is the **Consumer Price Index**, or **CPI**.\n\n**How it works**\nThe Bureau of Labor Statistics tracks prices of a \"basket\" of things people buy. That includes food, rent, gas, clothing, medical care and more.\n\nEach month, they check how much the basket costs. If it costs 3% more than a year ago, inflation is about 3%.\n\n**Your inflation may be different**\nThe basket is an average. If you spend a lot on something rising fast, like rent, your costs may rise faster than the CPI.\n\n**Real vs nominal**\n• **Nominal** means the plain number, like a 4% raise\n• **Real** means after inflation. With 3% inflation, a 4% raise is about a 1% real raise"
+                },
+                {
+                  "type": "check",
+                  "question": {
+                    "id": "f-c1",
+                    "prompt": "Which index is most often used to measure US inflation?",
+                    "options": [
+                      "Consumer Price Index (CPI)",
+                      "S&P 500",
+                      "Credit score",
+                      "Dow Jones"
+                    ],
+                    "answer": 0,
+                    "hint": "It tracks prices of everyday things people buy.",
+                    "explanation": "The CPI follows prices of a basket of goods and services like food, rent and gas."
+                  }
+                },
+                {
+                  "type": "accordion",
+                  "title": "Key words to know",
+                  "items": [
+                    {
+                      "title": "Inflation",
+                      "md": "A general rise in prices over time."
+                    },
+                    {
+                      "title": "Purchasing power",
+                      "md": "How much your money can actually buy."
+                    },
+                    {
+                      "title": "CPI",
+                      "md": "Consumer Price Index. A common measure of price changes."
+                    },
+                    {
+                      "title": "Real return",
+                      "md": "What you earn after subtracting inflation."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "Going further",
+      "summary": "Try the interactive tool, then read on.",
+      "discussionPrompt": "Try the tool with 2% and 5% inflation. What surprised you?",
+      "lessons": [
+        {
+          "id": "try",
+          "title": "Try it",
+          "items": [
+            {
+              "id": "explore",
+              "type": "widget",
+              "title": "What will your money buy later?",
+              "widget": {
+                "kind": "inflation",
+                "intro": "Pick an amount, an inflation rate and a number of years. See how much that money buys in today's dollars.",
+                "defaults": {
+                  "amount": 100,
+                  "rate": 3,
+                  "years": 20
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "read-on",
+          "title": "Read on",
+          "items": [
+            {
+              "id": "part-3",
+              "type": "reading",
+              "title": "What causes inflation",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Inflation usually comes from a few big causes.\n\n**Too much demand**\nWhen lots of people want to buy, but there isn't enough to go around, prices rise.\n\n**Higher costs**\nWhen it costs more to make things, like fuel or materials, businesses often raise prices.\n\n**More money in the system**\nIf money grows faster than the goods to buy, each dollar is worth less.\n\n**What the Federal Reserve does**\nTo slow inflation, the Fed can raise interest rates. Borrowing gets more expensive, people spend less, and prices cool down. To help a slow economy, it can lower rates.\n\n**Expectations matter too**\nIf people expect prices to rise, they may buy now and ask for raises. That can push prices up further."
+                }
+              ]
+            },
+            {
+              "id": "part-4",
+              "type": "reading",
+              "title": "How to keep up with inflation",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "You can't stop inflation, but you can plan for it.\n\n**Don't let cash sit idle**\nMoney in a 0% account loses buying power. Keep emergency money in a savings account that pays interest.\n\n**Invest for the long term**\nFor money you won't need for many years, investing has usually grown faster than inflation. It goes up and down along the way.\n\n**Look at inflation-protected options**\n• **TIPS:** Treasury bonds that adjust for inflation\n• **I bonds:** US savings bonds with a rate tied to inflation, bought at TreasuryDirect.gov\n\n**Grow your earning power**\nNew skills can lead to raises that beat inflation.\n\n**Update your budget**\nCheck your budget when prices change, so it stays real."
+                },
+                {
+                  "type": "callout",
+                  "tone": "tip",
+                  "md": "**Try this:** Use the inflation tool in Module 2. See what $100 will buy in 20 years at 3%."
+                },
+                {
+                  "type": "check",
+                  "question": {
+                    "id": "f-c2",
+                    "prompt": "Which can help savings keep up with inflation over many years?",
+                    "options": [
+                      "Keeping cash under the mattress",
+                      "Investing for long-term growth",
+                      "Spending it all now",
+                      "A checking account that pays 0%"
+                    ],
+                    "answer": 1,
+                    "hint": "You need growth that beats rising prices.",
+                    "explanation": "Over long periods, diversified investing has usually grown faster than inflation, though it can drop in the short term."
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Practice and check",
+      "summary": "Review the big ideas, practice, then take the quiz.",
+      "discussionPrompt": "What's one way your family could protect its savings from inflation?",
+      "lessons": [
+        {
+          "id": "review",
+          "title": "Review and practice",
+          "items": [
+            {
+              "id": "review",
+              "type": "reading",
+              "title": "Key ideas and practice",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Here's the whole course in five steps. Reveal them one at a time, then try the sorting game."
+                },
+                {
+                  "type": "timeline",
+                  "title": "The big ideas, in order",
+                  "steps": [
+                    {
+                      "title": "Prices rise over time"
+                    },
+                    {
+                      "title": "Each dollar buys a little less"
+                    },
+                    {
+                      "title": "Causes: high demand, higher costs, more money in the system"
+                    },
+                    {
+                      "title": "Cash earning less than inflation loses value"
+                    },
+                    {
+                      "title": "Long-term investing and growing your skills help you keep up"
+                    }
+                  ]
+                },
+                {
+                  "type": "sort",
+                  "question": {
+                    "id": "f-s1",
+                    "prompt": "Does this help you keep up with inflation?",
+                    "buckets": ["Helps", "Doesn't help"],
+                    "items": [
+                      {
+                        "text": "Long-term investing in a diversified fund",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Cash under the mattress",
+                        "bucket": 1
+                      },
+                      {
+                        "text": "Treasury Inflation-Protected Securities (TIPS)",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "A checking account earning 0%",
+                        "bucket": 1
+                      },
+                      {
+                        "text": "Building skills that raise your pay",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Ignoring rising prices in your budget",
+                        "bucket": 1
+                      }
+                    ],
+                    "hint": "Ask: does it grow at least as fast as prices?",
+                    "explanation": "Investing, TIPS and higher earnings can keep pace. Idle cash and ignoring price changes fall behind."
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "quiz",
+          "title": "Quiz",
+          "items": [
+            {
+              "id": "quiz",
+              "type": "quiz",
+              "title": "Course quiz",
+              "quizId": "understanding-inflation"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "slug": "retirement-planning",
+  "meta": {
+    "title": "Retirement Planning",
+    "order": 9,
+    "age": "Ages 16+ and parents",
+    "level": "Intermediate",
+    "blurb": "Retirement feels far away. That's exactly why starting early helps so much.",
+    "objectives": [
+      "See how time grows savings",
+      "Know 401(k) and IRA basics",
+      "Choose between Roth and traditional",
+      "Set a simple savings target"
+    ],
+    "outcome": "By the end, you can start a retirement plan with confidence.",
+    "pillars": ["I", "H"],
+    "icon": "Target",
+    "tint": "bg-pink-100 text-pink-800",
+    "featured": true,
+    "time": "3 modules, about 25 min"
+  },
+  "modules": [
+    {
+      "id": "m1",
+      "title": "The basics",
+      "summary": "Watch the video, then learn the key ideas.",
+      "discussionPrompt": "What age would you like to have the choice to stop working?",
+      "lessons": [
+        {
+          "id": "watch",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "video",
+              "type": "video",
+              "title": "Retirement Planning Guide",
+              "source": {
+                "youtubeId": "pZNnueqfj_A"
+              }
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Learn the key ideas",
+          "items": [
+            {
+              "id": "part-1",
+              "type": "reading",
+              "title": "Why start now",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Retirement might be 50 years away. That's exactly why starting early is so powerful.\n\n**Time does the heavy lifting**\nMoney you invest early has decades to grow on its own growth. That's compound growth.\n\n**A simple comparison**\nTwo people each save the same amount every month at the same growth rate.\n• One starts at 25.\n• One starts at 35.\n\nThe early starter usually ends up with much more, even though the difference is only 10 years. Those extra years of growth add up.\n\n**Small is fine**\nYou don't need a lot to start. Starting is what matters."
+                },
+                {
+                  "type": "callout",
+                  "tone": "tip",
+                  "md": "**Try this:** Use the tool in Module 2. Compare saving for 40 years with saving for 20."
+                }
+              ]
+            },
+            {
+              "id": "part-2",
+              "type": "reading",
+              "title": "401(k) plans",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "A 401(k) is a retirement account you get through a job.\n\n**How it works**\nYou choose a percent of each paycheck to save. It goes straight into your account and gets invested.\n\n**The employer match**\nMany employers add money when you save. For example, they might match 50% of what you put in, up to 6% of your pay. That's like a raise just for saving.\n\n**Always try to get the full match.**\n\n**Vesting**\nSome employer money only becomes fully yours after you work there a while. Check your plan's rules.\n\n**Limits**\nThere's a yearly limit on how much you can put in. It changes most years, so check IRS.gov for the current amount."
+                }
+              ]
+            },
+            {
+              "id": "part-3",
+              "type": "reading",
+              "title": "IRAs: Roth or traditional",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "An **IRA** is an individual retirement account. You open it yourself. You need earned income to put money in.\n\n**Traditional IRA**\nYou may get a tax break now. You pay tax when you take money out in retirement.\n\n**Roth IRA**\nYou put in money you've already paid tax on. Qualified withdrawals in retirement are **tax-free**.\n\n**Which is better?**\n• Expect a higher tax rate later? Roth often wins.\n• Expect a lower tax rate later? Traditional often wins.\n\nMany young people pick Roth, because their tax rate is usually low now."
+                },
+                {
+                  "type": "callout",
+                  "tone": "note",
+                  "md": "**Parent tip:** If your teen has a job, a custodial Roth IRA lets them start early. Contributions can't be more than what they earned that year."
+                },
+                {
+                  "type": "check",
+                  "question": {
+                    "id": "p-c1",
+                    "prompt": "With a Roth IRA, when do you usually pay income tax?",
+                    "options": [
+                      "When you put money in, then qualified withdrawals are tax-free",
+                      "When you take money out",
+                      "Never on anything",
+                      "Every month"
+                    ],
+                    "answer": 0,
+                    "hint": "Roth means tax now, not later.",
+                    "explanation": "Roth contributions use after-tax money. Qualified withdrawals in retirement are tax-free."
+                  }
+                },
+                {
+                  "type": "accordion",
+                  "title": "Key words to know",
+                  "items": [
+                    {
+                      "title": "401(k)",
+                      "md": "A retirement account offered through a job."
+                    },
+                    {
+                      "title": "IRA",
+                      "md": "Individual retirement account you open yourself."
+                    },
+                    {
+                      "title": "Roth",
+                      "md": "Pay tax now; qualified withdrawals later are tax-free."
+                    },
+                    {
+                      "title": "Employer match",
+                      "md": "Money your employer adds when you contribute."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "Going further",
+      "summary": "Try the interactive tool, then read on.",
+      "discussionPrompt": "In the tool, what happened when you cut the years from 40 to 20?",
+      "lessons": [
+        {
+          "id": "try",
+          "title": "Try it",
+          "items": [
+            {
+              "id": "explore",
+              "type": "widget",
+              "title": "Start early vs start late",
+              "widget": {
+                "kind": "compound-interest",
+                "intro": "Try saving monthly for 40 years, then for 20. The growth rate is only an example.",
+                "defaults": {
+                  "principal": 0,
+                  "monthly": 200,
+                  "rate": 6,
+                  "years": 40
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "read-on",
+          "title": "Read on",
+          "items": [
+            {
+              "id": "part-4",
+              "type": "reading",
+              "title": "How much is enough?",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "There's no single right number, but some guidelines help.\n\n**Save a steady percent**\nMany planners suggest saving about 15% of income for retirement, counting any employer match. If that's too much now, start smaller and raise it each year.\n\n**Think about your future spending**\nMany retirees need most of what they spent while working. Some costs drop, like commuting. Others rise, like health care.\n\n**The 4% guideline**\nA common rule of thumb says you can withdraw about 4% of your savings in the first year of retirement, then adjust for inflation. It's a starting point, not a promise.\n\n**Check your progress**\nLook at your savings once a year. Small changes early make a big difference later."
+                },
+                {
+                  "type": "check",
+                  "question": {
+                    "id": "p-c2",
+                    "prompt": "Your employer matches 50% of what you save, up to 6% of pay. You save 6%. The match adds…",
+                    "options": [
+                      "Nothing",
+                      "3% of your pay",
+                      "6% of your pay",
+                      "12% of your pay"
+                    ],
+                    "answer": 1,
+                    "hint": "Half of 6%.",
+                    "explanation": "50% of 6% is 3% of pay, added on top of your own 6%."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "part-5",
+              "type": "reading",
+              "title": "Taking money out",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Retirement accounts have rules about when you can take money out.\n\n**Early withdrawals**\nTaking money out of a 401(k) or IRA before age 59½ usually means taxes plus a 10% penalty. There are some exceptions.\n\n**Required withdrawals**\nFor most traditional accounts, you must start taking money out in your 70s. These are called **required minimum distributions**. The age has changed recently, so check IRS.gov.\n\n**Social Security**\nYou can start benefits as early as 62. Waiting until your full retirement age, or later up to 70, gives a bigger monthly check. For people born in 1960 or later, full retirement age is 67.\n\n**Plan the order**\nMany people use a mix of Social Security, savings and accounts in a planned order to make money last."
+                },
+                {
+                  "type": "callout",
+                  "tone": "warning",
+                  "md": "**Think twice before cashing out a 401(k) when you change jobs.** Rolling it over keeps your money growing."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Practice and check",
+      "summary": "Review the big ideas, practice, then take the quiz.",
+      "discussionPrompt": "Roth or traditional for a first job? What's your reasoning?",
+      "lessons": [
+        {
+          "id": "review",
+          "title": "Review and practice",
+          "items": [
+            {
+              "id": "review",
+              "type": "reading",
+              "title": "Key ideas and practice",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Here's the whole course in five steps. Reveal them one at a time, then try the sorting game."
+                },
+                {
+                  "type": "timeline",
+                  "title": "The big ideas, in order",
+                  "steps": [
+                    {
+                      "title": "Start early, even with small amounts"
+                    },
+                    {
+                      "title": "Get the full employer match"
+                    },
+                    {
+                      "title": "Choose Roth or traditional"
+                    },
+                    {
+                      "title": "Invest for the long term"
+                    },
+                    {
+                      "title": "Plan how you'll take money out"
+                    }
+                  ]
+                },
+                {
+                  "type": "sort",
+                  "question": {
+                    "id": "p-s1",
+                    "prompt": "Traditional or Roth?",
+                    "buckets": ["Traditional", "Roth"],
+                    "items": [
+                      {
+                        "text": "Tax break now",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Tax-free qualified withdrawals later",
+                        "bucket": 1
+                      },
+                      {
+                        "text": "Pay tax when you withdraw",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Pay tax before you put money in",
+                        "bucket": 1
+                      },
+                      {
+                        "text": "Good if you expect a lower tax rate in retirement",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Good if you expect a higher tax rate in retirement",
+                        "bucket": 1
+                      }
+                    ],
+                    "hint": "When does the tax break happen: now or later?",
+                    "explanation": "Traditional saves tax now and taxes withdrawals. Roth taxes money now and makes qualified withdrawals tax-free."
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "quiz",
+          "title": "Quiz",
+          "items": [
+            {
+              "id": "quiz",
+              "type": "quiz",
+              "title": "Course quiz",
+              "quizId": "retirement-planning"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

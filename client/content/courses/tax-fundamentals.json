@@ -1,0 +1,286 @@
+{
+  "schemaVersion": 1,
+  "slug": "tax-fundamentals",
+  "meta": {
+    "title": "Tax Basics",
+    "order": 7,
+    "age": "Ages 15+",
+    "level": "Intermediate",
+    "blurb": "When you earn money, some goes to taxes. Learn where it goes and how to keep more, legally.",
+    "objectives": [
+      "See how tax brackets work",
+      "Know deductions from credits",
+      "Use tax-friendly savings accounts",
+      "Plan ahead, not just in April"
+    ],
+    "outcome": "By the end, you can explain how taxes affect what you earn.",
+    "pillars": ["E", "R"],
+    "icon": "Calculator",
+    "tint": "bg-teal-100 text-teal-800",
+    "time": "3 modules, about 25 min"
+  },
+  "modules": [
+    {
+      "id": "m1",
+      "title": "The basics",
+      "summary": "Watch the video, then learn the key ideas.",
+      "discussionPrompt": "What did you think a tax bracket meant before this course?",
+      "lessons": [
+        {
+          "id": "watch",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "video",
+              "type": "video",
+              "title": "How Taxes Work in the U.S.",
+              "source": {
+                "youtubeId": "ROb2Vp5Rs7A"
+              }
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Learn the key ideas",
+          "items": [
+            {
+              "id": "part-1",
+              "type": "reading",
+              "title": "Why we pay taxes",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Taxes are money people and businesses pay to the government. They pay for things we share, like roads, schools, the military, parks and programs like Social Security.\n\n**Common kinds of taxes**\n• **Income tax:** on money you earn. Paid to the federal government, and in most states, to the state too.\n• **Payroll taxes:** for Social Security and Medicare. They come out of each paycheck.\n• **Sales tax:** added when you buy things in most states.\n• **Property tax:** paid by people who own homes or land.\n\n**Your first paycheck**\nYour pay before taxes is **gross pay**. What you actually get is **net pay**. The difference is taxes and other deductions."
+                },
+                {
+                  "type": "callout",
+                  "tone": "note",
+                  "md": "**Parent tip:** Show your teen a real pay stub. Walk through gross pay, each tax and net pay together."
+                }
+              ]
+            },
+            {
+              "id": "part-2",
+              "type": "reading",
+              "title": "How income tax works",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "**Withholding**\nWhen you start a job, you fill out a **W-4** form. It tells your employer how much tax to hold back from each paycheck.\n\n**Tax brackets**\nThe US uses brackets. Each slice of income is taxed at its own rate. Moving into a higher bracket only raises the rate on the dollars in that slice, not all your income.\n\n**Marginal vs effective rate**\n• **Marginal rate:** the rate on your last dollar earned\n• **Effective rate:** your total tax divided by your total income. It's always lower than your top rate.\n\n**Filing a tax return**\nEach year, usually by mid-April, you file a return. If too much was withheld, you get a **refund**. If too little, you **owe** the difference."
+                },
+                {
+                  "type": "callout",
+                  "tone": "tip",
+                  "md": "**Try this:** Use the bracket tool in Module 2. Move the slider and watch the effective rate stay below the top rate."
+                },
+                {
+                  "type": "check",
+                  "question": {
+                    "id": "t-c1",
+                    "prompt": "You move into a higher tax bracket. What happens?",
+                    "options": [
+                      "All your income is taxed at the higher rate",
+                      "Only the income above the line is taxed at the higher rate",
+                      "You lose money overall",
+                      "Your tax drops to zero"
+                    ],
+                    "answer": 1,
+                    "hint": "Brackets work like stairs, not a cliff.",
+                    "explanation": "Only the dollars above the bracket line get the higher rate. Earning more never lowers your take-home pay because of brackets."
+                  }
+                },
+                {
+                  "type": "accordion",
+                  "title": "Key words to know",
+                  "items": [
+                    {
+                      "title": "Taxable income",
+                      "md": "Income left after deductions. Tax is figured on this."
+                    },
+                    {
+                      "title": "Marginal rate",
+                      "md": "The rate on your last dollar earned."
+                    },
+                    {
+                      "title": "Effective rate",
+                      "md": "Total tax divided by total income."
+                    },
+                    {
+                      "title": "Withholding",
+                      "md": "Tax taken out of each paycheck ahead of time."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "Going further",
+      "summary": "Try the interactive tool, then read on.",
+      "discussionPrompt": "Try the tool: what's the effective rate at $30,000 versus $90,000?",
+      "lessons": [
+        {
+          "id": "try",
+          "title": "Try it",
+          "items": [
+            {
+              "id": "explore",
+              "type": "widget",
+              "title": "See how brackets slice your income",
+              "widget": {
+                "kind": "tax-brackets",
+                "intro": "Slide the yearly income. Each slice is taxed at its own rate. These are example brackets for learning; real ones change every year.",
+                "defaults": {
+                  "income": 50000
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "read-on",
+          "title": "Read on",
+          "items": [
+            {
+              "id": "part-3",
+              "type": "reading",
+              "title": "Deductions and credits",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Both lower your taxes, but in different ways.\n\n**Deductions** lower your taxable income.\nMost people take the **standard deduction**, a set amount everyone can subtract. Others list their deductions one by one, called itemizing.\n\n**Credits** lower your tax bill directly, dollar for dollar.\n\n**Which is worth more?**\nSay your tax rate is 12%.\n• A $1,000 deduction saves about $120.\n• A $1,000 credit saves $1,000.\n\n**Credits you may hear about**\n• Earned Income Tax Credit\n• Child Tax Credit\n• American Opportunity Tax Credit, for college costs\n\nRules and amounts change, so check IRS.gov or a tax pro for the current year."
+                },
+                {
+                  "type": "check",
+                  "question": {
+                    "id": "t-c2",
+                    "prompt": "Which saves more: a $1,000 tax credit or a $1,000 deduction?",
+                    "options": [
+                      "The credit",
+                      "The deduction",
+                      "They're the same",
+                      "Neither"
+                    ],
+                    "answer": 0,
+                    "hint": "One cuts your tax bill, one cuts your taxable income.",
+                    "explanation": "A credit cuts your tax by the full $1,000. A deduction only saves your tax rate times $1,000."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "part-4",
+              "type": "reading",
+              "title": "Tax-smart saving",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Some accounts give you a tax break for saving.\n\n**Retirement accounts**\n• **Traditional 401(k) or IRA:** you may get a tax break now and pay tax later when you withdraw\n• **Roth 401(k) or IRA:** you pay tax now, and qualified withdrawals later are tax-free\n\n**Health Savings Account (HSA)**\nIf you have a qualifying health plan, an HSA can give tax breaks for medical costs.\n\n**Tips for a first job**\n• Fill out your W-4 carefully\n• Keep your pay stubs and the **W-2** form you get in January\n• Even if you don't owe tax, filing may get your withheld money back\n• Free filing help is available at IRS.gov\n\n**Plan all year**\nTaxes aren't just an April thing. Small choices during the year add up."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Practice and check",
+      "summary": "Review the big ideas, practice, then take the quiz.",
+      "discussionPrompt": "What's one tax tip you'd share with a friend starting their first job?",
+      "lessons": [
+        {
+          "id": "review",
+          "title": "Review and practice",
+          "items": [
+            {
+              "id": "review",
+              "type": "reading",
+              "title": "Key ideas and practice",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Here's the whole course in five steps. Reveal them one at a time, then try the sorting game."
+                },
+                {
+                  "type": "timeline",
+                  "title": "The big ideas, in order",
+                  "steps": [
+                    {
+                      "title": "You earn income"
+                    },
+                    {
+                      "title": "Some is withheld from each paycheck"
+                    },
+                    {
+                      "title": "Deductions lower your taxable income"
+                    },
+                    {
+                      "title": "Brackets tax each slice at its own rate"
+                    },
+                    {
+                      "title": "Credits cut your tax bill directly, then you file"
+                    }
+                  ]
+                },
+                {
+                  "type": "sort",
+                  "question": {
+                    "id": "t-s1",
+                    "prompt": "Is it a deduction or a credit?",
+                    "buckets": ["Deduction", "Credit"],
+                    "items": [
+                      {
+                        "text": "Standard deduction",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Child Tax Credit",
+                        "bucket": 1
+                      },
+                      {
+                        "text": "Student loan interest deduction",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Earned Income Tax Credit",
+                        "bucket": 1
+                      },
+                      {
+                        "text": "Mortgage interest deduction",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "American Opportunity Tax Credit",
+                        "bucket": 1
+                      }
+                    ],
+                    "hint": "The name usually gives it away.",
+                    "explanation": "Deductions lower taxable income. Credits subtract straight from the tax you owe."
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "quiz",
+          "title": "Quiz",
+          "items": [
+            {
+              "id": "quiz",
+              "type": "quiz",
+              "title": "Course quiz",
+              "quizId": "tax-fundamentals"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

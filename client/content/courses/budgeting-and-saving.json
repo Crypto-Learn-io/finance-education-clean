@@ -1,0 +1,319 @@
+{
+  "schemaVersion": 1,
+  "slug": "budgeting-and-saving",
+  "meta": {
+    "title": "Budgeting & Saving",
+    "order": 1,
+    "age": "Ages 10–14",
+    "level": "Beginner",
+    "blurb": "Learn where your money goes and how to keep some. Simple steps help you build a saving habit.",
+    "objectives": [
+      "Make a simple budget",
+      "Use the 50/30/20 rule",
+      "Start an emergency fund",
+      "Set a saving goal and stick to it"
+    ],
+    "outcome": "By the end, you can plan a monthly budget and set a saving goal.",
+    "pillars": ["T", "H"],
+    "icon": "PiggyBank",
+    "tint": "bg-emerald-100 text-emerald-800",
+    "featured": true,
+    "time": "3 modules, about 25 min"
+  },
+  "modules": [
+    {
+      "id": "m1",
+      "title": "The basics",
+      "summary": "Watch the video, then learn the key ideas.",
+      "discussionPrompt": "What's one thing you spend on that surprised you once you tracked it?",
+      "lessons": [
+        {
+          "id": "watch",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "video",
+              "type": "video",
+              "title": "How to Make a Budget | Beginner's Guide to Budgeting",
+              "source": {
+                "youtubeId": "-Of_WRjDrx0"
+              }
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Learn the key ideas",
+          "items": [
+            {
+              "id": "part-1",
+              "type": "reading",
+              "title": "What is a budget?",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "A budget is a plan for your money. It tells every dollar where to go before you spend it.\n\nMoney comes **in**. That's your income, like an allowance, gifts or pay from a job. Money goes **out**. That's spending, saving and sharing.\n\nA budget is not about saying no to everything. It's about choosing what matters most to you.\n\n**A quick example**\nMaya gets $20 a week for chores. Without a plan, it's gone by Tuesday. With a plan, she decides first:\n• $10 to spend on fun things\n• $6 to save for new headphones\n• $4 to give or save for later\n\nSame $20. Now Maya is in charge of it."
+                },
+                {
+                  "type": "callout",
+                  "tone": "tip",
+                  "md": "**Try this:** For one week, write down every dollar you spend. Most people are surprised where their money goes."
+                }
+              ]
+            },
+            {
+              "id": "part-2",
+              "type": "reading",
+              "title": "Needs, wants and your money brain",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "**Needs** are things you must have to live, learn or work. Think food, a place to live, basic clothes and getting to school or work.\n\n**Wants** are nice extras. Think games, snacks, concert tickets and the newest phone.\n\nWants aren't bad. The trick is paying for needs first.\n\n**Why do we overspend?**\n• Ads are made to make us want things right now\n• Friends buy stuff, and we want to keep up\n• Buying something feels good for a moment\n• Small buys add up without us noticing\n\n**The 24-hour rule**\nWant something that isn't a need? Wait one day before you buy it. If you still want it tomorrow, it may be worth it. Often the feeling fades."
+                },
+                {
+                  "type": "callout",
+                  "tone": "note",
+                  "md": "**Parent tip:** Talk out loud when you shop. \"We need milk. We want ice cream. Let's check the budget.\" Kids learn a lot by hearing how you decide."
+                },
+                {
+                  "type": "check",
+                  "question": {
+                    "id": "b-c1",
+                    "prompt": "Which of these is a need, not a want?",
+                    "options": [
+                      "A new video game",
+                      "Concert tickets",
+                      "Groceries for the week",
+                      "A third pair of sneakers"
+                    ],
+                    "answer": 2,
+                    "hint": "Needs are things you must pay for to live, learn, or work.",
+                    "explanation": "Food is a need. The others are nice to have, so they're wants."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "part-3",
+              "type": "reading",
+              "title": "The 50/30/20 rule",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "The 50/30/20 rule is a simple way to split money you take home.\n\n• **50% for needs:** rent, food, bills, transport\n• **30% for wants:** fun, eating out, hobbies\n• **20% for savings:** emergency fund, goals and paying down debt\n\n**Example with $2,000 a month**\n• Needs: $1,000\n• Wants: $600\n• Savings: $400\n\nSaving $400 a month adds up to $4,800 in a year.\n\n**A kid-sized version**\nIf you don't pay rent yet, you can use the same idea. Try 50% to spend, 30% to save for a goal and 20% to save for the long term or give.\n\nIt's a starting point, not a law. If rent is high where you live, needs might take more than half. Adjust it so it works for you."
+                },
+                {
+                  "type": "accordion",
+                  "title": "Key words to know",
+                  "items": [
+                    {
+                      "title": "Budget",
+                      "md": "A plan for how you'll use the money you have."
+                    },
+                    {
+                      "title": "Emergency fund",
+                      "md": "Savings set aside only for surprises, like a car repair or lost job."
+                    },
+                    {
+                      "title": "Needs vs wants",
+                      "md": "Needs keep you safe and healthy. Wants are extras that are nice to have."
+                    },
+                    {
+                      "title": "50/30/20 rule",
+                      "md": "50% of take-home pay to needs, 30% to wants, 20% to savings and debt."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "Going further",
+      "summary": "Try the interactive tool, then read on.",
+      "discussionPrompt": "Would 50/30/20 work for your family? What would you change?",
+      "lessons": [
+        {
+          "id": "try",
+          "title": "Try it",
+          "items": [
+            {
+              "id": "explore",
+              "type": "widget",
+              "title": "Split a paycheck with 50/30/20",
+              "widget": {
+                "kind": "budget-split",
+                "intro": "Slide to change monthly take-home pay. Watch how the 50/30/20 rule splits it.",
+                "defaults": {
+                  "income": 2000
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "read-on",
+          "title": "Read on",
+          "items": [
+            {
+              "id": "part-4",
+              "type": "reading",
+              "title": "Build an emergency fund",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "An emergency fund is money you save just for surprises. A broken phone. A car repair. A lost job.\n\nWithout one, people often turn to credit cards. That can turn one bad day into months of debt.\n\n**How much?**\nFor adults, many experts suggest 3 to 6 months of basic costs. That sounds like a lot, so start small. Even $500 covers many surprises.\n\nFor kids, a \"surprise fund\" of $20 to $50 can replace lost earbuds or a broken charger.\n\n**Where to keep it**\nKeep it somewhere safe and easy to reach, but not too easy. A savings account at a bank or credit union is a good choice. Most are insured by the FDIC or NCUA, so your money is protected.\n\n**Only for real emergencies**\nA sale is not an emergency. If you use the fund, refill it next."
+                },
+                {
+                  "type": "callout",
+                  "tone": "tip",
+                  "md": "**Try this:** Pick a number for your surprise fund. Write it on a sticky note and track your progress."
+                },
+                {
+                  "type": "check",
+                  "question": {
+                    "id": "b-c2",
+                    "prompt": "An emergency fund is usually meant to cover…",
+                    "options": [
+                      "One fun weekend trip",
+                      "3 to 6 months of basic expenses",
+                      "Next year's holiday gifts",
+                      "A new phone every year"
+                    ],
+                    "answer": 1,
+                    "hint": "Think surprise job loss or a big car repair.",
+                    "explanation": "Most experts suggest 3 to 6 months of essential costs, kept somewhere safe and easy to reach."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "part-5",
+              "type": "reading",
+              "title": "Make saving automatic",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "The easiest way to save is to not think about it.\n\n**Pay yourself first**\nWhen money comes in, save first. Then spend what's left. Most people do the opposite and save whatever is left over. Usually, nothing is left.\n\n**Let it happen on its own**\n• Set up an automatic transfer to savings on payday\n• Use separate savings \"buckets\" for each goal\n• Round up purchases and save the change\n\n**Make your savings grow**\nSome savings accounts pay more interest than others. A high-yield savings account can grow your money faster, and it's still insured. Compare the rate, called APY, before you open one.\n\n**Name your goals**\n\"Save money\" is hard to stick with. \"Save $150 for a bike by June\" is easier. Clear goals keep you going."
+                }
+              ]
+            },
+            {
+              "id": "part-6",
+              "type": "reading",
+              "title": "When budgets get hard",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Every budget hits bumps. That's normal. Here's how to handle the common ones.\n\n**\"My income changes every month.\"**\nPlan with your lowest month. Extra money in good months goes to savings.\n\n**\"I forgot to track.\"**\nPick one easy tool, like an app or a notebook. Check it once a week, not every day.\n\n**\"I blew my budget.\"**\nIt happens. Don't quit. Look at what happened and adjust next month.\n\n**\"It feels too strict.\"**\nGive yourself a small amount of fun money with no rules. It makes the rest easier to follow.\n\n**Check in every month**\nSit down once a month and ask three questions:\n1. Did I spend on what matters to me?\n2. What surprised me?\n3. What will I change next month?"
+                },
+                {
+                  "type": "callout",
+                  "tone": "note",
+                  "md": "**Parent tip:** A short monthly money meeting with your kids builds the habit. Keep it to 10 minutes and keep it positive."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Practice and check",
+      "summary": "Review the big ideas, practice, then take the quiz.",
+      "discussionPrompt": "What's one saving goal you'll set this month?",
+      "lessons": [
+        {
+          "id": "review",
+          "title": "Review and practice",
+          "items": [
+            {
+              "id": "review",
+              "type": "reading",
+              "title": "Key ideas and practice",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Here's the whole course in five steps. Reveal them one at a time, then try the sorting game."
+                },
+                {
+                  "type": "timeline",
+                  "title": "The big ideas, in order",
+                  "steps": [
+                    {
+                      "title": "Track what you earn and spend"
+                    },
+                    {
+                      "title": "Sort spending into needs, wants and savings"
+                    },
+                    {
+                      "title": "Pay yourself first: save as soon as money arrives"
+                    },
+                    {
+                      "title": "Build an emergency fund"
+                    },
+                    {
+                      "title": "Check in every month and adjust"
+                    }
+                  ]
+                },
+                {
+                  "type": "sort",
+                  "question": {
+                    "id": "b-s1",
+                    "prompt": "Sort each expense. Is it a need or a want?",
+                    "buckets": ["Need", "Want"],
+                    "items": [
+                      {
+                        "text": "Rent",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Streaming subscription",
+                        "bucket": 1
+                      },
+                      {
+                        "text": "Bus pass to get to work",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Designer jacket",
+                        "bucket": 1
+                      },
+                      {
+                        "text": "Electricity bill",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Eating out with friends",
+                        "bucket": 1
+                      }
+                    ],
+                    "hint": "Ask: could I live and work safely without it?",
+                    "explanation": "Rent, power and getting to work are needs. The rest are wants, which you can trim when money is tight."
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "quiz",
+          "title": "Quiz",
+          "items": [
+            {
+              "id": "quiz",
+              "type": "quiz",
+              "title": "Course quiz",
+              "quizId": "budgeting-and-saving"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

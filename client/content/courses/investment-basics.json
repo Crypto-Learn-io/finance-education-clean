@@ -1,0 +1,301 @@
+{
+  "schemaVersion": 1,
+  "slug": "investment-basics",
+  "meta": {
+    "title": "Investment Basics",
+    "order": 5,
+    "age": "Ages 13–18",
+    "level": "Intermediate",
+    "blurb": "Investing helps money grow while you sleep. Learn the basics without the jargon.",
+    "objectives": [
+      "Know stocks, bonds, and funds",
+      "Understand ETFs and index funds",
+      "Spread risk across investments",
+      "Invest a little, often"
+    ],
+    "outcome": "By the end, you can explain how a simple starter portfolio works.",
+    "pillars": ["I"],
+    "icon": "TrendingUp",
+    "tint": "bg-green-100 text-green-800",
+    "featured": true,
+    "time": "3 modules, about 25 min"
+  },
+  "modules": [
+    {
+      "id": "m1",
+      "title": "The basics",
+      "summary": "Watch the video, then learn the key ideas.",
+      "discussionPrompt": "If you invested $10 a week, what would you want it to grow into?",
+      "lessons": [
+        {
+          "id": "watch",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "video",
+              "type": "video",
+              "title": "How to Invest for Beginners in 2025",
+              "source": {
+                "youtubeId": "Ay4fmZdZqJE"
+              }
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Learn the key ideas",
+          "items": [
+            {
+              "id": "part-1",
+              "type": "reading",
+              "title": "Why invest?",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Saving keeps money safe. Investing helps money **grow**.\n\nWhen you invest, you buy something you hope will be worth more later. Over long periods, investing has usually grown faster than savings accounts. But it also comes with risk. Values go up and down.\n\n**Before you invest**\n• Build an emergency fund first\n• Only invest money you won't need for at least 5 years\n• Pay off high-interest debt, like credit cards\n\n**Why start young?**\nTime lets compound growth do its work. Small amounts invested early can grow more than bigger amounts invested later."
+                },
+                {
+                  "type": "callout",
+                  "tone": "note",
+                  "md": "**Parent tip:** Kids can't open a brokerage account alone. A parent can open a custodial account for them. If your teen has earned income, a custodial Roth IRA is another option."
+                }
+              ]
+            },
+            {
+              "id": "part-2",
+              "type": "reading",
+              "title": "Stocks and bonds",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "**Stocks**\nA stock is a small piece of a company. If the company does well, your piece may be worth more. Some companies also pay **dividends**, a share of profits.\n\nStocks can swing a lot, especially over short periods.\n\n**Bonds**\nA bond is a loan you make to a company or a government. They pay you interest and give your money back on a set date.\n\nBonds are usually steadier than stocks, but they tend to grow more slowly.\n\n**The basic trade-off**\n• Stocks: more growth, more ups and downs\n• Bonds: less growth, more stability\n\nMost investors use a mix of both."
+                },
+                {
+                  "type": "check",
+                  "question": {
+                    "id": "v-c1",
+                    "prompt": "A bond is…",
+                    "options": [
+                      "Owning part of a company",
+                      "Lending money that's paid back with interest",
+                      "A type of credit card",
+                      "A crypto coin"
+                    ],
+                    "answer": 1,
+                    "hint": "Think IOU.",
+                    "explanation": "When you buy a bond you lend money to a company or government. They pay interest and return the money later."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "part-3",
+              "type": "reading",
+              "title": "Funds, index funds and ETFs",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Picking single stocks is hard, even for experts. Funds make it easier.\n\n**Mutual funds**\nA fund pools money from many people to buy lots of investments at once.\n\n**Index funds**\nThese copy a list of companies, like the S&P 500. They don't try to pick winners. They just own the whole list.\n\n**ETFs**\nExchange-traded funds also hold many investments. They trade during the day like a single stock. Many ETFs are index funds.\n\n**Why people like index funds**\n• Instant diversification\n• Usually low fees\n• Simple to understand\n\n**Watch the fees**\nA fund's yearly fee is its **expense ratio**. A difference of 1% a year can cost a lot over decades. Lower is better."
+                },
+                {
+                  "type": "accordion",
+                  "title": "Key words to know",
+                  "items": [
+                    {
+                      "title": "Stock",
+                      "md": "A share of ownership in a company."
+                    },
+                    {
+                      "title": "Bond",
+                      "md": "A loan you make to a company or government in return for interest."
+                    },
+                    {
+                      "title": "ETF",
+                      "md": "Exchange-traded fund. A basket of investments that trades like one stock."
+                    },
+                    {
+                      "title": "Diversification",
+                      "md": "Spreading money across many investments to lower risk."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "Going further",
+      "summary": "Try the interactive tool, then read on.",
+      "discussionPrompt": "Which surprised you more in the tool: the monthly amount or the number of years?",
+      "lessons": [
+        {
+          "id": "try",
+          "title": "Try it",
+          "items": [
+            {
+              "id": "explore",
+              "type": "widget",
+              "title": "See how regular investing can grow",
+              "widget": {
+                "kind": "compound-interest",
+                "intro": "Try different monthly amounts and years. The rate is an example, not a promise. Investments can lose value.",
+                "defaults": {
+                  "principal": 500,
+                  "monthly": 25,
+                  "rate": 7,
+                  "years": 30
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "read-on",
+          "title": "Read on",
+          "items": [
+            {
+              "id": "part-4",
+              "type": "reading",
+              "title": "Build a simple portfolio",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "A portfolio is everything you invest in. Simple is usually best.\n\n**Match it to your timeline**\n• Money needed in under 5 years: keep it mostly safe, like savings or short-term bonds\n• Money for 10+ years: you can usually take more stock risk\n\n**A simple starter idea**\nMany beginners use one broad index fund, or a mix of a stock index fund and a bond index fund.\n\n**Target-date funds**\nThese pick a mix based on when you'll need the money. They get safer as that date gets closer.\n\n**Keep it balanced**\nOnce a year, check your mix. If stocks grew a lot, move some back to bonds. This is called rebalancing."
+                }
+              ]
+            },
+            {
+              "id": "part-5",
+              "type": "reading",
+              "title": "Smart investing habits",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "**Invest a little, often**\nPutting in the same amount regularly is called dollar-cost averaging. You buy more when prices are low and less when they're high.\n\n**Don't panic**\nMarkets drop sometimes. Selling in a panic can lock in losses. Long-term investors usually ride it out.\n\n**Skip the hype**\nIf friends or social media say a stock is a \"sure thing,\" be careful. Nobody can promise that.\n\n**Keep costs low**\nHigh fees quietly eat your returns.\n\n**Keep learning**\nRead, ask questions and start small."
+                },
+                {
+                  "type": "callout",
+                  "tone": "warning",
+                  "md": "**Scam alert:** \"Guaranteed\" high returns are a red flag. Real investments always carry risk."
+                },
+                {
+                  "type": "check",
+                  "question": {
+                    "id": "v-c2",
+                    "prompt": "Why do investors diversify?",
+                    "options": [
+                      "To pick the single best stock",
+                      "To spread risk across many investments",
+                      "To avoid all risk",
+                      "To pay no taxes"
+                    ],
+                    "answer": 1,
+                    "hint": "Don't put all your eggs in one basket.",
+                    "explanation": "Owning many investments means one bad one hurts less. It lowers risk but can't remove it."
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Practice and check",
+      "summary": "Review the big ideas, practice, then take the quiz.",
+      "discussionPrompt": "Stocks, bonds or a mix? What would you start with and why?",
+      "lessons": [
+        {
+          "id": "review",
+          "title": "Review and practice",
+          "items": [
+            {
+              "id": "review",
+              "type": "reading",
+              "title": "Key ideas and practice",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Here's the whole course in five steps. Reveal them one at a time, then try the sorting game."
+                },
+                {
+                  "type": "timeline",
+                  "title": "The big ideas, in order",
+                  "steps": [
+                    {
+                      "title": "Save an emergency fund first"
+                    },
+                    {
+                      "title": "Stocks: own a piece of a company"
+                    },
+                    {
+                      "title": "Bonds: lend money for interest"
+                    },
+                    {
+                      "title": "Funds and ETFs: buy many at once"
+                    },
+                    {
+                      "title": "Invest regularly and stay patient"
+                    }
+                  ]
+                },
+                {
+                  "type": "sort",
+                  "question": {
+                    "id": "v-s1",
+                    "prompt": "Does this describe a stock or a bond?",
+                    "buckets": ["Stock", "Bond"],
+                    "items": [
+                      {
+                        "text": "You own part of a company",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "You lend money to a government",
+                        "bucket": 1
+                      },
+                      {
+                        "text": "You might get dividends",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "You get set interest payments",
+                        "bucket": 1
+                      },
+                      {
+                        "text": "The value can swing a lot",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "It has a maturity date",
+                        "bucket": 1
+                      }
+                    ],
+                    "hint": "Owner or lender?",
+                    "explanation": "Stocks make you an owner with bigger ups and downs. Bonds make you a lender with steadier interest."
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "quiz",
+          "title": "Quiz",
+          "items": [
+            {
+              "id": "quiz",
+              "type": "quiz",
+              "title": "Course quiz",
+              "quizId": "investment-basics"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

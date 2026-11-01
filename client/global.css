@@ -1,0 +1,541 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * THRIVE brand palette (plain hex, use anywhere with var()).
+   * Contrast notes (WCAG):
+   *  - white on --color-primary-dark  5.4:1  (AA for all text)  -> buttons, links
+   *  - white on --color-primary       3.5:1  (AA large text only) -> icons, big headings, decoration
+   *  - --color-text on --bg-muted    14.2:1
+   *  - --color-text on --color-accent 10.0:1 -> yellow is for small highlights with dark text
+   */
+  :root {
+    --color-primary: #0f9d58;
+    --color-primary-dark: #0a7a4a;
+    --color-primary-darker: #086b40;
+    --color-accent: #ffc857;
+    --color-accent-soft: #fff4dc;
+    --bg-muted: #eaf9f0;
+    --bg-soft: #f3fff6;
+    --color-text: #0b2a1a;
+    --color-text-muted: #3d5a47;
+
+    /* Motion tokens: keep everything between 150 and 400ms. */
+    --motion-fast: 150ms;
+    --motion-base: 250ms;
+    --motion-slow: 400ms;
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+    /**
+     * Tailwind / shadcn theme tokens (HSL triplets, see tailwind.config.ts).
+     * Mapped onto the THRIVE palette above.
+     */
+    --background: 0 0% 100%;
+    --foreground: 149 59% 10%; /* #0B2A1A */
+
+    --card: 0 0% 100%;
+    --card-foreground: 149 59% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 149 59% 10%;
+
+    --primary: 154 85% 26%; /* #0A7A4A, passes AA with white text */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 154 86% 23%; /* #086B40 */
+
+    --secondary: 144 55% 95%; /* #EAF9F0 */
+    --secondary-foreground: 154 85% 26%;
+
+    --muted: 144 55% 97%;
+    --muted-foreground: 141 19% 30%; /* #3D5A47 */
+
+    --accent: 144 55% 95%; /* hover fill for outline/ghost buttons */
+    --accent-foreground: 154 85% 22%;
+
+    --sun: 40 100% 67%; /* #FFC857 */
+    --sun-foreground: 149 59% 10%;
+
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 145 38% 87%; /* #D3EBDD */
+    --input: 145 30% 80%;
+    --ring: 154 85% 26%;
+
+    --radius: 0.875rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 152 45% 7%;
+    --foreground: 140 40% 94%;
+    --card: 152 40% 10%;
+    --card-foreground: 140 40% 94%;
+    --popover: 152 40% 10%;
+    --popover-foreground: 140 40% 94%;
+    --primary: 151 83% 45%;
+    --primary-foreground: 152 45% 7%;
+    --primary-hover: 151 83% 40%;
+    --secondary: 152 30% 16%;
+    --secondary-foreground: 140 40% 94%;
+    --muted: 152 30% 14%;
+    --muted-foreground: 140 15% 70%;
+    --accent: 152 30% 16%;
+    --accent-foreground: 140 40% 94%;
+    --sun: 40 100% 67%;
+    --sun-foreground: 149 59% 10%;
+    --destructive: 0 62.8% 40%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 152 25% 20%;
+    --input: 152 25% 20%;
+    --ring: 151 83% 45%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family:
+      "Nunito Variable",
+      "Nunito",
+      ui-rounded,
+      system-ui,
+      -apple-system,
+      "Segoe UI",
+      Roboto,
+      sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.01em;
+  }
+
+  /* Clear, consistent keyboard focus everywhere. */
+  :focus-visible {
+    outline: 3px solid var(--color-primary-dark);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  /* Small green pill, e.g. "Always free" next to the main CTA. */
+  .free-pill {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-bold;
+    background: #d6f5e3;
+    color: #065f3a; /* 6.7:1 on the pill */
+    box-shadow: inset 0 0 0 1px #b3e6c9;
+  }
+
+  /* Animated underline for text links. */
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 2px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size var(--motion-base) var(--ease-out);
+  }
+  .link-underline:hover,
+  .link-underline:focus-visible {
+    background-size: 100% 2px;
+  }
+
+  /* Lift effect for interactive cards. */
+  .card-lift {
+    transition:
+      transform var(--motion-base) var(--ease-out),
+      box-shadow var(--motion-base) var(--ease-out);
+  }
+  .card-lift:hover,
+  .card-lift:focus-within {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px -12px rgb(10 122 74 / 0.35);
+  }
+}
+
+/* ---------- Animations ---------- */
+
+@keyframes thrive-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes thrive-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes thrive-sway {
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+/* Hero: gentle fade + rise on load. Use style="--delay: 80ms" to stagger. */
+.hero-animate {
+  opacity: 0;
+  animation: thrive-fade-up var(--motion-slow) var(--ease-out) forwards;
+  animation-delay: var(--delay, 0ms);
+}
+
+/* Reveal on scroll: useReveal() adds .is-visible via IntersectionObserver. */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity var(--motion-slow) var(--ease-out),
+    transform var(--motion-slow) var(--ease-out);
+  transition-delay: var(--delay, 0ms);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.float-slow {
+  animation: thrive-float 4s ease-in-out infinite;
+}
+.sway {
+  transform-origin: 50% 100%;
+  animation: thrive-sway 3.5s ease-in-out infinite;
+}
+
+/* ---------- LMS player ---------- */
+
+:root {
+  /* Spring-like easing for slides. Falls back to a soft cubic-bezier. */
+  --ease-spring: cubic-bezier(0.34, 1.3, 0.64, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+@supports (transition-timing-function: linear(0, 1)) {
+  :root {
+    --ease-spring: linear(
+      0,
+      0.006,
+      0.025 2.8%,
+      0.101 6.1%,
+      0.539 18.9%,
+      0.721 25.3%,
+      0.849 31.5%,
+      0.937 38.1%,
+      0.968 41.8%,
+      0.991 45.7%,
+      1.006 50.1%,
+      1.015 55%,
+      1.017 63.9%,
+      1.001 85.9%,
+      1
+    );
+  }
+}
+
+@layer components {
+  /* Hover: lift 2%, soften shadow, soft green glow */
+  .hover-glow {
+    transition:
+      transform var(--motion-base) var(--ease-out),
+      box-shadow var(--motion-base) var(--ease-out),
+      border-color var(--motion-base) var(--ease-out);
+  }
+  .hover-glow:hover,
+  .hover-glow:focus-visible {
+    transform: scale(1.02);
+    box-shadow:
+      0 10px 28px -14px rgb(10 122 74 / 0.45),
+      0 0 0 4px rgb(15 157 88 / 0.12);
+    border-color: rgb(15 157 88 / 0.45);
+  }
+
+  /* Shimmering skeleton */
+  .skeleton {
+    position: relative;
+    overflow: hidden;
+    background: #e7f3ec;
+    border-radius: 0.75rem;
+  }
+  .skeleton::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgb(255 255 255 / 0.75),
+      transparent
+    );
+    animation: thrive-shimmer 1.3s ease-in-out infinite;
+  }
+
+  /* Smooth height for accordions and the sidebar tree */
+  .collapse-grid {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 380ms var(--ease-spring);
+  }
+  .collapse-grid[data-open="true"] {
+    grid-template-rows: 1fr;
+  }
+  .collapse-grid > * {
+    overflow: hidden;
+    min-height: 0;
+  }
+
+  .shake {
+    animation: thrive-shake 420ms cubic-bezier(0.36, 0.07, 0.19, 0.97);
+  }
+
+  /* Animated check box (sidebar + checklists) */
+  .check-box {
+    transition:
+      background-color 200ms var(--ease-out),
+      border-color 200ms var(--ease-out),
+      transform 320ms var(--ease-spring);
+  }
+  .check-box[data-done="true"] {
+    transform: scale(1);
+  }
+  .check-box path {
+    stroke-dasharray: 16;
+    stroke-dashoffset: 16;
+    transition: stroke-dashoffset 300ms var(--ease-out) 80ms;
+  }
+  .check-box[data-done="true"] path {
+    stroke-dashoffset: 0;
+  }
+  .check-box.just-done {
+    animation: thrive-pop 420ms var(--ease-spring);
+  }
+
+  /* Canvas slide between items */
+  .canvas-enter-next {
+    animation: thrive-slide-in-right 480ms var(--ease-spring) both;
+  }
+  .canvas-enter-prev {
+    animation: thrive-slide-in-left 480ms var(--ease-spring) both;
+  }
+
+  /* Range inputs in playgrounds */
+  .range {
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 999px;
+    background: linear-gradient(
+      to right,
+      var(--color-primary-dark) var(--fill, 50%),
+      #d3ebdd var(--fill, 50%)
+    );
+    cursor: pointer;
+  }
+  .range::-webkit-slider-thumb {
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 999px;
+    background: #fff;
+    border: 3px solid var(--color-primary-dark);
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.15);
+    transition: transform 150ms var(--ease-out);
+  }
+  .range:hover::-webkit-slider-thumb,
+  .range:focus-visible::-webkit-slider-thumb {
+    transform: scale(1.15);
+  }
+  .range::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    background: #fff;
+    border: 3px solid var(--color-primary-dark);
+  }
+
+  /* Chart lines animate between values where supported */
+  .chart-line {
+    transition: d 450ms var(--ease-in-out);
+  }
+  .bar-fill {
+    transition:
+      width 450ms var(--ease-in-out),
+      left 450ms var(--ease-in-out);
+  }
+}
+
+@keyframes thrive-shimmer {
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes thrive-shake {
+  10%,
+  90% {
+    transform: translateX(-2px);
+  }
+  20%,
+  80% {
+    transform: translateX(4px);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translateX(-6px);
+  }
+  40%,
+  60% {
+    transform: translateX(6px);
+  }
+}
+@keyframes thrive-pop {
+  0% {
+    transform: scale(0.6);
+  }
+  60% {
+    transform: scale(1.18);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes thrive-slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(36px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes thrive-slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-36px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Reduced motion: keep gentle fades and colour changes, drop movement
+   (sliding, scaling, bouncing, floating, shaking). */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .hero-animate {
+    animation-name: thrive-fade !important;
+  }
+  .reveal {
+    transform: none !important;
+    transition: opacity var(--motion-slow) ease-out !important;
+  }
+  .canvas-enter-next,
+  .canvas-enter-prev {
+    animation: thrive-fade 250ms ease-out both !important;
+  }
+  .float-slow,
+  .sway,
+  .shake,
+  .skeleton::after,
+  .check-box.just-done {
+    animation: none !important;
+  }
+  .hover-glow:hover,
+  .hover-glow:focus-visible,
+  .card-lift:hover,
+  .card-lift:focus-within {
+    transform: none;
+  }
+  /* tailwindcss-animate: fade only, no slide or zoom */
+  .animate-in,
+  .animate-out {
+    --tw-enter-translate-x: 0 !important;
+    --tw-enter-translate-y: 0 !important;
+    --tw-enter-scale: 1 !important;
+    --tw-enter-rotate: 0 !important;
+    --tw-exit-translate-x: 0 !important;
+    --tw-exit-translate-y: 0 !important;
+    --tw-exit-scale: 1 !important;
+  }
+  .collapse-grid {
+    transition-timing-function: ease-out;
+  }
+}
+
+@keyframes thrive-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Printing a certificate: print only the certificate, landscape. */
+@media print {
+  @page {
+    size: landscape;
+    margin: 0.4in;
+  }
+  body * {
+    visibility: hidden;
+  }
+  #certificate,
+  #certificate * {
+    visibility: visible;
+  }
+  #certificate {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    height: 100%;
+    aspect-ratio: auto;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

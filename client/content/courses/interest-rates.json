@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 1,
+  "slug": "interest-rates",
+  "meta": {
+    "title": "Interest Rates",
+    "order": 3,
+    "age": "Ages 12–16",
+    "level": "Beginner",
+    "blurb": "Interest can work for you or against you. See how small rates grow big over time.",
+    "objectives": [
+      "Tell simple and compound interest apart",
+      "Compare APR and APY",
+      "See why starting early pays off"
+    ],
+    "outcome": "By the end, you can compare two rates and pick the better deal.",
+    "pillars": ["V", "I"],
+    "icon": "Percent",
+    "tint": "bg-amber-100 text-amber-800",
+    "time": "3 modules, about 25 min"
+  },
+  "modules": [
+    {
+      "id": "m1",
+      "title": "The basics",
+      "summary": "Watch the video, then learn the key ideas.",
+      "discussionPrompt": "Where have you seen interest in real life?",
+      "lessons": [
+        {
+          "id": "watch",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "video",
+              "type": "video",
+              "title": "Simple vs. Compound Interest | Simple Beginners Guide",
+              "source": {
+                "youtubeId": "lMVwYoiiV0w"
+              }
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Learn the key ideas",
+          "items": [
+            {
+              "id": "part-1",
+              "type": "reading",
+              "title": "What is interest?",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Interest is the price of using money.\n\nWhen you **borrow**, you pay interest. When you **save**, the bank pays you interest. It's like rent for money.\n\n**Why does interest exist?**\nIf you lend money, you can't use it for a while. You also take a risk that it won't come back. Interest is the reward for that.\n\n**Interest is usually a yearly percent**\nA 5% rate means about $5 a year for every $100.\n\n**Two sides of the same coin**\n• On a loan, a lower rate is better for you\n• On savings, a higher rate is better for you\n\nLearning how interest works helps you on both sides."
+                }
+              ]
+            },
+            {
+              "id": "part-2",
+              "type": "reading",
+              "title": "Simple interest",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Simple interest is paid only on the **starting amount**, called the principal.\n\n**The formula**\nInterest = Principal × Rate × Time\n\n**Example**\nYou put $100 in an account that pays 10% simple interest a year.\n• After 1 year: $100 × 0.10 × 1 = $10\n• After 2 years: $100 × 0.10 × 2 = $20\n• After 3 years: $30\n\nThe interest is the same every year, $10. It never grows on itself.\n\n**Where you'll see it**\nSome car loans and short-term loans use simple interest. Most savings accounts use compound interest instead, which grows faster."
+                },
+                {
+                  "type": "check",
+                  "question": {
+                    "id": "i-c1",
+                    "prompt": "$100 earns 10% simple interest for 2 years. How much interest is that?",
+                    "options": ["$10", "$20", "$21", "$200"],
+                    "answer": 1,
+                    "hint": "Multiply principal × rate × years.",
+                    "explanation": "$100 × 0.10 × 2 = $20. With yearly compounding it would be $21."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "part-3",
+              "type": "reading",
+              "title": "Compound interest",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Compound interest means you earn interest on your interest. Over time, it snowballs.\n\n**Same $100 at 10%, compounded yearly**\n• Year 1: $100 + $10 = $110\n• Year 2: $110 + $11 = $121\n• Year 3: $121 + $12.10 = $133.10\n\nEach year's interest is a little bigger than the last.\n\n**The Rule of 72**\nWant a quick guess for how long it takes money to double? Divide 72 by the interest rate.\n• At 6%: 72 ÷ 6 = about 12 years\n• At 9%: 72 ÷ 9 = about 8 years\n\n**Time is the secret ingredient**\nThe longer money compounds, the faster it grows. That's why starting early matters so much."
+                },
+                {
+                  "type": "callout",
+                  "tone": "warning",
+                  "md": "**It works on debt too.** Credit card balances compound against you. That's why unpaid balances grow so fast."
+                },
+                {
+                  "type": "accordion",
+                  "title": "Key words to know",
+                  "items": [
+                    {
+                      "title": "Principal",
+                      "md": "The original amount you save or borrow."
+                    },
+                    {
+                      "title": "Interest rate",
+                      "md": "The percent charged or paid on the principal, usually per year."
+                    },
+                    {
+                      "title": "APR",
+                      "md": "Annual percentage rate. The yearly cost of a loan."
+                    },
+                    {
+                      "title": "APY",
+                      "md": "Annual percentage yield. What savings really earn in a year with compounding."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "Going further",
+      "summary": "Try the interactive tool, then read on.",
+      "discussionPrompt": "Did the compound interest tool surprise you? What changed the result most?",
+      "lessons": [
+        {
+          "id": "try",
+          "title": "Try it",
+          "items": [
+            {
+              "id": "explore",
+              "type": "widget",
+              "title": "Watch compound interest grow",
+              "widget": {
+                "kind": "compound-interest",
+                "intro": "Change the starting amount, monthly savings, rate and years. Compare what you put in with what interest adds.",
+                "defaults": {
+                  "principal": 1000,
+                  "monthly": 50,
+                  "rate": 6,
+                  "years": 20
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "read-on",
+          "title": "Read on",
+          "items": [
+            {
+              "id": "part-4",
+              "type": "reading",
+              "title": "APR vs APY",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "These two terms look alike but tell you different things.\n\n**APR: Annual Percentage Rate**\nUsed for **borrowing**. It shows the yearly cost of a loan, including some fees. Lower is better.\n\n**APY: Annual Percentage Yield**\nUsed for **saving**. It shows what you really earn in a year, including compounding. Higher is better.\n\n**Why APY can be higher than the rate**\nIf interest compounds monthly, you earn a little interest on your interest every month. So a 5% rate can give an APY slightly above 5%.\n\n**How to use this**\n• Comparing loans? Compare the APRs.\n• Comparing savings accounts? Compare the APYs."
+                },
+                {
+                  "type": "callout",
+                  "tone": "tip",
+                  "md": "**Try this:** Look up the savings APY at two banks. You might be surprised how different they are."
+                },
+                {
+                  "type": "check",
+                  "question": {
+                    "id": "i-c2",
+                    "prompt": "Which number shows the yearly cost of borrowing, including some fees?",
+                    "options": ["APY", "APR", "CPI", "GDP"],
+                    "answer": 1,
+                    "hint": "The one used on loans and credit cards.",
+                    "explanation": "APR is for borrowing. APY shows what savings earn with compounding."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "part-5",
+              "type": "reading",
+              "title": "Fixed vs variable rates",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "**Fixed rate**\nThe rate stays the same for the whole loan. Your payment is predictable.\n\n**Variable rate**\nThe rate can go up or down over time. Payments can change too. It might start lower, but there's more risk.\n\n**Small differences add up**\nOn big loans, a small rate change matters. On a large home loan, 1% can mean thousands of dollars over the years.\n\n**Smart moves**\n• Shop around and compare rates\n• A better credit score usually gets a lower rate\n• For savings, move money to accounts with a higher APY\n• Start saving early so compounding has time to work"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Practice and check",
+      "summary": "Review the big ideas, practice, then take the quiz.",
+      "discussionPrompt": "If you had $100 today, would you rather earn simple or compound interest? Why?",
+      "lessons": [
+        {
+          "id": "review",
+          "title": "Review and practice",
+          "items": [
+            {
+              "id": "review",
+              "type": "reading",
+              "title": "Key ideas and practice",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Here's the whole course in five steps. Reveal them one at a time, then try the sorting game."
+                },
+                {
+                  "type": "timeline",
+                  "title": "The big ideas, in order",
+                  "steps": [
+                    {
+                      "title": "Interest is the price of using money"
+                    },
+                    {
+                      "title": "Simple interest: only on the starting amount"
+                    },
+                    {
+                      "title": "Compound interest: interest on interest"
+                    },
+                    {
+                      "title": "APR for borrowing, APY for saving"
+                    },
+                    {
+                      "title": "Start early and let time help"
+                    }
+                  ]
+                },
+                {
+                  "type": "sort",
+                  "question": {
+                    "id": "i-s1",
+                    "prompt": "Are you earning interest or paying it?",
+                    "buckets": ["Earning", "Paying"],
+                    "items": [
+                      {
+                        "text": "Savings account",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Credit card balance",
+                        "bucket": 1
+                      },
+                      {
+                        "text": "Car loan",
+                        "bucket": 1
+                      },
+                      {
+                        "text": "Certificate of deposit (CD)",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Student loan",
+                        "bucket": 1
+                      },
+                      {
+                        "text": "A bond you own",
+                        "bucket": 0
+                      }
+                    ],
+                    "hint": "Who is lending money to whom?",
+                    "explanation": "When you lend money (savings, CDs, bonds) you earn. When you borrow (cards, loans) you pay."
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "quiz",
+          "title": "Quiz",
+          "items": [
+            {
+              "id": "quiz",
+              "type": "quiz",
+              "title": "Course quiz",
+              "quizId": "interest-rates"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,291 @@
+{
+  "schemaVersion": 1,
+  "slug": "risk-vs-return",
+  "meta": {
+    "title": "Risk vs Return",
+    "order": 6,
+    "age": "Ages 14–18",
+    "level": "Intermediate",
+    "blurb": "Bigger rewards come with bigger risks. Find a balance that feels right for you.",
+    "objectives": [
+      "Name the main types of risk",
+      "Find your own comfort with risk",
+      "Use diversification to stay steady"
+    ],
+    "outcome": "By the end, you can match an investment to your goals.",
+    "pillars": ["I"],
+    "icon": "Shield",
+    "tint": "bg-rose-100 text-rose-800",
+    "time": "3 modules, about 25 min"
+  },
+  "modules": [
+    {
+      "id": "m1",
+      "title": "The basics",
+      "summary": "Watch the video, then learn the key ideas.",
+      "discussionPrompt": "How would you feel if an investment dropped 20% in a month?",
+      "lessons": [
+        {
+          "id": "watch",
+          "title": "Watch",
+          "items": [
+            {
+              "id": "video",
+              "type": "video",
+              "title": "What is risk and return? | Financial Literacy | Khan Academy",
+              "source": {
+                "youtubeId": "7mo167ohvJw"
+              }
+            }
+          ]
+        },
+        {
+          "id": "learn",
+          "title": "Learn the key ideas",
+          "items": [
+            {
+              "id": "part-1",
+              "type": "reading",
+              "title": "What is risk?",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "In investing, **risk** is the chance you lose money or don't earn what you hoped.\n\n**Return** is what you gain or lose. It's often shown as a percent.\n\n**Common kinds of risk**\n• **Market risk:** the whole market drops\n• **Company risk:** one company does badly\n• **Inflation risk:** your money grows slower than prices\n• **Interest rate risk:** bond prices fall when rates rise\n\n**No risk at all?**\nEven \"safe\" money has risk. Cash in a 0% account is safe from crashes, but inflation eats it slowly."
+                }
+              ]
+            },
+            {
+              "id": "part-2",
+              "type": "reading",
+              "title": "Risk and reward go together",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Here's the big idea: **higher possible returns usually come with higher risk.**\n\nWhy? Investors want extra reward for taking a bumpier ride. That extra is sometimes called the risk premium.\n\n**From lower to higher risk**\n1. Insured savings accounts and CDs\n2. Short-term government bonds\n3. Corporate bonds\n4. Broad stock index funds\n5. Single company stocks\n6. Very speculative bets, like crypto or options\n\n**But risk doesn't promise reward**\nTaking more risk gives you a chance at more return. It doesn't guarantee it."
+                },
+                {
+                  "type": "callout",
+                  "tone": "tip",
+                  "md": "**Try this:** In Module 2, slide between 0% and 100% stocks. Watch how the range of results gets wider."
+                },
+                {
+                  "type": "check",
+                  "question": {
+                    "id": "r-c1",
+                    "prompt": "Which of these is usually the lowest risk?",
+                    "options": [
+                      "A single new startup's stock",
+                      "An FDIC-insured savings account",
+                      "A cryptocurrency",
+                      "A fund that holds only stocks"
+                    ],
+                    "answer": 1,
+                    "hint": "Look for a government guarantee.",
+                    "explanation": "FDIC insurance protects bank deposits up to set limits, so the risk of losing money is very low."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "part-3",
+              "type": "reading",
+              "title": "Know your comfort with risk",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Your **risk tolerance** is how much up and down you can handle.\n\n**Two parts to think about**\n• **Ability:** How long until you need the money? More time means you can usually recover from drops.\n• **Feelings:** Would a 20% drop make you want to sell everything?\n\n**Time horizon matters most**\nMoney for next year should be safe. Money for 30 years from now can usually take more risk.\n\n**Ask yourself**\n• What is this money for?\n• When will I need it?\n• How would I feel if it dropped by a quarter?\n\nBe honest. A plan you can stick with beats a \"perfect\" plan you abandon."
+                },
+                {
+                  "type": "accordion",
+                  "title": "Key words to know",
+                  "items": [
+                    {
+                      "title": "Risk",
+                      "md": "The chance an investment loses value or doesn't grow as hoped."
+                    },
+                    {
+                      "title": "Return",
+                      "md": "The gain or loss on an investment."
+                    },
+                    {
+                      "title": "Volatility",
+                      "md": "How much and how fast a price moves up and down."
+                    },
+                    {
+                      "title": "Asset allocation",
+                      "md": "How you split money between stocks, bonds and cash."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "Going further",
+      "summary": "Try the interactive tool, then read on.",
+      "discussionPrompt": "What mix did you pick in the tool, and why?",
+      "lessons": [
+        {
+          "id": "try",
+          "title": "Try it",
+          "items": [
+            {
+              "id": "explore",
+              "type": "widget",
+              "title": "Mix stocks and bonds",
+              "widget": {
+                "kind": "risk-return",
+                "intro": "Slide to change how much is in stocks versus bonds. See how the possible ups and downs change. Numbers are examples, not a forecast.",
+                "defaults": {
+                  "stocks": 60
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "read-on",
+          "title": "Read on",
+          "items": [
+            {
+              "id": "part-4",
+              "type": "reading",
+              "title": "Don't put all your eggs in one basket",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "**Diversification** means spreading your money across many investments.\n\nIf you own just one company and it fails, you lose a lot. If you own hundreds of companies, one failure hurts much less.\n\n**Ways to diversify**\n• Many companies, not one\n• Different industries, like tech, health and energy\n• Stocks and bonds together\n• US and international investments\n\n**The easy way**\nA broad index fund gives you hundreds or thousands of companies in one purchase.\n\n**What it can't do**\nDiversification lowers risk. It can't remove it. When the whole market falls, most investments fall together for a while."
+                },
+                {
+                  "type": "check",
+                  "question": {
+                    "id": "r-c2",
+                    "prompt": "Diversification helps because…",
+                    "options": [
+                      "All investments rise together",
+                      "When some fall, others may hold up",
+                      "It guarantees a profit",
+                      "It removes all fees"
+                    ],
+                    "answer": 1,
+                    "hint": "Different investments don't always move together.",
+                    "explanation": "Mixing investments smooths the ride, because losses in one area can be offset by others."
+                  }
+                }
+              ]
+            },
+            {
+              "id": "part-5",
+              "type": "reading",
+              "title": "Managing risk over time",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "**Rebalance**\nOver time, your mix drifts. Once a year, move it back to your plan.\n\n**Get safer as goals get closer**\nMany people shift from stocks to bonds as they near the date they need the money.\n\n**Keep an emergency fund**\nIt keeps you from selling investments at a bad time.\n\n**Avoid borrowing to invest**\nUsing borrowed money can multiply losses.\n\n**Watch for red flags**\n• Guaranteed high returns\n• Pressure to act fast\n• Things you can't understand\n\nIf it sounds too good to be true, it probably is."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "m3",
+      "title": "Practice and check",
+      "summary": "Review the big ideas, practice, then take the quiz.",
+      "discussionPrompt": "When might lower risk be the smarter choice?",
+      "lessons": [
+        {
+          "id": "review",
+          "title": "Review and practice",
+          "items": [
+            {
+              "id": "review",
+              "type": "reading",
+              "title": "Key ideas and practice",
+              "blocks": [
+                {
+                  "type": "text",
+                  "md": "Here's the whole course in five steps. Reveal them one at a time, then try the sorting game."
+                },
+                {
+                  "type": "timeline",
+                  "title": "The big ideas, in order",
+                  "steps": [
+                    {
+                      "title": "Every investment has some risk"
+                    },
+                    {
+                      "title": "More possible reward usually means more risk"
+                    },
+                    {
+                      "title": "Know your comfort with ups and downs"
+                    },
+                    {
+                      "title": "Spread money across different investments"
+                    },
+                    {
+                      "title": "Match risk to when you need the money"
+                    }
+                  ]
+                },
+                {
+                  "type": "sort",
+                  "question": {
+                    "id": "r-s1",
+                    "prompt": "Lower risk or higher risk?",
+                    "buckets": ["Lower risk", "Higher risk"],
+                    "items": [
+                      {
+                        "text": "Insured savings account",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Stock in one company",
+                        "bucket": 1
+                      },
+                      {
+                        "text": "Short-term government bond",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Cryptocurrency",
+                        "bucket": 1
+                      },
+                      {
+                        "text": "Certificate of deposit (CD)",
+                        "bucket": 0
+                      },
+                      {
+                        "text": "Options trading",
+                        "bucket": 1
+                      }
+                    ],
+                    "hint": "Ask how much the value could swing in a year.",
+                    "explanation": "Insured deposits and short-term government bonds are steady. Single stocks, crypto and options can swing a lot."
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "quiz",
+          "title": "Quiz",
+          "items": [
+            {
+              "id": "quiz",
+              "type": "quiz",
+              "title": "Course quiz",
+              "quizId": "risk-vs-return"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
