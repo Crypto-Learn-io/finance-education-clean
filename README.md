@@ -11,3 +11,9 @@ npm run build   # production build in dist/
 ```
 
 Tech notes for contributors are in `AGENTS.md`.
+
+## Built by
+
+Akshay Sriram · [akshaysrir09@gmail.com](mailto:akshaysrir09@gmail.com)
+
+Questions, ideas or found a mistake? Use the Contact page on the site or send an email.

@@ -18,6 +18,7 @@ const CoursePlayer = lazy(() => import("./lms/CoursePlayer"));
 import Index from "./pages/Index";
 import Courses from "./pages/Courses";
 import Quizzes from "./pages/Quizzes";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Chatbot from "./components/Chatbot";
 
@@ -43,6 +44,7 @@ export default function App() {
             {/* About section was removed. Old links go home. */}
             <Route path="/about" element={<Navigate to="/" replace />} />
             <Route path="/quizzes" element={<Quizzes />} />
+            <Route path="/contact" element={<Contact />} />
 
             {/* Course player: every course comes from client/content/courses/*.json */}
             <Route

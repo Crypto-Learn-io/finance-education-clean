@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import Navigation from "./Navigation";
+import { BUILDER, contactHref } from "@/data/site";
 import { useReveal } from "@/hooks/use-reveal";
 
 interface LayoutProps {
@@ -24,19 +25,36 @@ export default function Layout({ children }: LayoutProps) {
       </main>
       <footer className="border-t border-border bg-mint-soft">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-ink-muted">
-          <div className="flex items-center gap-2">
-            <img src="/favicon.svg" alt="" width={24} height={24} />
-            <span>
-              <strong className="text-ink">THRIVE</strong>: Track, Habits,
-              Responsibility, Invest, Value, Earn
-            </span>
+          <div className="flex flex-col items-center gap-1 sm:items-start">
+            <div className="flex items-center gap-2">
+              <img src="/favicon.svg" alt="" width={24} height={24} />
+              <span>
+                <strong className="text-ink">THRIVE</strong>: Track, Habits,
+                Responsibility, Invest, Value, Earn
+              </span>
+            </div>
+            <p className="text-center sm:text-left">
+              Built by <strong className="text-ink">{BUILDER.name}</strong> ·{" "}
+              <a
+                href={contactHref()}
+                className="link-underline font-semibold text-primary"
+              >
+                {BUILDER.email}
+              </a>
+            </p>
           </div>
-          <nav aria-label="Footer" className="flex items-center gap-5">
+          <nav
+            aria-label="Footer"
+            className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 whitespace-nowrap"
+          >
             <Link to="/courses" className="link-underline font-semibold">
               Courses
             </Link>
             <Link to="/quizzes" className="link-underline font-semibold">
               Quizzes
+            </Link>
+            <Link to="/contact" className="link-underline font-semibold">
+              Contact us
             </Link>
             <span className="free-pill text-xs">Always free</span>
           </nav>

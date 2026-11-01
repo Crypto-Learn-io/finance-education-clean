@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { Home, BookOpen, Brain, Menu, X } from "lucide-react";
+import { Home, BookOpen, Brain, Menu, X, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navItems = [
   { href: "/", label: "Home", icon: Home },
   { href: "/courses", label: "Courses", icon: BookOpen },
   { href: "/quizzes", label: "Quizzes", icon: Brain },
+  { href: "/contact", label: "Contact us", icon: Mail },
 ];
 
 export default function Navigation() {
@@ -45,21 +46,21 @@ export default function Navigation() {
               <span className="text-xl font-black tracking-wider text-ink">
                 THRIVE
               </span>
-              <span className="hidden sm:block text-[11px] font-semibold text-brand-dark mt-0.5">
+              <span className="hidden lg:block text-[11px] font-semibold text-brand-dark mt-0.5">
                 Track · Habits · Responsibility · Invest · Value · Earn
               </span>
             </span>
           </Link>
 
           {/* Desktop links */}
-          <ul className="hidden md:flex items-center gap-2">
+          <ul className="hidden md:flex items-center gap-1 lg:gap-2">
             {navItems.map(({ href, label, icon: Icon }) => (
               <li key={href}>
                 <Link
                   to={href}
                   aria-current={isActive(href) ? "page" : undefined}
                   className={cn(
-                    "flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition-colors duration-200",
+                    "flex items-center gap-2 whitespace-nowrap px-3 lg:px-4 py-2 rounded-full text-sm font-bold transition-colors duration-200",
                     isActive(href)
                       ? "text-primary bg-mint"
                       : "text-ink-muted hover:text-primary hover:bg-mint/70",
