@@ -461,44 +461,58 @@
   }
 }
 
-/* Respect reduced motion: show everything, no movement. */
+/* Reduced motion: keep gentle fades and colour changes, drop movement
+   (sliding, scaling, bouncing, floating, shaking). */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
-  .hero-animate,
+  .hero-animate {
+    animation-name: thrive-fade !important;
+  }
   .reveal {
-    opacity: 1 !important;
     transform: none !important;
-    animation: none !important;
-    transition: none !important;
+    transition: opacity var(--motion-slow) ease-out !important;
+  }
+  .canvas-enter-next,
+  .canvas-enter-prev {
+    animation: thrive-fade 250ms ease-out both !important;
   }
   .float-slow,
   .sway,
   .shake,
   .skeleton::after,
-  .canvas-enter-next,
-  .canvas-enter-prev,
   .check-box.just-done {
     animation: none !important;
   }
   .hover-glow:hover,
-  .hover-glow:focus-visible {
-    transform: none;
-  }
+  .hover-glow:focus-visible,
   .card-lift:hover,
   .card-lift:focus-within {
     transform: none;
   }
-  .link-underline {
-    transition: none;
+  /* tailwindcss-animate: fade only, no slide or zoom */
+  .animate-in,
+  .animate-out {
+    --tw-enter-translate-x: 0 !important;
+    --tw-enter-translate-y: 0 !important;
+    --tw-enter-scale: 1 !important;
+    --tw-enter-rotate: 0 !important;
+    --tw-exit-translate-x: 0 !important;
+    --tw-exit-translate-y: 0 !important;
+    --tw-exit-scale: 1 !important;
   }
-  *,
-  *::before,
-  *::after {
-    transition-duration: 1ms !important;
-    animation-duration: 1ms !important;
-    animation-iteration-count: 1 !important;
+  .collapse-grid {
+    transition-timing-function: ease-out;
+  }
+}
+
+@keyframes thrive-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

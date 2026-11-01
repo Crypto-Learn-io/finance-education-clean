@@ -32,6 +32,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Drawer, DrawerContent, DrawerTitle } from "@/components/ui/drawer";
 import { cn } from "@/lib/utils";
+import { useReveal } from "@/hooks/use-reveal";
 import { pillarWord } from "@/data/courses";
 import { loadUserProgress } from "@/data/xpSystem";
 import { useCourseProgress } from "@/lib/course-progress";
@@ -433,6 +434,7 @@ function Player({ course, itemId }: { course: CourseData; itemId: string }) {
     },
     [markAnsweredRaw, slug],
   );
+  useReveal();
   const [celebrate, setCelebrate] = useState(false);
   const [helpOpen, setHelpOpen] = useState(false);
 
@@ -733,7 +735,7 @@ function Player({ course, itemId }: { course: CourseData; itemId: string }) {
                 direction === "next" ? "canvas-enter-next" : "canvas-enter-prev"
               }
             >
-              <nav aria-label="Breadcrumb">
+              <nav aria-label="Breadcrumb" className="hero-animate">
                 <ol className="flex flex-wrap items-center gap-1 text-sm font-semibold text-ink-muted">
                   <li>
                     <Link to={base} className="link-underline text-primary">
@@ -746,7 +748,10 @@ function Player({ course, itemId }: { course: CourseData; itemId: string }) {
                   <li>{lessonTitle}</li>
                 </ol>
               </nav>
-              <p className="mt-4 flex flex-wrap items-center gap-2 text-sm font-bold text-ink-muted">
+              <p
+                className="hero-animate mt-4 flex flex-wrap items-center gap-2 text-sm font-bold text-ink-muted"
+                style={{ "--delay": "70ms" } as CSSProperties}
+              >
                 <span className="rounded-full bg-mint px-3 py-1 text-primary">
                   {ITEM_LABEL[current.item.type]}
                 </span>
@@ -754,19 +759,25 @@ function Player({ course, itemId }: { course: CourseData; itemId: string }) {
                   <span>{itemMinutes(current.item)} min</span>
                 )}
                 {isDone && (
-                  <span className="flex items-center gap-1 text-primary">
+                  <span className="flex items-center gap-1 text-primary animate-in fade-in zoom-in-90 duration-300">
                     <CheckCircle2 className="h-4 w-4" aria-hidden="true" />{" "}
                     Completed
                   </span>
                 )}
               </p>
               {current.item.type !== "quiz" && (
-                <h1 className="mt-3 text-3xl font-black text-ink md:text-4xl">
+                <h1
+                  className="hero-animate mt-3 text-3xl font-black text-ink md:text-4xl"
+                  style={{ "--delay": "140ms" } as CSSProperties}
+                >
                   {current.item.title}
                 </h1>
               )}
               {current.item.type === "reading" && (
-                <div className="mt-4">
+                <div
+                  className="hero-animate mt-4"
+                  style={{ "--delay": "210ms" } as CSSProperties}
+                >
                   <ReadAloud
                     title={current.item.title}
                     text={blocksToSpeech(current.item.blocks)}
@@ -774,7 +785,10 @@ function Player({ course, itemId }: { course: CourseData; itemId: string }) {
                 </div>
               )}
 
-              <div className="mt-6">
+              <div
+                className="hero-animate mt-6"
+                style={{ "--delay": "260ms" } as CSSProperties}
+              >
                 <ItemCanvas
                   course={course}
                   current={current}
@@ -794,7 +808,7 @@ function Player({ course, itemId }: { course: CourseData; itemId: string }) {
               {/* Item navigation */}
               <nav
                 aria-label="Lesson navigation"
-                className="mt-10 hidden items-center justify-between gap-3 border-t border-border pt-6 md:flex"
+                className="reveal mt-10 hidden items-center justify-between gap-3 border-t border-border pt-6 md:flex"
               >
                 <Button asChild variant="outline" size="lg">
                   <Link to={prev ? `${base}/${prev.item.id}` : base}>

@@ -95,76 +95,87 @@ function Blocks({
   return (
     <>
       {blocks.map((b, i) => {
-        switch (b.type) {
-          case "text":
-            return <LessonContent key={i} content={b.md} />;
-          case "callout": {
-            const Icon =
-              b.tone === "warning"
-                ? AlertTriangle
-                : b.tone === "note"
-                  ? Info
-                  : Lightbulb;
-            return (
-              <aside
-                key={i}
-                className={cn(
-                  "my-5 flex gap-3 rounded-2xl p-4",
-                  b.tone === "warning"
-                    ? "bg-orange-50"
-                    : b.tone === "note"
-                      ? "bg-mint-soft"
-                      : "bg-sun-soft",
-                )}
-              >
-                <Icon
-                  className="mt-0.5 h-5 w-5 flex-none text-primary"
-                  aria-hidden="true"
-                />
-                <div className="text-ink">
-                  <LessonContent content={b.md} />
-                </div>
-              </aside>
-            );
-          }
-          case "check":
-            return (
-              <KnowledgeCheck
-                key={b.question.id}
-                question={b.question}
-                initiallySolved={answered.has(b.question.id)}
-                onCorrect={() => onAnswer(b.question.id)}
-              />
-            );
-          case "sort":
-            return (
-              <SortCheck
-                key={b.question.id}
-                question={b.question}
-                initiallySolved={answered.has(b.question.id)}
-                onCorrect={() => onAnswer(b.question.id)}
-              />
-            );
-          case "accordion":
-            return (
-              <Accordion
-                key={i}
-                title={b.title}
-                items={b.items as { title: string; md: string }[]}
-              />
-            );
-          case "timeline":
-            return (
-              <Timeline
-                key={i}
-                title={b.title}
-                steps={b.steps as { title: string; md?: string }[]}
-              />
-            );
-        }
+        const el = renderBlock(b, i);
+        return b.type === "text" ? (
+          el
+        ) : (
+          <div key={i} className="reveal">
+            {el}
+          </div>
+        );
       })}
     </>
   );
+
+  function renderBlock(b: Block, i: number) {
+    switch (b.type) {
+      case "text":
+        return <LessonContent key={i} content={b.md} reveal />;
+      case "callout": {
+        const Icon =
+          b.tone === "warning"
+            ? AlertTriangle
+            : b.tone === "note"
+              ? Info
+              : Lightbulb;
+        return (
+          <aside
+            key={i}
+            className={cn(
+              "my-5 flex gap-3 rounded-2xl p-4",
+              b.tone === "warning"
+                ? "bg-orange-50"
+                : b.tone === "note"
+                  ? "bg-mint-soft"
+                  : "bg-sun-soft",
+            )}
+          >
+            <Icon
+              className="mt-0.5 h-5 w-5 flex-none text-primary"
+              aria-hidden="true"
+            />
+            <div className="text-ink">
+              <LessonContent content={b.md} />
+            </div>
+          </aside>
+        );
+      }
+      case "check":
+        return (
+          <KnowledgeCheck
+            key={b.question.id}
+            question={b.question}
+            initiallySolved={answered.has(b.question.id)}
+            onCorrect={() => onAnswer(b.question.id)}
+          />
+        );
+      case "sort":
+        return (
+          <SortCheck
+            key={b.question.id}
+            question={b.question}
+            initiallySolved={answered.has(b.question.id)}
+            onCorrect={() => onAnswer(b.question.id)}
+          />
+        );
+      case "accordion":
+        return (
+          <Accordion
+            key={i}
+            title={b.title}
+            items={b.items as { title: string; md: string }[]}
+          />
+        );
+      case "timeline":
+        return (
+          <Timeline
+            key={i}
+            title={b.title}
+            steps={b.steps as { title: string; md?: string }[]}
+          />
+        );
+    }
+  }
 }
 
 /** Quiz from quizzes.ts by id, or built from questions in the JSON. */

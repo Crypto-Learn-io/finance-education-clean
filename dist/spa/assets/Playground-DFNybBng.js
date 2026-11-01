@@ -1,4 +1,4 @@
-import{c as ye,o as V,r as b,ao as we,j as t,t as H,P as F,b as N,u as je,ap as K,q as U,d as ke,p as Ne,y as I,J as $e,K as Te,aq as Ie}from"./index-BmoIL6aj.js";import{I as Fe}from"./CoursePlayer-Cxc7Kexy.js";/**
+import{c as ye,o as V,r as b,ap as we,j as t,t as H,P as F,b as N,u as je,aq as K,q as U,d as ke,p as Ne,y as I,J as $e,K as Te,ar as Ie}from"./index-iDOBMdvU.js";import{I as Fe}from"./CoursePlayer-DMMbde5l.js";/**
  * @license lucide-react v0.462.0 - ISC
  *
  * This source code is licensed under the ISC license.

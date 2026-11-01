@@ -96,9 +96,10 @@ export default function StudyPanel({
       </div>
       <div
         role="tabpanel"
+        key={tab}
         id={`panel-${tab}`}
         aria-labelledby={`panel-tab-${tab}`}
-        className="min-h-0 flex-1 overflow-y-auto p-4"
+        className="min-h-0 flex-1 overflow-y-auto p-4 animate-in fade-in slide-in-from-right-2 duration-300"
       >
         {tab === "notes" && (
           <NotesTab
